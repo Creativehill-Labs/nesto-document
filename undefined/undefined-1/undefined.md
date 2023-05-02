@@ -1,6 +1,6 @@
 # 지갑 설정 방법
 
-DeFi 안전 사용 규칙
+## DeFi 안전 사용 규칙
 
 디파이(DeFi, Decentralized Finance)에서는, 암호화폐 자산의 진정한 소유자는 당신입니다. 당신의 자산은 당신이 직접 관리 및 통제하는 지갑(Wallet)에 보관됩니다. 하지만 어떠한 행동을 하기 전에, 항상 다음과 같은 안전한 사용 규칙을 따르는 것이 중요합니다:
 
@@ -31,7 +31,7 @@ DeFi(탈중앙화 금융)와 암호화폐를 다룰 때는 매우 조심해야 �
 
 ## MetaMask
 
-MetaMask는 매우 인기있는 브라우저 기반 지갑 플러그인입니다. Ethereum을 기본으로 지원하며 BNB Chain, Avalanche, Polygon과 같은 다른 Ethereum 호환 블록체인도 수동으로 추가할 수 있습니다.\
+MetaMask는 매우 인기 있는 브라우저 기반 지갑 플러그인입니다. Ethereum을 기본으로 지원하며 BNB Chain, Avalanche, Polygon과 같은 다른 Ethereum 호환 블록체인도 수동으로 추가할 수 있습니다.\
 또한 MetaMask는 Ledger, Trezor와 같은 하드웨어 지갑과도 호환됩니다.
 
 {% embed url="https://metamask.io/download/" %}
