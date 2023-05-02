@@ -4,7 +4,7 @@
 
 * [개요](README.md)
 * [시작하기](undefined/undefined-1/README.md)
-  * [지갑 설정 방법](undefined/undefined-1/undefined.md)
+  * [지갑 설정 방법](undefined/undefined-1/undefined.md)
   * [지갑 충전 방법](undefined/undefined-1/undefined-1.md)
   * [NESTO에 지갑을 연결하는 방법](undefined/undefined-1/nesto.md)
 
