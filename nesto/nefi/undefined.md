@@ -24,7 +24,7 @@ NEFI 토큰은 저장소(Vaults)가 활성화된 모든 체인에 배치되어 �
 * ~~<mark style="color:blue;">Canto:</mark>~~ [~~<mark style="color:blue;">0x765277EebeCA2e31912C9946eAe1021199B39C61</mark>~~](https://tuber.build/address/0x765277EebeCA2e31912C9946eAe1021199B39C61)
 
 모든 블록체인에서 NEFI토큰을 얻을 수 있는 네이티브 스테이킹 풀에 스테이킹 하거나,\
-NEFI Maxi 저장소(Vaults)에서 더 많은 NEFI토큰을 얻을 수 있습니다.
+NEFI Maxi Vault에서 더 많은 NEFI토큰을 얻을 수 있습니다.
 
 ## 토큰 홀더
 
