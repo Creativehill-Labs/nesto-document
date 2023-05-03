@@ -1,6 +1,6 @@
 # 계약 주소
 
-NEFI 토큰은 저장소(Vaults)가활성화된 모든 체인에 배치되어 있습니다. 다른 체인으로 전환하시려면 [이 가이드를](broken-reference) 참고하시고, 체인 간에 NEFI를 이동하려면 [이 가이드](broken-reference)를 참조하세요. \
+NEFI 토큰은 저장소(Vaults)가 활성화된 모든 체인에 배치되어 있습니다. 다른 체인으로 전환하시려면 [이 가이드를](broken-reference) 참고하시고, 체인 간에 NEFI를 이동하려면 [이 가이드](broken-reference)를 참조하세요. \
 아래는 각 체인의 컨트랙트 주소입니다.
 
 * ~~<mark style="color:blue;">BSC:</mark>~~ [~~<mark style="color:blue;">0xca3f508b8e4dd382ee878a314789373d80a5190a</mark>~~](https://bscscan.com/token/0xca3f508b8e4dd382ee878a314789373d80a5190a)
