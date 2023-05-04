@@ -24,7 +24,7 @@ _우리의 보관소(Vault)를 사용하면 APY에 자동으로 성과 수수료
 
 **그래서 당신은 보는 수익률과 똑같은 수익을 얻을 수 있습니다.**
 
-Nesto의 보관소(Vault)는[ #보관소(Vault)구조는 어떻게 되나요<mark style="color:blue;">?</mark>](../../undefined-1/vaults.md) 항목에 적혀있는 것과 같이 수확한 보상에서 일정한 성과 수수료를 공제합니다. 이 수수료는 해당 보관소(Vault)에 NEFI 스테이킹한 Nesto [자금](../../undefined-3/undefined-3.md)에 다시 분배됩니다.&#x20;
+Nesto의 보관소(Vault)는[ #보관소(Vault)구조](../../undefined-1/vaults.md)<mark style="color:blue;">?</mark> 항목에 적혀있는 것과 같이 수확한 보상에서 일정한 성과 수수료를 공제합니다. 이 수수료는 해당 보관소(Vault)에 NEFI 스테이킹한 Nesto [자금](../../undefined-3/undefined-3.md)에 다시 분배됩니다.&#x20;
 
 **일반적인 보관소(Vault)의 구조는 이렇습니다.**
 
