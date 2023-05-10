@@ -28,7 +28,7 @@
 
 * [보관소(Vaults)](undefined-1/vaults.md)
 * [전략](undefined-1/undefined.md)
-* [후원](undefined-1/undefined-1.md)
+* [Burst](undefined-1/burst.md)
 * [NESTO-escrowed 토큰](undefined-1/nesto-escrowed/README.md)
   * [neFTM](undefined-1/nesto-escrowed/neftm.md)
   * [neSPIRIT](undefined-1/nesto-escrowed/nespirit.md)
