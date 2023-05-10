@@ -28,7 +28,7 @@
 
 * [보관소(Vaults)](undefined-1/vaults.md)
 * [전략](undefined-1/undefined.md)
-* [Burst](undefined-1/burst.md)
+* [Burst](undefined-1/undefined-1.md)
 * [NESTO-escrowed 토큰](undefined-1/nesto-escrowed/README.md)
   * [neFTM](undefined-1/nesto-escrowed/neftm.md)
   * [neSPIRIT](undefined-1/nesto-escrowed/nespirit.md)
@@ -41,7 +41,7 @@
 
 ## 자주하는 질문
 
-* [일반적인 질문](undefined-2/undefined.md)
+* [자주하는 질문](undefined-2/undefined.md)
 * [인포그래픽](undefined-2/undefined-1.md)
 * [보관소(Vaults) API](undefined-2/vaults-api.md)
 * [사용법 가이드](undefined-2/undefined-2/README.md)
