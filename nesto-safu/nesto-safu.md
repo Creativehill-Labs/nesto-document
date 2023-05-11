@@ -1,2 +1,0 @@
-# NESTO SAFU 관행
-

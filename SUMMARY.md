@@ -55,7 +55,7 @@
 
 ## NESTO SAFU 프로토콜
 
-* [NESTO SAFU 관행](nesto-safu/nesto-safu.md)
+* [NESTO AMFU 관행](nesto-safu/nesto-amfu.md)
 * [계약 & 타임록](nesto-safu/and.md)
 * [버그 바운티 프로그램](nesto-safu/undefined.md)
 * [NESTO 안전 점수](nesto-safu/nesto.md)
