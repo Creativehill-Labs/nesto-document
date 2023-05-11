@@ -43,7 +43,7 @@
 
 * [자주하는 질문](undefined-2/undefined.md)
 * [인포그래픽](undefined-2/undefined-1.md)
-* [보관소(Vaults) API](undefined-2/vaults-api.md)
+* [보관소(Vaults) APY](undefined-2/vaults-apy.md)
 * [사용법 가이드](undefined-2/undefined-2/README.md)
   * [보관소(vaults)에 입금하는 방법](undefined-2/undefined-2/vaults.md)
   * [메타마스크에 커스텀 토큰을 추가하는 방법](undefined-2/undefined-2/undefined.md)
