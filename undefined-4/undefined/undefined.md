@@ -54,6 +54,97 @@ StratFeeManager 컨트렉트는 또한 추가 종속성 자체를 소개합니�
 
 ## 쓰기 기능
 
-setStratFeeId()
+### setStratFeeId()
 
 전략에 대한 관련 수수료를 나타내는 전략 수수료 ID의 새 정수 값을 설정합니다.
+
+```
+함수 setStratFeeId ( uint256 _feeId ) 외부 onlyManager {  
+    비프피피구성 . setStratFeeId ( _feeId );
+    SetStratFeeId ( _feeId ) 방출 ; 
+}
+```
+
+### setWithdrawalFee()
+
+수확할 때마다 청구되는 컨트렉트의 인출 수수료에 대한 새로운 정수 값을 설정합니다.
+
+함수 setWithdrawalFee ( uint256 \_fee ) public onlyManager {&#x20;
+
+&#x20;   요구 ( \_fee <= WITHDRAWAL\_FEE\_CAP , "!cap" );
+
+&#x20;   인출 수수료 = \_fee ;
+
+&#x20;   SetWithdrawalFee ( \_fee ) 방출 ;
+
+}
+
+### setVault()
+
+사용자 자금을 관리하는 컨트렉트 Vault의 새 주소를 설정합니다.
+
+```
+사용자 자금을 관리하는 컨트렉트 Vault의 새 주소를 설정합니다.
+기능 setVault ( 주소 _vault ) 외부 onlyOwner {  
+    Vault = _vault ;
+    SetVault ( _vault ) 방출 ; 
+}
+
+```
+
+### setUnirouter()
+
+컨트렉트 내에서 스왑을 처리하는 컨트렉트 라우터의 새 주소를 설정합니다.
+
+```
+기능 setUnirouter ( 주소 _unirouter ) 외부 onlyOwner {  
+    유니라우터 = _unirouter ;
+    SetUnirouter ( _unirouter ) 방출 ; 
+}
+```
+
+### setKeeper()
+
+전략을 "패닉"시킬 수 있는 컨트렉트 관리자를 위한 새 주소를 설정합니다.
+
+```
+기능 setKeeper ( 주소 _keeper ) 외부 onlyManager { 
+    키퍼 = _키퍼 ;
+    SetKeeper ( _keeper ) 방출 ;
+}
+```
+
+### setStrategist()
+
+전략가 수수료를 받는 컨트렉트 전략가의 새 주소를 설정합니다.
+
+```
+기능 setStrategist ( 주소 _strategist ) 외부 {   
+    require ( msg . sender == 전략가 , "!전략가" ); 
+    전략가 = _전략가 ;
+    SetStrategist ( _strategist ) 방출 ; 
+}
+```
+
+### setAmpleFeeRecipient()
+
+수확에 대한 Ample의 수수료(일반적으로 Ample 재무부 컨트렉트)를 받는 사람의 새 주소를 설정합니다.
+
+```
+함수 setAmpleFeeRecipient ( 주소 _AmpleFeeRecipient ) 외부 onlyOwner {  
+    비프피레시피엔트 = _Ample피리시피언트 ;
+    SetAmpleFeeRecipient ( _AmpleFeeRecipient ) 방출 ; 
+}
+
+```
+
+### setAmpleFeeConfig()
+
+수수료를 가져오기 위해 전략에서 사용하는 수수료 구성 컨트렉트의 새 주소를 설정합니다.
+
+```
+기능 setAmpleFeeConfig ( 주소 _AmpleFeeConfig ) 외부 onlyOwner {  
+    AmpleFeeConfig = IFeeConfig ( _AmpleFeeConfig ); 
+    SetAmpleFeeConfig ( _AmpleFeeConfig ) 방출 ; 
+}
+```
