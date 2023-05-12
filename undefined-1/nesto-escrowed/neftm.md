@@ -14,7 +14,7 @@ BeFTM을 얻으려면 먼저 사용자가 FTM을 Beeky Delegator Vault에 예치
 
 \-----------이미지영역--------------
 
-beFTM은 Solidly, BeethovenX, SpiritSwap 및 SpukeySwap과 같은 많은 DEX에서 수동으로 구매할 수도 있습니다. 또한거래를 위해 beFTM 계약 주소가 필요할 수 있습니다. [~~0x7381eD41F6dE418DdE5e84B55590422a57917886~~](https://ftmscan.com/token/0x7381eD41F6dE418DdE5e84B55590422a57917886)
+neFTM은 Solidly, BeethovenX, SpiritSwap 및 SpukeySwap과 같은 많은 DEX에서 수동으로 구매할 수도 있습니다. 또한거래를 위해 beFTM 계약 주소가 필요할 수 있습니다. [~~0x7381eD41F6dE418DdE5e84B55590422a57917886~~](https://ftmscan.com/token/0x7381eD41F6dE418DdE5e84B55590422a57917886)
 
 ## neFTM 위임은 어떻게 작동하나요?
 
