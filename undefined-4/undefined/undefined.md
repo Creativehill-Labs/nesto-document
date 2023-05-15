@@ -1,6 +1,6 @@
 # 전략적 수수료 관리 계약
 
-StratFeeManager [컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/strategies/Common/StratFeeManagerInitializable.sol) 모든 Ample에서 가져오고 사용되는 중요한 종속성 모음입니다.[전략 컨트렉트](https://docs.beefy.finance/developer-documentation/strategy-contract).
+StratFeeManager [컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/strategies/Common/StratFeeManagerInitializable.sol) 모든 Nesto에서 가져오고 사용되는 중요한 종속성 모음입니다.[전략 컨트렉트](https://docs.beefy.finance/developer-documentation/strategy-contract).
 
 [원래 이러한 종속성은 StratManager.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/strategies/Common/StratManager.sol) 및 [FeeManager.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/strategies/Common/FeeManager.sol) 의 두 컨트렉트로 분할되었습니다. Solidity V0.8로 이동한 후 이 둘은 단일 컨트렉트인 [StratFeeManager.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/strategies/Common/StratFeeManager.sol) 로 결합되었습니다. 현재 버전인 [StratFeeManagerInitializable.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/strategies/Common/StratFeeManagerInitializable.sol) 은 모든 단일 전략을 개별적으로 배포할 필요가 없도록 프록시 복제 전략(전략 및 해당 종속성에 대한 관련 인수로 초기화해야 함)으로의 이동을 촉진했습니다.
 

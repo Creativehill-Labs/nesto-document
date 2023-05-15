@@ -1,6 +1,6 @@
 # 수수료 설정 계약
 
-AmpleFeeConfigurator [컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/infra/BeefyFeeConfigurator.sol) Ample가 배포한 각 블록체인에서 호스팅되는 인프라 컨트렉트입니다. 컨트렉트는 관련 체인의 각 전략에 대한 수수료 구성을 관리합니다.[StratFeeManager 컨트렉트](https://docs.beefy.finance/developer-documentation/strategy-contract/stratfeemanager-contract)[IFeeConfig.sol 을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/interfaces/common/IFeeConfig.sol) 통한 인터페이스 .
+NestoFeeConfigurator [컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/infra/BeefyFeeConfigurator.sol) Nesto가 배포한 각 블록체인에서 호스팅되는 인프라 컨트렉트입니다. 컨트렉트는 관련 체인의 각 전략에 대한 수수료 구성을 관리합니다.[StratFeeManager 컨트렉트](https://docs.beefy.finance/developer-documentation/strategy-contract/stratfeemanager-contract)[IFeeConfig.sol 을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/interfaces/common/IFeeConfig.sol) 통한 인터페이스 .
 
 _각 체인의 FeeConfigurator 컨트렉트( "AmpleFeeConfig" )_ 관련 주소는 다음을 사용하여 Ample API에 표시됩니다.[가져오기/구성](https://docs.beefy.finance/developer-documentation/beefy-api#get-config)끝점.
 
@@ -86,7 +86,7 @@ _setStratFeeId ( msg . 보낸 사람 , _feeId );
 
 ### setFeeCategory()
 
-Ample, 수확 호출자 및 전략가 간의 수수료 분할을 포함하여 지정된 _FeeCategory 구조(신규 또는 기존)에 대한 매개변수를 설정합니다._
+Nesto, 수확 호출자 및 전략가 간의 수수료 분할을 포함하여 지정된 _FeeCategory 구조(신규 또는 기존)에 대한 매개변수를 설정합니다._
 
 ```
 함수 setFeeCategory ( 
