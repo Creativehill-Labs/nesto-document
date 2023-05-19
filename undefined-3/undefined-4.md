@@ -26,7 +26,7 @@ Nesto의 핵심 기여자들은 다양한 영역에서 Nesto를 개선하기 위
 
 ## Nesto의 OG
 
-아래는 Nesto의 첫 해에 있었던 Nesto OG의 목록입니다. 일부는 처음부터 Nesto를 초기 단계에서 성장시키는 데 도움을 주었습니다. 통계는 [Ample의 Discord](https://discord.gg/yq8wfHd) 와 가능한 경우 Twitter 계정을 기반으로 합니다. 이 역할은 더 이상 새로운 기여자에게 주어지지 않습니다. Nesto의 핵심 기여자 대부분은 Nesto OG도 마찬가지입니다.
+아래는 Nesto의 첫 해에 있었던 Nesto OG의 목록입니다. 일부는 처음부터 Nesto를 초기 단계에서 성장시키는 데 도움을 주었습니다. 통계는 [Nesto의 Discord](https://discord.gg/yq8wfHd) 와 가능한 경우 Twitter 계정을 기반으로 합니다. 이 역할은 더 이상 새로운 기여자에게 주어지지 않습니다. Nesto의 핵심 기여자 대부분은 Nesto OG도 마찬가지입니다.
 
 | Name                      | Discord                 | Twitter        | Primary Role |
 | ------------------------- | ----------------------- | -------------- | ------------ |
