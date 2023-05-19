@@ -1,5 +1,5 @@
 ---
-description: 이 가이드에서는 Metamask와 AnySwap을 사용하여 크로스 체인으로 AMFI를 전송하는데 필요한 방법에 대해 설명합니다.
+description: 이 가이드에서는 Metamask와 AnySwap을 사용하여 크로스 체인으로 NEFI를 전송하는데 필요한 방법에 대해 설명합니다.
 ---
 
 # NEFI 크로스 체인을 연결하는 방법

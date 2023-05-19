@@ -82,7 +82,7 @@ BIP(Nesto Improvement Proposals) - 어떤 방식으로든 프로토콜 개선을
 
 여기에는 다음을 위한 제안이 포함됩니다.[반복되는 기여자 지불](https://docs.beefy.finance/community-governance/contributor-compensation#reoccurring-payments).
 
-BSP(Nesto Signally Proposals) - $AMFI 보유자 간의 합의를 도출하거나 그들의 의견/선호도를 입증하는 것을 목표로 하는 구속력 없는 대안 제안.
+BSP(Nesto Signally Proposals) - NEFI 보유자 간의 합의를 도출하거나 그들의 의견/선호도를 입증하는 것을 목표로 하는 구속력 없는 대안 제안.
 
 .[자금 요청 / 소급 지급](https://docs.beefy.finance/community-governance/contributor-compensation#retroactive-payments)- Nesto의 간단한 자금 요청[국고](https://docs.beefy.finance/community-governance/treasury)특정 작업 흐름 또는 기여자에 대해. 이는 일반적으로 투자라기보다는 비용의 한 형태입니다.
 
