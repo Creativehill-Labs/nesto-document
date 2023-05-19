@@ -6,7 +6,7 @@
 
 ## 종속성
 
-모든 Ample 전략은 배포 시 전략 컨트렉트로 가져오는 다양한 종속성 및 인터페이스에 의존합니다. 전략이 다양한 기능을 상속할 수 있도록 하는 핵심 종속성은 다음과 같습니다.
+모든 Nesto 전략은 배포 시 전략 컨트렉트로 가져오는 다양한 종속성 및 인터페이스에 의존합니다. 전략이 다양한 기능을 상속할 수 있도록 하는 핵심 종속성은 다음과 같습니다.
 
 그만큼[StratFeeManager 컨트렉트](https://docs.beefy.finance/developer-documentation/strategy-contract/stratfeemanager-contract); 그리고
 
@@ -203,11 +203,11 @@ ITridentRouter ( 유니라우터 ). exactInputWithNativeToken ( _outputToNative 
 uint256 nativeBal = IERC20 ( 네이티브 ). balanceOf ( 주소 ( 이 )) * 수수료 . 합계 / 제수 ; 
 uint256 callFeeAmount = nativeBal * 수수료 . 호출 / 분할수 ;
 IERC20 ( 네이티브 ). safeTransfer ( callFeeRecipient , callFeeAmount );
-uint256 AmpleFeeAmount = nativeBal * 수수료 . 비프 / 디비저 ;
+uint256 NestoFeeAmount = nativeBal * 수수료 . 비프 / 디비저 ;
 IERC20 ( 네이티브 ). safeTransfer ( 비프피수신자 , 비프피수량 );
 uint256 strategistFeeAmount = nativeBal * 수수료 . 전략가 / DIVISOR ;
 IERC20 ( 네이티브 ). safeTransfer ( 전략가 , 전략가 수수료 금액 );
-ChargedFees ( callFeeAmount , AmpleFeeAmount , strategistFeeAmount ) 를 내보냅니다 . 
+ChargedFees ( callFeeAmount , NestoFeeAmount , strategistFeeAmount ) 를 내보냅니다 . 
 }
 
 ```
@@ -242,7 +242,7 @@ ITridentRouter ( 유니라우터 ). addLiquidity ( 토큰 , 원하는 , 1 , 데�
 
 ### setHarvestOnDeposit()
 
-대부분의 Ample Vault는 [예치금으로 수확합니다](https://docs.beefy.finance/products/vaults#what-is-harvesting-on-deposit) . 즉, 사용자의 자금이 전략에 들어가기 전에 전체 Vault의 수익이 수집되어 재투자됩니다. 이것은 새로운 예금자가 기존 예금자의 수익률을 훔치는 것을 방지합니다. 결과적으로 입금 시 수확하도록 설정된 모든 Vault는 인출 수수료를 완전히 제거할 수 있습니다.
+대부분의 Nesto Vault는 [예치금으로 수확합니다](https://docs.beefy.finance/products/vaults#what-is-harvesting-on-deposit) . 즉, 사용자의 자금이 전략에 들어가기 전에 전체 Vault의 수익이 수집되어 재투자됩니다. 이것은 새로운 예금자가 기존 예금자의 수익률을 훔치는 것을 방지합니다. 결과적으로 입금 시 수확하도록 설정된 모든 Vault는 인출 수수료를 완전히 제거할 수 있습니다.
 
 _harvestOnDeposit_ 은 저장소가 예치금에서 수확할 때 true로 설정되는 부울 변수입니다. 이는 아래에 설명된 _setHarvestOnDeposit() 함수에 의해 토글됩니다._
 
@@ -276,7 +276,7 @@ codebool 공개 HarvesOnDeposit ;
 
 ### 공황()
 
-Nesto는 프로토콜에 보관된 사용자 자금을 직접 건드리지 않습니다. _불확실하거나 기본 수익률 농장으로 업그레이드하는 동안 Ample는 제3자 컨트렉트에서 모든 자금을 인출하고 panic() 기능_ 을 사용하여 전략에 안전하게 보관할 수 있습니다 . 전략을 "패닉"함으로써 사용자는 지연이나 제3자 위험에 노출되지 않고 Vault에서 자금을 인출할 수 있습니다. 이 기능은 또한 UniRouter와 기본 이자 농사 컨트렉트에 대한 모든 허용치를 제거하여 해당 컨트렉트로 자금이 인출되지 않도록 합니다.
+Nesto는 프로토콜에 보관된 사용자 자금을 직접 건드리지 않습니다. _불확실하거나 기본 수익률 농장으로 업그레이드하는 동안 Nesto는 제3자 컨트렉트에서 모든 자금을 인출하고 panic() 기능_ 을 사용하여 전략에 안전하게 보관할 수 있습니다 . 전략을 "패닉"함으로써 사용자는 지연이나 제3자 위험에 노출되지 않고 Vault에서 자금을 인출할 수 있습니다. 이 기능은 또한 UniRouter와 기본 이자 농사 컨트렉트에 대한 모든 허용치를 제거하여 해당 컨트렉트로 자금이 인출되지 않도록 합니다.
 
 ```
 함수 패닉 () public onlyManager {  
