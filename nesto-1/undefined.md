@@ -2,7 +2,7 @@
 
 NestoFeeConfigurator [컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/infra/BeefyFeeConfigurator.sol) Nesto가 배포한 각 블록체인에서 호스팅되는 인프라 컨트렉트입니다. 컨트렉트는 관련 체인의 각 전략에 대한 수수료 구성을 관리합니다.[StratFeeManager 컨트렉트](https://docs.beefy.finance/developer-documentation/strategy-contract/stratfeemanager-contract)[IFeeConfig.sol 을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/interfaces/common/IFeeConfig.sol) 통한 인터페이스 .
 
-_각 체인의 FeeConfigurator 컨트렉트( "AmpleFeeConfig" )_ 관련 주소는 다음을 사용하여 Ample API에 표시됩니다.[가져오기/구성](https://docs.beefy.finance/developer-documentation/beefy-api#get-config)끝점.
+_각 체인의 FeeConfigurator 컨트렉트( "NestoFeeConfig" )_ 관련 주소는 다음을 사용하여 Nesto API에 표시됩니다.[가져오기/구성](https://docs.beefy.finance/developer-documentation/beefy-api#get-config)끝점.
 
 ## 수식어
 
@@ -19,7 +19,7 @@ _각 체인의 FeeConfigurator 컨트렉트( "AmpleFeeConfig" )_ 관련 주소�
 
 ### getFees()
 
-_특정 전략 주소 인수에 대한 FeeCategory 구조를_ 반환하여 청구된 총 수수료, Ample, 수확 호출자 및 전략가에 대한 수수료, 수수료 범주 유형에 대한 설명을 표시하는 문자열 및 "활성" 부울 변수를 표시하여 "활성" 부울 변수를 반환 _합니다_ . 수수료 카테고리가 켜져 있거나 꺼져 있습니다.
+_특정 전략 주소 인수에 대한 FeeCategory 구조를_ 반환하여 청구된 총 수수료, Nesto, 수확 호출자 및 전략가에 대한 수수료, 수수료 범주 유형에 대한 설명을 표시하는 문자열 및 "활성" 부울 변수를 표시하여 "활성" 부울 변수를 반환 _합니다_ . 수수료 카테고리가 켜져 있거나 꺼져 있습니다.
 
 _"\_adjust" 부울 변수 인수를_ 포함하여 수수료를 true로 설정한 경우 총 수확량의 %로 표시하거나 false로 설정한 경우 총 수수료의 %로 표시합니다.
 
@@ -104,9 +104,9 @@ Nesto, 수확 호출자 및 전략가 간의 수수료 분할을 포함하여 �
         _strategist = _strategist * DIVISOR / _total ;
     }
     uint256 우둔함 = DIVISOR - _call - _strategist ;
-    FeeCategory 메모리 카테고리 = FeeCategory ( _total , Ample , _call , _strategist , _label , _active ); 
+    FeeCategory 메모리 카테고리 = FeeCategory ( _total , Nesto , _call , _strategist , _label , _active ); 
     feeCategory [ _id ] = 카테고리 ; 
-    SetFeeCategory ( _id , _total , Ample , _call , _strategist , _label , _active ) 방출 ; 
+    SetFeeCategory ( _id , _total , Nesto , _call , _strategist , _label , _active ) 방출 ; 
 }
 
 ```
