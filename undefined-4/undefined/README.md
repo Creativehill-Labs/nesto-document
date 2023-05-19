@@ -1,6 +1,6 @@
 # 전략 계약
 
-전략[ 컨트렉트는](https://github.com/beefyfinance/beefy-contracts/tree/master/contracts/BIFI/strategies) Ample 투자 모델의 주요 동인이며, 이는 수확량 농장 보상의 자동 합성을 용이하게 합니다. Ample의 프로세스에는 세 가지 주요 단계가 있습니다. (1) 관련 농장에 예치된 토큰을 스테이킹합니다. (2) 수확 보상; (3) 보상을 더 많은 예치 토큰으로 교환하고 수익금을 재투자합니다.
+전략[ 컨트렉트는](https://github.com/beefyfinance/beefy-contracts/tree/master/contracts/BIFI/strategies) Nesto 투자 모델의 주요 동인이며, 이는 수확량 농장 보상의 자동 합성을 용이하게 합니다. Nesto의 프로세스에는 세 가지 주요 단계가 있습니다. (1) 관련 농장에 예치된 토큰을 스테이킹합니다. (2) 수확 보상; (3) 보상을 더 많은 예치 토큰으로 교환하고 수익금을 재투자합니다.
 
 각 전략 컨트렉트는 궁극적으로 [Vault 컨트렉트](https://docs.beefy.finance/developer-documentation/vault-contract)그들이 배포하는 자본에 대해 일반 사용자와 직접적인 상호 작용이 없습니다. Vault 및 전략 컨트렉트는 사용자 예치금에서 전략의 모든 위험을 격리하기 위해 별도로 유지됩니다.
 
