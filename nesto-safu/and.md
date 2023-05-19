@@ -2,11 +2,11 @@
 
 ## 주소록     &#x20;
 
-사용되는 모든 주소는 오픈 소스이며 확인 가능합니다. Ample 체인에서 DeFi 개발에 유용한 주소 모음은 GitHub의[ ~~Address Book~~](https://github.com/beefyfinance/beefy-api/tree/master/packages/address-book)에 저장되어 있습니다.
+사용되는 모든 주소는 오픈 소스이며 확인 가능합니다. Nesto 체인에서 DeFi 개발에 유용한 주소 모음은 GitHub의[ ~~Address Book~~](https://github.com/beefyfinance/beefy-api/tree/master/packages/address-book)에 저장되어 있습니다.
 
 ## 컨트렉트
 
-Vault UI를 통해 전략 주소와 Vault 주소를 쉽게 찾을 수 있습니다. 또한, 모든 Ample 보관소 컨트렉트는 [dashboard.Ample.finance](https://dashboard.beefy.finance/)에서 확인할 수 있습니다. 예를 들어,&#x20;
+Vault UI를 통해 전략 주소와 Vault 주소를 쉽게 찾을 수 있습니다. 또한, 모든 Nesto 보관소 컨트렉트는 [dashboard.Nesto.finance](https://dashboard.beefy.finance/)에서 확인할 수 있습니다. 예를 들어,&#x20;
 
 이 대시보드를 사용하여 보관소의 [수확 및 복리 적용 비율](https://github.com/beefyfinance/beefy-api/tree/master/packages/address-book)을 확인할 수 있습니다.
 
