@@ -20,7 +20,7 @@ ZAP을 사용할 때 항상 견적을 확인하세요! ZAP은 시장 슬리피�
 사이트가 지속적으로 업데이트 중이기 때문에 현재와 다를 수 있습니다.
 {% endhint %}
 
-이 튜토리얼 위해, 우리는 폴리곤 블록체인의 디스토피아 DEX에서 Ample의 stMATIC-MATIC sLP Vault를 사용합니다. 이 Vault는 ZAP V1과 ZAP V2를 모두 지원합니다.
+이 튜토리얼 위해, 우리는 폴리곤 블록체인의 디스토피아 DEX에서 Nesto의 stMATIC-MATIC sLP Vault를 사용합니다. 이 Vault는 ZAP V1과 ZAP V2를 모두 지원합니다.
 
 \---------이미지영역--------------
 

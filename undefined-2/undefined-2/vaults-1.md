@@ -16,7 +16,7 @@ Binance Smart Chain에서 CAKE-BNB LP Vault를 예로 들겠습니다.
 
 \---------이미지영역--------------
 
-#### 1.[~~dashboard.Ample.finance~~](https://dashboard.beefy.finance/)로 이동합니다.
+#### 1.[~~dashboard.Nesto.finance~~](https://dashboard.beefy.finance/)로 이동합니다.
 
 이 대시보드는 지갑(예: MetaMask)이 연결된 블록체인 네트워크를 기반으로 표시할 통계 및 볼트를 선택합니다. 따라서 현재 BSC 네트워크에 있지 않은 경우 네트워크를 해당 네트워크로 전환하면 대시보드 페이지가 새로 고쳐져 Nesto의 통계 및 BSC 보관소가 표시됩니다.
 
