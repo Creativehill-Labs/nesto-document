@@ -70,7 +70,7 @@ Nesto는 공식적인 정족수를 채택한 적이 없으므로 이전 거버�
 
 ## **제안서는 어떻게 작성하나요?**
 
-제출자가 최소 1 NEFI를 보유하거나 스테이크하는 경우 제안서를 생성할 수 있습니다. [https://vote.Ample.finance/#/를](https://vote.beefy.finance/#/) 방문하여 새 제안을 클릭하십시오.
+제출자가 최소 1 NEFI를 보유하거나 스테이크하는 경우 제안서를 생성할 수 있습니다. [https://vote.Nesto.finance/#/를](https://vote.beefy.finance/#/) 방문하여 새 제안을 클릭하십시오.
 
 각 제안은 다른 사람들이 귀하의 질문에 대한 응답으로 투표할 수 있는 선택 옵션과 함께 커뮤니티에 제기할 질문으로 구성됩니다. 제안서의 시작일과 종료일을 설정하고 게시하기만 하면 됩니다.
 
@@ -86,7 +86,7 @@ BSP(Nesto Signally Proposals) - $AMFI 보유자 간의 합의를 도출하거나
 
 .[자금 요청 / 소급 지급](https://docs.beefy.finance/community-governance/contributor-compensation#retroactive-payments)- Nesto의 간단한 자금 요청[국고](https://docs.beefy.finance/community-governance/treasury)특정 작업 흐름 또는 기여자에 대해. 이는 일반적으로 투자라기보다는 비용의 한 형태입니다.
 
-.[교부금 제안서](https://docs.beefy.finance/community-governance/contributor-compensation#beefygrants)- 자금 조달에 대한 자세한 요청[국고](https://docs.beefy.finance/community-governance/treasury), 일반적으로 상당한 자금과 입력이 필요하지만 Ample에 미래 수익 또는 비용 절감을 제공하는 것을 목표로 하는 대규모 프로젝트와 관련됩니다(그래서 비용이 아닌 투자입니다).
+.[교부금 제안서](https://docs.beefy.finance/community-governance/contributor-compensation#beefygrants)- 자금 조달에 대한 자세한 요청[국고](https://docs.beefy.finance/community-governance/treasury), 일반적으로 상당한 자금과 입력이 필요하지만 Nesto에 미래 수익 또는 비용 절감을 제공하는 것을 목표로 하는 대규모 프로젝트와 관련됩니다(그래서 비용이 아닌 투자입니다).
 
 ## 악의적인 투표로부터 어떻게 보호하나요?
 
@@ -96,8 +96,8 @@ BSP(Nesto Signally Proposals) - $AMFI 보유자 간의 합의를 도출하거나
 
 ## 지난 투표의 세부 정보는 어디에서 찾을 수 있나요?
 
-[최근 투표는 스냅샷 페이지](https://vote.beefy.finance/) 에 저장됩니다. 2021년 말에 Ample는 Bianace Smart Chain(BSC)에서만 실행되는 맞춤형 Snapshot 포크에서 Ample의 각 체인을 지원할 수 있는 최신 Snapshot 인스턴스로 전환했습니다. 전환 결과 2022년이 시작되기 전에 종료되는 제안은 새 사이트로 이월되지 않았습니다. 대신 원본 사이트의 보관된 사본이 보존되었습니다.
+[최근 투표는 스냅샷 페이지](https://vote.beefy.finance/) 에 저장됩니다. 2021년 말에 Nesto는 Bianace Smart Chain(BSC)에서만 실행되는 맞춤형 Snapshot 포크에서 Nesto의 각 체인을 지원할 수 있는 최신 Snapshot 인스턴스로 전환했습니다. 전환 결과 2022년이 시작되기 전에 종료되는 제안은 새 사이트로 이월되지 않았습니다. 대신 원본 사이트의 보관된 사본이 보존되었습니다.
 
-보관된 Nesto 투표 사이트에 대한 액세스는 [https://vote-archive.Ample.finance/](https://vote-archive.beefy.finance/) 에서 사용할 수 있습니다. 보관된 사이트는 사용자가 자신의 지갑을 사이트와 BSC 메인넷 모두에 연결하여 역사적인 제안을 표시하도록 요구합니다. 현재 투표 사이트는 [https://vote.Ample.finance/#/](https://vote.beefy.finance/#/) 에서 실시간으로 볼 수 있습니다.
+보관된 Nesto 투표 사이트에 대한 액세스는 [https://vote-archive.Nesto.finance/](https://vote-archive.beefy.finance/) 에서 사용할 수 있습니다. 보관된 사이트는 사용자가 자신의 지갑을 사이트와 BSC 메인넷 모두에 연결하여 역사적인 제안을 표시하도록 요구합니다. 현재 투표 사이트는 [https://vote.Nesto.finance/#/](https://vote.beefy.finance/#/) 에서 실시간으로 볼 수 있습니다.
 
 [또는 여기 문서에서 제안 저장소를](https://docs.beefy.finance/community-governance/proposal-repository) 준비하고 유지 관리합니다. 여기에서 우리 역사를 통틀어 투표 사이트 중 하나의 주요 제안에 빠르게 액세스할 수 있습니다.
