@@ -5,7 +5,7 @@ Nesto의 중심에는 혁신과 빠른 개발 문화가 있습니다. 1일 차�
 효과적인 보상과 보상은 인재를 지속적으로 유치 및 개발하고 DAO를 성장시키기 위해 이러한 문화를 구축하는 데 필수적입니다. 개방성과 투명성의 정신으로 이 페이지에서는 Nesto에서 보상에 대해 어떻게 생각하는지, 참여와 성장을 동기를 부여하기 위한 이니셔티브에 대해 설명합니다.
 
 {% hint style="warning" %}
-보관된 Nesto 투표 사이트에 대한 액세스는 [https://vote-archive.Ample.finance/](https://vote-archive.beefy.finance/) 에서 사용할 수 있습니다. 보관된 사이트는 사용자가 자신의 지갑을 사이트와 BSC 메인넷 모두에 연결하여 역사적인 제안을 표시하도록 요구합니다. 현재 투표 사이트는 [https://vote.Ample.finance/#/](https://vote.beefy.finance/#/) 에서 실시간으로 볼 수 있습니다.
+보관된 Nesto 투표 사이트에 대한 액세스는 [https://vote-archive.Nesto.finance/](https://vote-archive.beefy.finance/) 에서 사용할 수 있습니다. 보관된 사이트는 사용자가 자신의 지갑을 사이트와 BSC 메인넷 모두에 연결하여 역사적인 제안을 표시하도록 요구합니다. 현재 투표 사이트는 [https://vote.Nesto.finance/#/](https://vote.beefy.finance/#/) 에서 실시간으로 볼 수 있습니다.
 {% endhint %}
 
 ## 토큰 분배
@@ -26,9 +26,9 @@ Nesto 개발 초기 몇 달 동안 소급 보상은 커뮤니티의 노력을 �
 
 ## 개발자 인센티브
 
-대조적으로, 제품 개발 작업(예: 새로운 Ample Vault 구축)은 제품이 생성하는 이익을 측정하여 평가하기가 훨씬 쉽습니다. 성공적인 제품이 가져올 미래 이익의 가치를 알 수 없기 때문에 일회성 지불은 분명히 제품 개발에 대한 열등한 형태의 보상입니다. 마찬가지로 시간이 지남에 따라 NEFI를 보유하면 개발자의 노력의 결과가 커뮤니티에 반환될 것이라고 믿지만 이것이 개발자가 일반 NEFI 보유자보다 더 많이 참여하도록 장려하지 않는다는 것을 알고 있습니다.
+대조적으로, 제품 개발 작업(예: 새로운 Nesto Vault 구축)은 제품이 생성하는 이익을 측정하여 평가하기가 훨씬 쉽습니다. 성공적인 제품이 가져올 미래 이익의 가치를 알 수 없기 때문에 일회성 지불은 분명히 제품 개발에 대한 열등한 형태의 보상입니다. 마찬가지로 시간이 지남에 따라 NEFI를 보유하면 개발자의 노력의 결과가 커뮤니티에 반환될 것이라고 믿지만 이것이 개발자가 일반 NEFI 보유자보다 더 많이 참여하도록 장려하지 않는다는 것을 알고 있습니다.
 
-이러한 문제와 제품 개발 인센티브의 가치를 인식하여 Ample는 개발자가 성공적으로 개발하고 배포한 모든 저장소에 대해 모든 수확량의 0.5%를 (성과 수수료 구조의 일부로) 제공합니다. [누구나 Ample의 오픈 소스 코드와 유용한 가이드를](https://github.com/beefyfinance/beefy-contracts/blob/master/tutorials/deploy-pancakeswap-vault.md#setting-up-a-development-environment) 사용하여 전략가가 되어 자신만의 Vault를 개발할 수 있습니다.
+이러한 문제와 제품 개발 인센티브의 가치를 인식하여 Nesto는 개발자가 성공적으로 개발하고 배포한 모든 저장소에 대해 모든 수확량의 0.5%를 (성과 수수료 구조의 일부로) 제공합니다. [누구나 Nesto의 오픈 소스 코드와 유용한 가이드를](https://github.com/beefyfinance/beefy-contracts/blob/master/tutorials/deploy-pancakeswap-vault.md#setting-up-a-development-environment) 사용하여 전략가가 되어 자신만의 Vault를 개발할 수 있습니다.
 
 커뮤니티가 보증하는 보상은 항상 중요한 버그 수정을 과소평가할 가능성이 높기 때문에 코드베이스의 관리자에게도 비슷한 인센티브 문제가 발생합니다(특히 해결사가 버그를 악용하여 도난이나 몸값을 받을 수 있는 보상과 비교할 때). 이러한 기여를 보상하기 위해 우리는 화이트햇 해커를 위한 암호화 버그 바운티 플랫폼인 Immunefi와 함께 추가 [버그 바운티 프로그램을](https://immunefi.com/bounty/beefyfinance/) 시작했습니다. 성공한 청구인은 상당한 악용, 공격 또는 절도 기회를 노출한 대가로 최대 $75,000를 받을 수 있습니다.
 
