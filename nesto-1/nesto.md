@@ -1,6 +1,6 @@
 # NESTO 래퍼 계약
 
-NestoWrapper [컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapper.sol) Nesto를 만드는 ERC-4626 어댑터 인터페이스입니다.[Vault 컨트렉트](https://docs.beefy.finance/developer-documentation/vault-contract)ERC-4626 [표준](https://eips.ethereum.org/EIPS/eip-4626) 과 호환됩니다 . 표준의 구성 가능성을 잠금 해제하고 추가 어댑터 및 플러그인 없이도 외부 프로토콜을 통해 Ample Vaults와의 원활한 인터페이스 및 상호 작용을 가능하게 합니다.
+NestoWrapper [컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapper.sol) Nesto를 만드는 ERC-4626 어댑터 인터페이스입니다.[Vault 컨트렉트](https://docs.beefy.finance/developer-documentation/vault-contract)ERC-4626 [표준](https://eips.ethereum.org/EIPS/eip-4626) 과 호환됩니다 . 표준의 구성 가능성을 잠금 해제하고 추가 어댑터 및 플러그인 없이도 외부 프로토콜을 통해 Nestp Vaults와의 원활한 인터페이스 및 상호 작용을 가능하게 합니다.
 
 이 페이지에서는 ERC-4626 표준의 일부 배경과 NestoWrapper 컨트렉트의 기능을 설명합니다.
 
@@ -24,9 +24,9 @@ NestoWrapper 컨트렉트의 기능은 호출자의 Nesto Vault 토큰 전송에
 .
 함수 랩 ( uint256 amount ) public { 
 .
-// 지정된 양의 발신자의 Ample Vault 토큰을 래퍼로 전송합니다.
+// 지정된 양의 발신자의 Nesto Vault 토큰을 래퍼로 전송합니다.
 IERC20업그레이드 가능 ( Vault ). safeTransferFrom ( msg . 보낸 사람 , 주소 ( 이 ), 금액 ); 
-// 호출자에게 래핑된 지정된 양의 Ample Vault 토큰을 생성합니다.
+// 호출자에게 래핑된 지정된 양의 Nesto Vault 토큰을 생성합니다.
 _mint ( 메시지 . 보낸 사람 , 금액 );
 }
 
@@ -46,7 +46,7 @@ wrap ( IERC20Upgradeable ( Vault ) .balanceOf ( msg.sender ) ) ;
 
 ### 풀다()
 
-호출자의 래핑된 Ample Vault 토큰의 지정된 양을 소각하여 동일한 양의 래핑되지 않은 토큰을 래퍼 컨트렉트에서 호출자에게 다시 전송합니다.
+호출자의 래핑된 Nesto Vault 토큰의 지정된 양을 소각하여 동일한 양의 래핑되지 않은 토큰을 래퍼 컨트렉트에서 호출자에게 다시 전송합니다.
 
 ```
 // 일정량의 Vault 공유 토큰을 풉니다.
@@ -54,9 +54,9 @@ wrap ( IERC20Upgradeable ( Vault ) .balanceOf ( msg.sender ) ) ;
 .
 함수 풀기 ( uint256 양 ) public { 
 .
-// 발신자의 래핑된 Ample Vault 토큰의 지정된 양을 소각합니다.
+// 발신자의 래핑된 Nesto Vault 토큰의 지정된 양을 소각합니다.
 _burn ( 메시지 . 보낸 사람 , 금액 );
-// 지정된 양의 Ample Vault 토큰을 호출자에게 다시 전송합니다.
+// 지정된 양의 Nesto Vault 토큰을 호출자에게 다시 전송합니다.
 IERC20업그레이드 가능 ( Vault ). safeTransfer ( msg . 보낸 사람 , 금액 );
 }
 
@@ -91,7 +91,7 @@ unwrap ( balanceOf ( msg.sender ) ) ;
 // 호출자의 토큰을 래퍼로 전송합니다.
 IERC20업그레이드 가능 ( 자산 ()). safeTransferFrom ( 호출자 , 주소 ( this ), 자산 ); 
 uint balance = IERC20Upgradeable ( Vault ). balanceOf ( 주소 ( 이 )); 
-// 호출자의 토큰을 Ample Vault에 보관합니다.
+// 호출자의 토큰을 Nesto Vault에 보관합니다.
 IVault ( Vault ). 예금 ( 자산 );
 .
 // 수신자에게 래핑된 토큰을 생성합니다.
@@ -144,12 +144,12 @@ NestoWrapperFactory를 통해 NestoWrapper 컨트렉트를 모든 Vault에 배�
 OpenZeppelin 표준 프록시 템플릿 [ClonesUpgradeable.sol을](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/proxy/ClonesUpgradeable.sol) 사용하여 AmpleWrapper 컨트렉트의 복제본인 프록시 컨트렉트를 생성합니다.
 
 ```
-// 템플릿 인스턴스의 프록시로 새 Ample Vault 래퍼를 생성합니다.
-/// "_vault" 매개변수는 복제된 Ample Vault입니다.
-/// "proxy" 반환은 새로운 프록시된 Ample Vault 래퍼입니다.
+// 템플릿 인스턴스의 프록시로 새 Nesto Vault 래퍼를 생성합니다.
+/// "_vault" 매개변수는 복제된 Nesto Vault입니다.
+/// "proxy" 반환은 새로운 프록시된 Nesto Vault 래퍼입니다.
 .
 함수 복제 ( 주소 _vault ) 외부 반환 ( 주소 프록시 ) { 
-// 프록시는 AmpleWrapper 컨트렉트 인스턴스의 복제본으로 설정됩니다.
+// 프록시는 NestoWrapper 컨트렉트 인스턴스의 복제본으로 설정됩니다.
 프록시 = 구현 . 클론 ();
 // 위에서 설정한 래퍼 프록시를 초기화합니다.
 IWrapper ( 프록시 ). 초기화 (
@@ -165,8 +165,8 @@ ProxyCreated ( 프록시 ) 방출 ;
 
 ### 컨트렉트
 
-템플릿 Nesto Vault 래퍼 컨트렉트는 Nesto의 GitHub 리포지토리에서 공개적으로 유지 관리됩니다. [AmpleWrapper.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapper.sol) 및 [AmpleWrapperFactory.sol 을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapperFactory.sol) 참조하십시오 .
+템플릿 Nesto Vault 래퍼 컨트렉트는 Nesto의 GitHub 리포지토리에서 공개적으로 유지 관리됩니다. [NestoWrapper.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapper.sol) 및 [NestoWrapperFactory.sol 을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapperFactory.sol) 참조하십시오 .
 
-각 Nesto Vault에 대한 래퍼 컨트렉트는 관련 체인에 별도로 배포되며 반드시 유사한 컨트렉트 주소에 배포되지는 않습니다. [Polygon 블록체인에 배포된 샘플 컨트렉트를 테스트하려면 이 AmpleWrapper.sol](https://polygonscan.com/address/0x776994eab59b894fb892d08a46329c5077c9e226) 인스턴스 및 이 [AmpleWrapperFactory.sol](https://polygonscan.com/address/0xd1cedfb11994ebbc1608ae46d7c7176294bdd599) 인스턴스를 참조하십시오 .
+각 Nesto Vault에 대한 래퍼 컨트렉트는 관련 체인에 별도로 배포되며 반드시 유사한 컨트렉트 주소에 배포되지는 않습니다. [Polygon 블록체인에 배포된 샘플 컨트렉트를 테스트하려면 이 NestoWrapper.sol](https://polygonscan.com/address/0x776994eab59b894fb892d08a46329c5077c9e226) 인스턴스 및 이 [NestoWrapperFactory.sol](https://polygonscan.com/address/0xd1cedfb11994ebbc1608ae46d7c7176294bdd599) 인스턴스를 참조하십시오 .
 
 \
