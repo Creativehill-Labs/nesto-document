@@ -6,7 +6,7 @@ StratFeeManager [컨트렉트는](https://github.com/beefyfinance/beefy-contract
 
 ## 종속성
 
-StratFeeManager 컨트렉트는 또한 추가 종속성 자체를 소개합니다. 특히 [Ownable.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol) 은 컨트렉트의 소유자를 설정하고 기능을 소유자에게만 제한하는 기능을 도입하고 [Pausable.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/Pausable.sol) 은 컨트렉트를 일시 중지하여 컨트렉트의 기능을 동결하는 기능을 도입합니다. 두 종속성은 궁극적으로 모든 Ample 전략 컨트렉트에 포함됩니다.
+StratFeeManager 컨트렉트는 또한 추가 종속성 자체를 소개합니다. 특히 [Ownable.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol) 은 컨트렉트의 소유자를 설정하고 기능을 소유자에게만 제한하는 기능을 도입하고 [Pausable.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/Pausable.sol) 은 컨트렉트를 일시 중지하여 컨트렉트의 기능을 동결하는 기능을 도입합니다. 두 종속성은 궁극적으로 모든 Nesto 전략 컨트렉트에 포함됩니다.
 
 ## 수식어
 
@@ -28,7 +28,7 @@ StratFeeManager 컨트렉트는 또한 추가 종속성 자체를 소개합니�
 
 ```
 함수 getFees () 내부 보기 반환  IFeeConfig. FeeCategory 메모리) {      
-    AmpleFeeConfig 를 반환합니다. getFees (주소 ( 이 ));
+    NestoFeeConfig 를 반환합니다. getFees (주소 ( 이 ));
 }
 ```
 
@@ -48,7 +48,7 @@ StratFeeManager 컨트렉트는 또한 추가 종속성 자체를 소개합니�
 
 ```
 함수 getStratFeeId () 외부 보기 가 반환됨 ( uint256 ) {      
-    AmpleFeeConfig 를 반환합니다 . stratFeeId ( 주소 ( 이 ));
+    NestoFeeConfig 를 반환합니다 . stratFeeId ( 주소 ( 이 ));
 }
 ```
 
@@ -126,25 +126,25 @@ StratFeeManager 컨트렉트는 또한 추가 종속성 자체를 소개합니�
 }
 ```
 
-### setAmpleFeeRecipient()
+### setNestoFeeRecipient()
 
-수확에 대한 Ample의 수수료(일반적으로 Ample 재무부 컨트렉트)를 받는 사람의 새 주소를 설정합니다.
+수확에 대한 Nesto의 수수료(일반적으로 Nesto 재무부 컨트렉트)를 받는 사람의 새 주소를 설정합니다.
 
 ```
-함수 setAmpleFeeRecipient ( 주소 _AmpleFeeRecipient ) 외부 onlyOwner {  
-    비프피레시피엔트 = _Ample피리시피언트 ;
-    SetAmpleFeeRecipient ( _AmpleFeeRecipient ) 방출 ; 
+함수 setNestoFeeRecipient ( 주소 _NestoFeeRecipient ) 외부 onlyOwner {  
+    비프피레시피엔트 = _Nesto피리시피언트 ;
+    SetNestoFeeRecipient ( _NestoFeeRecipient ) 방출 ; 
 }
 
 ```
 
-### setAmpleFeeConfig()
+### setNestoFeeConfig()
 
 수수료를 가져오기 위해 전략에서 사용하는 수수료 구성 컨트렉트의 새 주소를 설정합니다.
 
 ```
-기능 setAmpleFeeConfig ( 주소 _AmpleFeeConfig ) 외부 onlyOwner {  
-    AmpleFeeConfig = IFeeConfig ( _AmpleFeeConfig ); 
-    SetAmpleFeeConfig ( _AmpleFeeConfig ) 방출 ; 
+기능 setNestoFeeConfig ( 주소 _NestoFeeConfig ) 외부 onlyOwner {  
+    NestoFeeConfig = IFeeConfig ( _NestoFeeConfig ); 
+    SetNESTOFeeConfig ( _NestoFeeConfig ) 방출 ; 
 }
 ```
