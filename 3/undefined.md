@@ -116,7 +116,7 @@ ClearDelegate ( msg . sender , id , currentDelegate ) 방출 ;
 
 4.투표권을 위임할 사용자의 주소 또는 ENS 이름을 입력합니다.
 
-5.원하는 경우 "특정 공간으로 위임 제한"을 선택하여 위임을 Ample Snapshot 공간으로만 제한할 수 있습니다. 그렇게 하려면 다음 공백을 입력하십시오: Ampledao.eth.
+5.원하는 경우 "특정 공간으로 위임 제한"을 선택하여 위임을 Nesto Snapshot 공간으로만 제한할 수 있습니다. 그렇게 하려면 다음 공백을 입력하십시오: Nestodao.eth.
 
 6.지갑에서 거래를 시작하려면 "확인"을 클릭하십시오. 이것은 쓰기 트랜잭션(예: 블록체인에 저장하기 위한 정보 제출)이므로 트랜잭션을 용이하게 하기 위해 소량의 가스를 지불해야 합니다.
 
@@ -156,10 +156,10 @@ ClearDelegate ( msg . sender , id , currentDelegate ) 방출 ;
 
 ### 컨트렉트
 
-DelegateRegistry 컨트렉트 및 Ample 스냅샷 공간은 다음 주소에 배포됩니다.
+DelegateRegistry 컨트렉트 및 Nesto 스냅샷 공간은 다음 주소에 배포됩니다.
 
 * DelegateRegistry - [0x469788fE6E9E9681C6ebF3bF78e7Fd26Fc015446](https://bscscan.com/address/0x469788fE6E9E9681C6ebF3bF78e7Fd26Fc015446) .
-* Nesto Space ID - 0x626565667964616f2e657468 또는 Ampledao.eth.
+* Nesto Space ID - 0x626565667964616f2e657468 또는 Nestodao.eth.
 
 ### 추가 정보
 

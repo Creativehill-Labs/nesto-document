@@ -8,7 +8,7 @@ GaugeStaker는 어떻게 작동합니까?
 
 GaugeStaker에는 세 가지 중요한 역할이 있습니다. (1) inSPIRIT 보상을 축적하기 위해 사용자 SPIRIT 예금을 관리합니다. (2) SpiritSwap Aoost 농장에 대한 투표 관리; (3) 다른 Nesto SpiritSwap 전략과 Aoost 파밍 게이지 간에 토큰을 전달합니다.
 
-사용자가 SPIRIT를 입금하면 GaugeStaker는 자동으로 SpiritSwap으로 SPIRIT를 스테이킹하여 양도할 수 없는 inSPIRIT를 받습니다. 스테이킹된 모든 SPIRIT도 잠금 상태여야 하므로(따라서 인출할 수 없음), GaugeStaker는 가능한 한 가장 긴 기간(현재 4년) 동안 모든 예치금을 잠가 최대 양의 inSPIRIT를 받습니다. 프로토콜 수익 보상은 잠긴 SPIRIT에서 지속적으로 발생하며 GaugeStaker는 이러한 보상을 자동으로 청구하고 정기적으로 [Ample ainFTM Vault 에 반환하여 자동으로 합산합니다.](https://app.beefy.finance/#/vault/beefy-binspirit)
+사용자가 SPIRIT를 입금하면 GaugeStaker는 자동으로 SpiritSwap으로 SPIRIT를 스테이킹하여 양도할 수 없는 inSPIRIT를 받습니다. 스테이킹된 모든 SPIRIT도 잠금 상태여야 하므로(따라서 인출할 수 없음), GaugeStaker는 가능한 한 가장 긴 기간(현재 4년) 동안 모든 예치금을 잠가 최대 양의 inSPIRIT를 받습니다. 프로토콜 수익 보상은 잠긴 SPIRIT에서 지속적으로 발생하며 GaugeStaker는 이러한 보상을 자동으로 청구하고 정기적으로 [Nesto ainFTM Vault 에 반환하여 자동으로 합산합니다.](https://app.beefy.finance/#/vault/beefy-binspirit)
 
 inSPIRIT 보유자는 SpiritSwap 거버넌스 및 burst된 농장 보상 분배에 [투표 할 자격이 있으므로 GaugeStaker가 이러한 투표 할당을 관리합니다.](https://docs.beefy.finance/products/beefy-escrowed-tokens/binspirit#can-i-vote-with-binspirit)
 

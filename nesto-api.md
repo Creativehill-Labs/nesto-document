@@ -82,7 +82,7 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 
 ### 기타 엔드포인트
 
-[Ample 애플리케이션](https://app.beefy.finance/) 에서 개별 Vault와 관련되지 않은 기타 정보를 표시하는 데 사용하도록 개발된 엔드포인트입니다
+[Nesto 애플리케이션](https://app.beefy.finance/) 에서 개별 Vault와 관련되지 않은 기타 정보를 표시하는 데 사용하도록 개발된 엔드포인트입니다
 
 <details>
 
@@ -113,7 +113,7 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 프로토콜에 대한 중요한 정보를 표시하기 위해 [Nesto Dashboard](https://dashboard.beefy.finance/) 용으로 개발된 엔드포인트입니다.
 
 {% hint style="info" %}
-대시보드 사이트와 /earnings 엔드포인트는 더 이상 Ample에서 적극적으로 유지 관리하지 않습니다. 대시보드 사이트는 활성 상태로 유지되지만 구현된 모든 Vault와 Ample가 배포한 모든 체인을 반영하지는 않습니다.
+대시보드 사이트와 /earnings 엔드포인트는 더 이상 Nesto에서 적극적으로 유지 관리하지 않습니다. 대시보드 사이트는 활성 상태로 유지되지만 구현된 모든 Vault와 Nesto가 배포한 모든 체인을 반영하지는 않습니다.
 {% endhint %}
 
 <details>
@@ -148,7 +148,7 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 
 Nesto는 현재 프로토콜의 하위 그래프를 운영하거나 유지하지 않습니다.
 
-[Messari의 친구들은 https://api.thegraph.com/subgraphs/name/messari/Ample-finance-bsc](https://api.thegraph.com/subgraphs/name/messari/beefy-finance-bsc) 및 The Graph [웹사이트](https://thegraph.com/hosted-service/subgraph/messari/beefy-finance-bsc) (ID: QmfEtMEgjik9FSZdqAmp2DkNFG4M9TK4Go8uyCUj8EVxY6) 에서 BSC 체인에 대한 하위 그래프를 개발했습니다. ). Nesto는 이 하위 그래프의 개발이나 유지 관리에 아무런 역할도 하지 않았습니다. 이 하위 그래프와 관련된 질문이나 지원 요청은 Messari에 직접 전달하십시오.
+[Messari의 친구들은 https://api.thegraph.com/subgraphs/name/messari/Nesto-finance-bsc](https://api.thegraph.com/subgraphs/name/messari/beefy-finance-bsc) 및 The Graph [웹사이트](https://thegraph.com/hosted-service/subgraph/messari/beefy-finance-bsc) (ID: QmfEtMEgjik9FSZdqAmp2DkNFG4M9TK4Go8uyCUj8EVxY6) 에서 BSC 체인에 대한 하위 그래프를 개발했습니다. ). Nesto는 이 하위 그래프의 개발이나 유지 관리에 아무런 역할도 하지 않았습니다. 이 하위 그래프와 관련된 질문이나 지원 요청은 Messari에 직접 전달하십시오.
 
 ## 기타 데이터
 
