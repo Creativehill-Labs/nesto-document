@@ -141,7 +141,7 @@ NestoWrapperFactory를 통해 NestoWrapper 컨트렉트를 모든 Vault에 배�
 
 ### 클론()
 
-OpenZeppelin 표준 프록시 템플릿 [ClonesUpgradeable.sol을](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/proxy/ClonesUpgradeable.sol) 사용하여 AmpleWrapper 컨트렉트의 복제본인 프록시 컨트렉트를 생성합니다.
+OpenZeppelin 표준 프록시 템플릿 [ClonesUpgradeable.sol을](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/proxy/ClonesUpgradeable.sol) 사용하여 NestoWrapper 컨트렉트의 복제본인 프록시 컨트렉트를 생성합니다.
 
 ```
 // 템플릿 인스턴스의 프록시로 새 Nesto Vault 래퍼를 생성합니다.
