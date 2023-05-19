@@ -8,7 +8,7 @@ Nesto [Vault 컨트렉트는](https://github.com/beefyfinance/beefy-contracts/bl
 
 ### 원하다()
 
-Ample Vault 및 전략 컨트렉트 모두에서 사용되는 기본 팜 토큰(예: LP 토큰)의 주소를 반환합니다. 이는 팜에 사용되는 기본 자산과 동일하지 않습니다.
+Nesto Vault 및 전략 컨트렉트 모두에서 사용되는 기본 팜 토큰(예: LP 토큰)의 주소를 반환합니다. 이는 팜에 사용되는 기본 자산과 동일하지 않습니다.
 
 <pre><code>function want () 공개 보기 반환 ( IERC20Upgradeable ) {     
 <strong>    IERC20Upgradeable ( 전략 . 원함 ())을 반환합니다 .
@@ -159,7 +159,7 @@ function proposalStrat ( address _implementation ) public onlyOwner {
 
 ## NestoVaultV7.sol
 
-표준 Nesto Vault 컨트렉트의 현재 릴리스는 2022년 8월에 [릴리스된 ](https://github.com/beefyfinance/beefy-contracts/pull/83)[AmpleVaultV7.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyVaultV7.sol) 입니다 . V7 릴리스는 몇 가지 주요 방식에서 이전 버전보다 개선되었습니다.
+표준 Nesto Vault 컨트렉트의 현재 릴리스는 2022년 8월에 [릴리스된 ](https://github.com/beefyfinance/beefy-contracts/pull/83)[NestoVaultV7.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyVaultV7.sol) 입니다 . V7 릴리스는 몇 가지 주요 방식에서 이전 버전보다 개선되었습니다.
 
 * 사용 중단 및 재배포할 필요 없이 라이브 Nesto Vault에 대한 업데이트 및 변경을 용이하게 하기 위해 프록시 패턴을 통해 Vault 업그레이드 기능을 도입했습니다.
 * 업그레이드 가능한 전략을 허용하도록 전략 인터페이스를 업데이트했습니다. 그리고
