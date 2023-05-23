@@ -22,7 +22,7 @@
 
 * Nesto API
   * Site: [https://api.Nesto.finance/](https://api.beefy.finance/apy)
-  * Repo: [https://github.com/Nestofinance/beefy-api](https://github.com/beefyfinance/beefy-api)
+  * Repo: [https://github.com/Nestofinance/Nesto-api](https://github.com/beefyfinance/beefy-api)
   * Further details available on the [Broken link](broken-reference "mention") page.
 
 ## Smart Contracts
