@@ -102,18 +102,18 @@ Nesto는 기여자들의 커뮤니티입니다. 다음은 활발히 활동 중�
 
 2023년 9월 2일 기준으로 다음 역할 중 101명의 고유 기여자가 있습니다.
 
-~~·  17 @Core~~
+<mark style="color:red;">·  17 @Core</mark>
 
-~~·  18 @Dev~~
+<mark style="color:red;">·  18 @Dev</mark>
 
-~~·  23 @Strategist~~
+<mark style="color:red;">·  23 @Strategist</mark>
 
-~~·  47 @Nesto OGs~~
+<mark style="color:red;">·  47 @Nesto OGs</mark>
 
-~~·  29 @ Heroes~~
+<mark style="color:red;">·  29 @ Heroes</mark>
 
-~~·  27 @ Farmhand~~
+<mark style="color:red;">·  27 @ Farmhand</mark>
 
-~~·  13 @Mod~~
+<mark style="color:red;">·  13 @Mod</mark>
 
 \
