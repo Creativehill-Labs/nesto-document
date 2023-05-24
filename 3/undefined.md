@@ -9,10 +9,10 @@ DelegateRegistry [컨트렉트는](https://github.com/gnosis/delegate-registry/b
 DelegateRegistry 컨트렉트는 무엇보다도 컨트렉트의 "위임" 매핑에 저장되는 기존 위임에 대한 정보 저장소입니다.
 
 ```
-// 첫 번째 키는 위임자이고 두 번째 키는 ID입니다.
-// 값은 대리자의 주소입니다.
-.
-mapping ( address => mapping ( bytes32 => address )) public delegation ;
+// The first key is the delegator and the second key a id. 
+// The value is the address of the delegate 
+
+mapping (address => mapping (bytes32 => address)) public delegation;
 ```
 
 효과적으로 각 위임은 위임자의 주소(즉, 투표 권한을 위임받은 사용자)를 참조하여 저장되며, 이는 관련 스냅샷 공간 ID(bytes32 값으로 저장됨) 및 위임자의 주소(즉, 투표 권한을 위임받은 사용자)에 매핑됩니다. 의결권이 위임됨).
@@ -28,10 +28,13 @@ DelegateRegistry 컨트렉트는 일반적인 작업에서 두 ​​가지 가�
 컨트렉트의 의미[setDelegate()](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#setdelegate-1)함수가 성공적으로 호출되었으며 결과적으로 호출자가 새 대리자를 선택했습니다.
 
 ```
-// 이러한 이벤트를 사용하여 이벤트를 처리하여 역방향 조회를 구축할 수 있습니다.
-// 인덱스를 사용하면 이 조회를 구축하는 방법에 대해 매우 부분적일 수 있습니다(예: 특정 대리자에 대해서만).
-.
-이벤트 SetDelegate ( 주소 인덱스 위임자 , bytes32 인덱스 ID , 주소 인덱스 위임 );
+// Using these events it is possible to process the events to build up reverse 
+lookups.
+// The indeces allow it to be very partial about how to build this lookup (e.g. only 
+for a specific delegate).
+
+event SetDelegate(address indexed delegator, bytes32 indexed id, address indexed 
+delegate);
 
 ```
 
@@ -39,11 +42,14 @@ DelegateRegistry 컨트렉트는 일반적인 작업에서 두 ​​가지 가�
 
 아래 중 하나임을 나타냅니다.[컨트렉트 기능](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#contract-functions)이(가) 성공적으로 호출되었으며 결과적으로 이전 대리인이 호출자에 대해 승인되었습니다.
 
-<pre><code>// 이러한 이벤트를 사용하여 이벤트를 처리하여 역방향 조회를 구축할 수 있습니다.
-// 인덱스를 사용하면 이 조회를 구축하는 방법에 대해 매우 부분적일 수 있습니다(예: 특정 대리자에 대해서만).
-.
-<strong>이벤트 ClearDelegate ( 주소 인덱스 위임자 , bytes32 인덱스 ID , 주소 인덱스 위임 );
-</strong><strong>
+<pre><code>// Using these events it is possible to process the events to build up reverse 
+lookups.
+// The indeces allow it to be very partial about how to build this lookup (e.g. only 
+for a specific delegate).
+
+event ClearDelegate(address indexed delegator, bytes32 indexed id, address indexed 
+delegate);
+<strong>
 </strong>
 </code></pre>
 
@@ -56,23 +62,25 @@ DelegateRegistry 컨트렉트의 기능은 매우 간단하며 대리자를 설�
 대리인을 설정하려면 컨트렉트에 두 가지 입력이 필요합니다. 관련 스냅샷 공간 ID(bytes32 값으로 저장됨); 및 대리인의 주소(즉, 투표권이 위임된 사용자). 그런 다음 호출을 실행하기 전에 몇 가지 요구 사항(예: 사용자가 자신, null 주소 또는 현재 대리인에게 위임하지 않음)에 대해 입력을 테스트합니다.
 
 ```
-/// @dev msg.sender 및 특정 ID에 대한 대리자를 설정합니다.
-/// msg.sender와 id의 조합은 고유한 키로 볼 수 있습니다.
-/// @param id 대리자가 설정되어야 하는 ID
-/// @param delegate 델리게이트 주소
-.
-함수 setDelegate ( bytes32 id , 주소 대리자 ) public {
-require ( delegate != msg .sender , "Can't delegate to self" ) ;
-require ( 델리게이트 != 주소 ( 0 ), "0x0에 위임할 수 없음" );
-주소 currentDelegate = 위임 [ msg . 발신자 ][ 아이디 ];
-require ( delegate != currentDelegate , "이미 이 주소에 위임되었습니다" );
-// 위임 매핑 업데이트
-위임 [ msg . 보낸 사람 ][ id ] = 대리자 ;
-if ( currentDelegate != 주소 ( 0 )) {
-ClearDelegate ( msg . sender , id , currentDelegate ) 방출 ;
-}
-.
-SetDelegate ( msg . sender , id , delegate ) 방출 ;
+/// @dev Sets a delegate for the msg.sender and a specific id.
+///      The combination of msg.sender and the id can be seen as a unique key.
+/// @param id Id for which the delegate should be set
+/// @param delegate Address of the delegate
+
+function setDelegate(bytes32 id, address delegate) public {
+        require (delegate != msg.sender, "Can't delegate to self");
+        require (delegate != address(0), "Can't delegate to 0x0");
+        address currentDelegate = delegation[msg.sender][id];
+        require (delegate != currentDelegate, "Already delegated to this address");
+        
+        // Update delegation mapping
+        delegation[msg.sender][id] = delegate;
+        
+        if (currentDelegate != address(0)) {
+            emit ClearDelegate(msg.sender, id, currentDelegate);
+        }
+
+        emit SetDelegate(msg.sender, id, delegate);
 }
 
 ```
@@ -86,18 +94,19 @@ SetDelegate ( msg . sender , id , delegate ) 방출 ;
 현재 대리인을 지우려면 컨트렉트에 관련 스냅샷 공간 ID(bytes32 값으로 저장됨)인 하나의 입력이 필요합니다. 그런 다음 호출을 실행하기 전에 대리인이 실제로 설정되었는지 확인하기 위해 테스트합니다.
 
 ```
-/// @dev msg.sender 및 특정 ID에 대한 대리자를 지웁니다.
-/// msg.sender와 id의 조합은 고유한 키로 볼 수 있습니다.
-/// @param id 대리자가 설정되어야 하는 ID
-.
-기능 clearDelegate ( bytes32 id ) public {
-주소 currentDelegate = 위임 [ msg . 발신자 ][ 아이디 ];
-require ( currentDelegate != address ( 0 ), "No delegate set" );
-// 위임 매핑 업데이트
-위임 [ msg . 보낸 사람 ][ id ] = 주소 ( 0 );
-ClearDelegate ( msg . sender , id , currentDelegate ) 방출 ;
-}
+/// @dev Clears a delegate for the msg.sender and a specific id.
+///      The combination of msg.sender and the id can be seen as a unique key.
+/// @param id Id for which the delegate should be set
 
+function clearDelegate(bytes32 id) public {
+        address currentDelegate = delegation[msg.sender][id];
+        require (currentDelegate != address(0), "No delegate set");
+        
+        // update delegation mapping
+        delegation[msg.sender][id] = address(0);
+        
+        emit ClearDelegate(msg.sender, id, currentDelegate);
+}
 ```
 
 호출이 성공하면 함수는 위임 매핑을 null 주소로 업데이트한 다음(즉, 사용자가 투표권을 위임하지 않았음을 나타냄) 다음을 내보냅니다.[ClearDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate)이전 대리자가 제거되었음을 나타내는 이벤트입니다.
