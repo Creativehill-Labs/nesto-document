@@ -20,7 +20,7 @@ description: Metamask에 커스텀 토큰을 추가하는 방법은 다음과 �
 
 ### 4.NEFI의 컨트랙트 주소를 '토큰 컨트랙트 주소'란에 붙여넣습니다.
 
-NEFI 토큰 BNB 체인 컨트랙트 주소 : [0xCa3F508B8e4Dd382eE878A314789373D80A5190A](../../nesto/nefi/undefined.md) 다른 체인에서의 NEFI 토큰 컨트랙트 주소는 여기에서 찾을 수 있습니다: [~~컨트랙트 주소~~](https://bscscan.com/token/0xCa3F508B8e4Dd382eE878A314789373D80A5190A)
+NEFI 토큰 BNB 체인 컨트랙트 주소 : [0xCa3F508B8e4Dd382eE878A314789373D80A5190A](../../nesto/nefi/undefined.md) 다른 체인에서의 NEFI 토큰 컨트랙트 주소는 여기에서 찾을 수 있습니다: [컨트랙트 주소](https://bscscan.com/token/0xCa3F508B8e4Dd382eE878A314789373D80A5190A)
 
 \---------이미지영역--------------
 

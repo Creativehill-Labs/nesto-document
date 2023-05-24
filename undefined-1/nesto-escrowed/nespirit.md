@@ -18,7 +18,7 @@ neSPIRIT은 inSPIRIT의 고정된 비프 에스크로 버전으로, SPIRIT에 �
 
 ## neSPIRIT은 어떻게 얻나요?
 
-사용자는[ ~~neSPIRIT 볼트 페이지~~](https://app.beefy.finance/vault/beefy-binspirit)에서 1:1 비율로 neSPIRIT을 생성할 수 있습니다. 만약 neSPIRIT을 사는 것이 더 이익이 된다면, nesto의 smart minter는 그대로 실행 할것이며, 사용자는 그들의 SPIRIT에 더 많은 neSPIRIT을 얻을 수 있습니다. 사용자는 또한 분산된 거래소에서 neSPIRIT을 구매할 수 있습니다.
+사용자는[ neSPIRIT 볼트 페이지](https://app.beefy.finance/vault/beefy-binspirit)에서 1:1 비율로 neSPIRIT을 생성할 수 있습니다. 만약 neSPIRIT을 사는 것이 더 이익이 된다면, nesto의 smart minter는 그대로 실행 할것이며, 사용자는 그들의 SPIRIT에 더 많은 neSPIRIT을 얻을 수 있습니다. 사용자는 또한 분산된 거래소에서 neSPIRIT을 구매할 수 있습니다.
 
 \-----------이미지영역--------------
 
@@ -56,6 +56,6 @@ neSPIRIT이 페그 이하가 되면, 계약은 SpiritSwap 프로토콜 수익을
 
 ## neSPIRIT로 투표할 수 있나요?
 
-아니요, Nesto는 이전에[ ~~neSPIRIT 투표 시스템과 전용 스냅샷 페이지~~](https://snapshot.org/#/binspirit.eth)를 구축했지만, Spirit Swap V2로 전환함으로써 보유자에게 최고의 수익을 제공할 수 있는 프로세스를 자동화했습니다. 이제 Beefy는 모든 수익을 neSPIRIT Vautl로 직접 반환하여 최소한의 노력으로 높은 수익률을 달성합니다.
+아니요, Nesto는 이전에[ neSPIRIT 투표 시스템과 전용 스냅샷 페이지](https://snapshot.org/#/binspirit.eth)를 구축했지만, Spirit Swap V2로 전환함으로써 보유자에게 최고의 수익을 제공할 수 있는 프로세스를 자동화했습니다. 이제 Beefy는 모든 수익을 neSPIRIT Vautl로 직접 반환하여 최소한의 노력으로 높은 수익률을 달성합니다.
 
 Nesto가 절차를 자동화했지만, 여전히 neSPIRIT 대한 직접적인 제안을 받을 수 있습니다. 자세한 내용은 코어 팀에게 디스코드, 텔레그램 또는 트위터를 통해 연락해 보세요.

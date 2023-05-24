@@ -32,12 +32,12 @@ Nesto의 핵심 제품인 Nesto Vaults는 처음부터 프로젝트에 대한 �
 
 Treasury Council에는 항상 7명의 위원이 있으며 MultiSig 트랜잭션이 실행되기 전에 승인하려면 4명의 합의가 필요합니다. 현재 7명의 멤버와 Treasury EOA 지갑에 대한 세부 정보는 다음과 같습니다.
 
-* AllTrades: 0xa75209dC118dF7B6541db5b7Be0DE9485Ebaa907
-* DefiDebauchery: 0x037465bF6a4A8D7F552AE18046478C6A727178F3
-* Mjoaris: 0xBFEB0756f09f73A19CE62FBa6a8Db4e922E73A14Pablo: 0xDB583b636f995eF1EF28ac96B9bA235916bd1583
-* Power: 0x6fCE222540015290FB572C82622dc73a431CdF3F
-* TBC: 0x428b2F01Bfb0917FE6FF463f37B0c47F1782B9Cd
-* YR2150: 0xF24f555d6765D559BFF4C5557dD9024CBA10d30e
+* <mark style="color:red;">AllTrades: 0xa75209dC118dF7B6541db5b7Be0DE9485Ebaa907</mark>
+* <mark style="color:red;">DefiDebauchery: 0x037465bF6a4A8D7F552AE18046478C6A727178F3</mark>
+* <mark style="color:red;">Mjoaris: 0xBFEB0756f09f73A19CE62FBa6a8Db4e922E73A14Pablo: 0xDB583b636f995eF1EF28ac96B9bA235916bd1583</mark>
+* <mark style="color:red;">Power: 0x6fCE222540015290FB572C82622dc73a431CdF3F</mark>
+* <mark style="color:red;">TBC: 0x428b2F01Bfb0917FE6FF463f37B0c47F1782B9Cd</mark>
+* <mark style="color:red;">YR2150: 0xF24f555d6765D559BFF4C5557dD9024CBA10d30e</mark>
 
 Treasury Council에 대한 모든 질문은 [Nesto Discord](https://discord.gg/yq8wfHd) 의 #💵-treasury 채널로 보내야 합니다 . 보안을 위해 위원회 구성원에게 직접 메시지를 보내지 마십시오. 그렇지 않으면 귀하의 메시지가 무시되고 잠재적으로 차단되거나 보고될 수 있습니다.
 
@@ -55,7 +55,7 @@ Nesto's Treasury는 인프라의 몇 가지 핵심 빌딩 블록에 의존하여
 
 Treasury MultiSig는 다음 체인에 대한 다음 주소에서 찾을 수 있습니다.
 
-·  Arbitrum: [0x3f5eddad52C665A4AA011cd11A21E1d5107d7862](https://gnosis-safe.io/app/arb1:0x3f5eddad52C665A4AA011cd11A21E1d5107d7862/balances)
+·  Arbitrum: [0x3f5eddad52C665A4AA011cd11A21E1d5107d7862](https://gnosis-safe.io/app/arb1:0x3f5eddad52C665A4AA011cd11A21E1d5107d7862/balances)<mark style="color:red;">\*\*</mark>
 
 ·  Aurora: [0x088C70Ddff3a3774825dd5e5EaDB356404248d83](https://app.safe.global/home?safe=aurora:0x088C70Ddff3a3774825dd5e5EaDB356404248d83)
 
@@ -113,38 +113,38 @@ NestoTreasury 대시보드는 Nesto Treasury의 현재 상태에 대한 즉각�
 
 위에서 설명한 바와 같이 [재무 관리](https://docs.beefy.finance/community-governance/treasury#treasury-management), 주요 블록체인의 유입은 자금 관리 목적으로 스테이블 코인으로 스왑되며, 각 체인의 수수료 배처는 운영을 위해 주요 스테이블 코인을 채택합니다. 다음 체인에는 다음과 같은 지정 통화가 있습니다.
 
-~~·  Arbitrum: USDC~~
+<mark style="color:red;">·  Arbitrum: USDC</mark>
 
-~~·  Avalanche: USDT~~
+<mark style="color:red;">·  Avalanche: USDT</mark>
 
-~~·  BSC: BUSD~~
+<mark style="color:red;">·  BSC: BUSD</mark>
 
-~~·  Canto: USDC~~
+<mark style="color:red;">·  Canto: USDC</mark>
 
-~~·  Cronos: USDC~~
+<mark style="color:red;">·  Cronos: USDC</mark>
 
-~~·  Ethereum: USDC~~
+<mark style="color:red;">·  Ethereum: USDC</mark>
 
-~~·  Ethereum Validator: ETH (retained in validator)~~
+<mark style="color:red;">·  Ethereum Validator: ETH (retained in validator)</mark>
 
-~~·  Fantom: USDC~~
+<mark style="color:red;">·  Fantom: USDC</mark>
 
-~~·  Fantom Validator: WBTC (gradually bridged to Ethereum)~~
+<mark style="color:red;">·  Fantom Validator: WBTC (gradually bridged to Ethereum)</mark>
 
-~~·  Fuse: BUSD~~
+<mark style="color:red;">·  Fuse: BUSD</mark>
 
-~~·  Fuse Validator: Fuse (retained in validator)~~
+<mark style="color:red;">·  Fuse Validator: Fuse (retained in validator)</mark>
 
-~~·  Kava: USDC~~
+<mark style="color:red;">·  Kava: USDC</mark>
 
-~~·  Metis: USDC~~
+<mark style="color:red;">·  Metis: USDC</mark>
 
-~~·  Moonbeam: MAI~~
+<mark style="color:red;">·  Moonbeam: MAI</mark>
 
-~~·  Moonriver: USDC~~
+<mark style="color:red;">·  Moonriver: USDC</mark>
 
-~~·  Optimism: USDC~~
+<mark style="color:red;">·  Optimism: USDC</mark>
 
-~~·  Polygon: USDC~~
+<mark style="color:red;">·  Polygon: USDC</mark>
 
 Aurora, Celo, Emerald, Harmony 및 HECO의 거래량과 유동성은 현재 스테이블 코인 관리를 보장하기에는 너무 작기 때문에 Vault 수수료 유입은 일반적으로 관련 기본 체인 토큰으로 스왑됩니다.

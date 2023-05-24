@@ -42,15 +42,15 @@ Nesto 개발 초기 몇 달 동안 소급 보상은 커뮤니티의 노력을 �
 
 그 이후로 반복되는 기여자 지불 요청은 DAO 투표에 의해 반복적으로 승인되었습니다. 현재까지의 전체 목록은 다음과 같습니다.
 
-| 기간                    |         | 제안                                                                                                     |
-| --------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
-| 2021년 11월             | 94,000  | 아카이브 페이지                                                                                               |
-| 2021년 12월 \~ 2022년 1월 | 97,500  | 아카이브 페이지                                                                                               |
-| 2022년 2월 \~ 2022년 4월  | 102,000 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
-| 2022년 5월 \~ 2022년 7월  | 127,500 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
-| 2022년 8월 \~ 2022년 10월 | 102,400 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
-| 2022년 11월 \~ 2023년 1월 | 104,000 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
-| 2023년 2월 \~ 2023년 4월  | 104,000 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
+| 기간                                            |         | 제안                                                                                                     |
+| --------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
+| 2021년 11월<mark style="color:red;">\*\*</mark> | 94,000  | 아카이브 페이지                                                                                               |
+| 2021년 12월 \~ 2022년 1월                         | 97,500  | 아카이브 페이지                                                                                               |
+| 2022년 2월 \~ 2022년 4월                          | 102,000 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
+| 2022년 5월 \~ 2022년 7월                          | 127,500 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
+| 2022년 8월 \~ 2022년 10월                         | 102,400 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
+| 2022년 11월 \~ 2023년 1월                         | 104,000 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
+| 2023년 2월 \~ 2023년 4월                          | 104,000 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
 
 ## NestoGrants
 

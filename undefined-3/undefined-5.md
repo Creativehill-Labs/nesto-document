@@ -10,15 +10,15 @@ Nesto의 전 세계 DeFi 파트너 및 협력자 네트워크는 우리가 프�
 
 기존 및 신규 파트너와의 관계는 전담 파트너십 팀에서 관리합니다. 팀의 주요 구성원은 다음과 같습니다.
 
-Weso - 전략적 파트너십 책임자
+<mark style="color:red;">Weso - 전략적 파트너십 책임자</mark>
 
-Frondoto - 파트너십 리드
+<mark style="color:red;">Frondoto - 파트너십 리드</mark>
 
-Zapmore - 파트너십 리드
+<mark style="color:red;">Zapmore - 파트너십 리드</mark>
 
-The Nesto Cow(TBC) - 소셜 미디어/마케팅 리드
+<mark style="color:red;">The Nesto Cow(TBC) - 소셜 미디어/마케팅 리드</mark>
 
-Community Heroes and Farmhands - 파트너십 심사 조수
+<mark style="color:red;">Community Heroes and Farmhands - 파트너십 심사 조수</mark>
 
 전담 팀이 있어도 여전히 파트너십 요청이 넘쳐납니다. 이를 관리하기 위해 잠재 파트너는 팀에 직접 연락하기보다는 아래에 설명된 프로세스를 따라 작업을 시작하도록 요청합니다.
 

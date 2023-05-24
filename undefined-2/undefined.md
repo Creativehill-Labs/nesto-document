@@ -8,7 +8,7 @@ nesto의 첫 번째 감사는 DefiYield로, NEFI 토큰, RewardPool, 그리고 �
 
 Certik은 NESTO 플랫폼 내에서 사용되는 가장 복잡하고 재사용 가능한 투자 전략 중 일부를 감사하여 대부분의 사용자가 상호 작용하는 중요한 스마트 컨트렉트의 안전과 견고성을 보장합니다.
 
-[~~모든 Nesto 감사는 Nesto 웹 사이트에서 확인할 수 있습니다~~](https://github.com/beefyfinance/beefy-audits)
+[모든 Nesto 감사는 Nesto 웹 사이트에서 확인할 수 있습니다](https://github.com/beefyfinance/beefy-audits)
 
 ## 수율 최적화 프로그램이란 무엇인가요?
 
@@ -30,7 +30,7 @@ APY는 특정 투자에서 제공되는 연간 수익률을 나타내며, 이자
 
 ## Vault Daily와 Trading Daily는 무엇을 의미하나요?
 
-일일 거래는 유동성 토큰의 가치가 얼마나 증가하는지를 의미합니다. 유동성 풀은 [~~Uniswap 유동성 모델~~](https://docs.uniswap.org/protocol/V2/concepts/advanced-topics/fees)에서 도입된 대로 모든 유동성 공급자 간에 거래 수수료를 공유합니다. Trading Daily는 거래량과 유동성 공급자에게 할당된 스왑 수수료 비율의 영향을 받습니다.
+일일 거래는 유동성 토큰의 가치가 얼마나 증가하는지를 의미합니다. 유동성 풀은 [Uniswap 유동성 모델](https://docs.uniswap.org/protocol/V2/concepts/advanced-topics/fees)에서 도입된 대로 모든 유동성 공급자 간에 거래 수수료를 공유합니다. Trading Daily는 거래량과 유동성 공급자에게 할당된 스왑 수수료 비율의 영향을 받습니다.
 
 Vault Daily는 토큰의 수가 증가하는 양을 의미합니다. 금고가 지속적으로 보상을 파밍하고 재투자하기 때문에 예치된 토큰 금액이 증가합니다. Vault Daily는 Pancakeswap의 CAKE와 같은 Yield Farm 보상(즉, 거래 수수료 외 추가 인센티브)의 영향을 받습니다.
 
@@ -42,7 +42,7 @@ Trading Daily 및 Vault Daily에 365를 곱하여 Trading APR 및 Vault APR을 �
 Nesto는 거래 APR을 계산할 때 24시간 동안의 거래량과 수수료를 기반으로합니다. 이와는 달리 대부분의 DEX는 7일 기간을 사용합니다. 이러한 차이로 인해 DEX와 비교할 때 표시되는 APY의 차이가 발생할 수 있습니다. 그러나 이는 단순히 계산 방법의 차이 때문이며, Nesto는 더 짧은 시간 범위를 사용하여 APR 거래의 변화를 더 빠르게 반영할 수 있으므로 더 정확하다고 주장합니다.
 {% endhint %}
 
-APR을 APY로 변환하는 도구는 [~~APRtoAPY.com~~](https://www.aprtoapy.com/)입니다.
+APR을 APY로 변환하는 도구는 [APRtoAPY.com](https://www.aprtoapy.com/)입니다.
 
 ## Nesto에 어떻게 기여하나요?
 

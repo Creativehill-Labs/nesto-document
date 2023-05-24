@@ -12,7 +12,7 @@ Qi는 Polygon 블록체인에서 사용되는 부채 담보 프로토콜 Mai Fin
 
 ## neQI란 무엇인가요?
 
-neQI를 발행하려면 neQI [보관소(Vault) ](../vaults.md)또는 [~~수입 풀~~](https://app.beefy.finance/vault/beefy-beqi-earnings) 페이지에서 1:1 비율로 QI를 스테이킹해야 합니다. neQI에 대한 유동성 제공을 위한 인센티브는 제공되지 않습니다.
+neQI를 발행하려면 neQI [보관소(Vault) ](../vaults.md)또는 [수입 풀](https://app.beefy.finance/vault/beefy-beqi-earnings) 페이지에서 1:1 비율로 QI를 스테이킹해야 합니다. neQI에 대한 유동성 제공을 위한 인센티브는 제공되지 않습니다.
 
 \-----------이미지영역--------------
 
