@@ -11,20 +11,19 @@ GasFeeThrottler [컨트렉트](https://github.com/beefyfinance/beefy-contracts/b
 3. gasThrottle **() 수정자** - 하위 컨트렉트의 수정된 기능에서 발생하는 트랜잭션의 가스 가격이 항상 고정된 최대 가스 가격 이하이어야 합니다.
 
 ```
-컨트렉트 GasFeeThrottler {  
-.
-    부울 공개 shouldGasThrottle = 참 ;  
-.
-    주소 공공 가스 가격 = 주소 ( 0xA43509661141F254F54D9A326E8Ec851A0b95307 );  
-.
-    수정자 gasThrottle () {  
-        if ( shouldGasThrottle && 주소 . isContract ( gasprice )) {  
-            require ( tx . gasprice <= IGasPrice ( gasprice ). maxGasPrice (), "gas is too high!" );  
+contract GasFeeThrottler {
+
+    bool public shouldGasThrottle = true;
+
+    address public gasprice = address(0xA43509661141F254F54D9A326E8Ec851A0b95307);
+
+    modifier gasThrottle() {
+        if (shouldGasThrottle && Address.isContract(gasprice)) {
+            require(tx.gasprice <= IGasPrice(gasprice).maxGasPrice(), "gas is too high!");
         }
-        _ ;
+        _;
     }
 }
-
 ```
 
 ### GasPrice.sol
@@ -36,16 +35,15 @@ GasPrice 컨트렉트는 그 목적을 용이하게 하기 위해 세 가지 핵
 3. setMaxGasPrice **함수** - 새 \_maxGasPrice에 대한 정수 값을 인수로 받아들이고 NewMaxGasPrice 이벤트를 내보내고 maxGasPrice 변수를 업데이트합니다.
 
 ```
-컨트렉트 GasPrice 는 소유할 수 있습니다 {  
-.
-    uint public maxGasPrice = 10000000000 ;  
-.
-    이벤트 NewMaxGasPrice ( uint oldPrice , uint newPrice );  
-.
-    함수 setMaxGasPrice ( uint _maxGasPrice ) 외부 onlyOwner {  
-        NewMaxGasPrice ( maxGasPrice , _maxGasPrice ) 방출 ; 
-        maxGasPrice = _maxGasPrice ;
+contract GasPrice is Ownable {
+
+    uint public maxGasPrice = 10000000000;
+
+    event NewMaxGasPrice(uint oldPrice, uint newPrice);
+
+    function setMaxGasPrice(uint _maxGasPrice) external onlyOwner {
+        emit NewMaxGasPrice(maxGasPrice, _maxGasPrice);
+        maxGasPrice = _maxGasPrice;
     }
 }
-
 ```

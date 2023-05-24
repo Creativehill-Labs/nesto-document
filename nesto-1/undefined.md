@@ -9,9 +9,9 @@ _각 체인의 FeeConfigurator 컨트렉트( "NestoFeeConfig" )_ 관련 주소�
 쓰기 기능에 대한 액세스를 제어하는 ​​표준 _onlyManager() 수정자를 포함합니다._
 
 ```
-수정자 onlyManager () {  
-    require ( msg . sender == owner () || msg . sender == keeper , "!manager" );   
-    _ ;
+modifier onlyManager() {
+    require(msg.sender == owner() || msg.sender == keeper, "!manager");
+    _;
 }
 ```
 
@@ -24,14 +24,13 @@ _특정 전략 주소 인수에 대한 FeeCategory 구조를_ 반환하여 청�
 _"\_adjust" 부울 변수 인수를_ 포함하여 수수료를 true로 설정한 경우 총 수확량의 %로 표시하거나 false로 설정한 경우 총 수수료의 %로 표시합니다.
 
 ```
-function getFees ( address _strategy ) 외부 보기 반환 ( FeeCategory 메모리 ) { 
-반환 getFeeCategory ( stratFeeId [ _strategy ], false ); 
-}
-.
-function getFees ( address _strategy , bool _adjust ) 외부 보기 반환 ( FeeCategory 메모리 ) { 
-반환 getFeeCategory ( stratFeeId [ _strategy ], _adjust ); 
+function getFees(address _strategy) external view returns (FeeCategory memory) {
+    return getFeeCategory(stratFeeId[_strategy], false);
 }
 
+function getFees(address _strategy, bool _adjust) external view returns (FeeCategory memory) {
+    return getFeeCategory(stratFeeId[_strategy], _adjust);
+}
 ```
 
 ### getFeeCategory()
@@ -39,18 +38,16 @@ function getFees ( address _strategy , bool _adjust ) 외부 보기 반환 ( Fee
 위에서 설명한 대로 특정 전략 ID 정수에 대한 _FeeCategory 구조를_ 반환합니다 . 또한 _"\_adjust"_ 부울 변수 옵션을 포함합니다.
 
 ```
-위에서 설명한 대로 특정 전략 ID 정수에 대한 FeeCategory 구조를 반환합니다 . 또한 "_adjust" 부울 변수 옵션을 포함합니다.
-function getFeeCategory ( uint256 _id , bool _adjust ) 공개 뷰 반환 ( FeeCategory 메모리 요금 ) { 
-uint256 id = feeCategory [ _id ]. 활성 ? _id : 0 ; 
-수수료 = feeCategory [ id ];
-경우 ( _조정 ) { 	
-uint256 _totalFee = 수수료 . 합계 ;
-수수료 . 비프 = 수수료 . 비프 * _totalFee / DIVISOR ;
-수수료 . 전화 = 수수료 . 호출 * _totalFee / DIVISOR ;
-수수료 . 전략가 = 수수료 . 전략가 * _totalFee / DIVISOR ;
+function getFeeCategory(uint256 _id, bool _adjust) public view returns (FeeCategory memory fees) {
+    uint256 id = feeCategory[_id].active ? _id : 0;
+    fees = feeCategory[id];
+    if (_adjust) {
+        uint256 _totalFee = fees.total;
+        fees.beefy = fees.beefy * _totalFee / DIVISOR;
+        fees.call = fees.call * _totalFee / DIVISOR;
+        fees.strategist = fees.strategist * _totalFee / DIVISOR;
+    }
 }
-}
-
 ```
 
 ## 쓰기 기능
@@ -62,26 +59,25 @@ _stratFeeId 매핑을_ 업데이트하여 최종적으로 중간 _feeCategory_ �
 _여기에는 자신의 feeId 를 업데이트하는 전략, 전략 주소 및 feeId를 인수_ 로 지정하는 전략 , 전략 주소 배열과 _feeId 배열을 모두_ 인수 로 제공하여 전략 범위를 설정하는 옵션 등 3가지 옵션이 포함됩니다. . 세 가지 각각은 내부 _\_setStratFeeId()_ 함수를 사용하여 각 전략을 업데이트합니다.
 
 ```
-함수 setStratFeeId ( uint256 _feeId ) 외부 {   
-_setStratFeeId ( msg . 보낸 사람 , _feeId );
-}
-.
-함수 setStratFeeId ( 주소 _strategy , uint256 _feeId ) 외부 onlyManager {   
-    _setStratFeeId ( _전략 , _feeId );
-}
-.
-함수 setStratFeeId ( 주소 [] 메모리 _전략 , uint256 [] 메모리 _feeIds ) 외부 onlyManager {     
-    uint256 stratLength = _strategies . 길이 ;
-    for ( uint256 i = 0 ; i < stratLength ; i ++ ) {   
-        _setStratFeeId ( _strategies [ i ], _feeIds [ i ]);
-    }
-}
-.
-함수 _setStratFeeId ( 주소 _strategy , uint256 _feeId ) 내부 {    
-    stratFeeId [ _전략 ] = _feeId ; 
-    SetStratFeeId ( _strategy , _feeId ) 방출 ; 
+function setStratFeeId(uint256 _feeId) external {
+_setStratFeeId(msg.sender, _feeId);
 }
 
+function setStratFeeId(address _strategy, uint256 _feeId) external onlyManager {
+    _setStratFeeId(_strategy, _feeId);
+}
+
+function setStratFeeId(address[] memory _strategies, uint256[] memory _feeIds) external onlyManager {
+    uint256 stratLength = _strategies.length;
+    for (uint256 i = 0; i < stratLength; i++) {
+        _setStratFeeId(_strategies[i], _feeIds[i]);
+    }
+}
+
+function _setStratFeeId(address _strategy, uint256 _feeId) internal {
+    stratFeeId[_strategy] = _feeId;
+    emit SetStratFeeId(_strategy, _feeId);
+}
 ```
 
 ### setFeeCategory()
@@ -89,26 +85,25 @@ _setStratFeeId ( msg . 보낸 사람 , _feeId );
 Nesto, 수확 호출자 및 전략가 간의 수수료 분할을 포함하여 지정된 _FeeCategory 구조(신규 또는 기존)에 대한 매개변수를 설정합니다._
 
 ```
-함수 setFeeCategory ( 
-    uint256_id , _
-    uint256 _전체 ,
-    uint256 _call ,
-    uint256 _전략가 ,
-    문자열 메모리 _label , 
-    부울 _활성 ,
-    부울 _조정
-) 외부 전용 소유자 { 
-    요구 ( _total <= totalLimit , ">totalLimit" ); 
-    경우 ( _조정 ) {  
-        _call = _call * DIVISOR / _total ;
-        _strategist = _strategist * DIVISOR / _total ;
+function setFeeCategory(
+    uint256 _id,
+    uint256 _total,
+    uint256 _call,
+    uint256 _strategist,
+    string memory _label,
+    bool _active,
+    bool _adjust
+) external onlyOwner {
+    require(_total <= totalLimit, ">totalLimit");
+    if (_adjust) {
+        _call = _call * DIVISOR / _total;
+        _strategist = _strategist * DIVISOR / _total;
     }
-    uint256 우둔함 = DIVISOR - _call - _strategist ;
-    FeeCategory 메모리 카테고리 = FeeCategory ( _total , Nesto , _call , _strategist , _label , _active ); 
-    feeCategory [ _id ] = 카테고리 ; 
-    SetFeeCategory ( _id , _total , Nesto , _call , _strategist , _label , _active ) 방출 ; 
+    uint256 beefy = DIVISOR - _call - _strategist;
+    FeeCategory memory category = FeeCategory(_total, beefy, _call, _strategist, _label, _active);
+    feeCategory[_id] = category;
+    emit SetFeeCategory(_id, _total, beefy, _call, _strategist, _label, _active);
 }
-
 ```
 
 ### setKeeper()
@@ -116,11 +111,10 @@ Nesto, 수확 호출자 및 전략가 간의 수수료 분할을 포함하여 �
 FeeConfigurator 컨트렉트에서 명명된 키퍼를 업데이트합니다.
 
 ```
-기능 setKeeper ( 주소 _keeper ) 외부 onlyManager {  
-    키퍼 = _키퍼 ;
-    SetKeeper ( _keeper ) 방출 ; 
+function setKeeper(address _keeper) external onlyManager {
+    keeper = _keeper;
+    emit SetKeeper(_keeper);
 }
-
 ```
 
 ### 일시정지() / 일시정지해제()
@@ -128,14 +122,13 @@ FeeConfigurator 컨트렉트에서 명명된 키퍼를 업데이트합니다.
 특정 FeeCategory(카테고리 ID를 인수로 사용)를 활성("일시 중지됨")(해당 범주로 설정된 전략이 해당 범주를 사용함을 의미함) 또는 비활성("일시 중지됨")(전략이 기본값으로 되돌아감)으로 설정합니다. 수수료 구성.
 
 ```
-함수 일시 중지 ( uint256 _id ) 외부 onlyManager {  
-    요금 카테고리 [ _id ]. 활성 = 거짓 ; 
-    일시 중지 ( _id ) 방출 ; 
-}
-.
-기능 일시정지 해제 ( uint256 _id ) 외부 onlyManager {  
-    요금 카테고리 [ _id ]. 활성 = 참 ; 
-    Unpause 방출 ( _id ); 
+function pause(uint256 _id) external onlyManager {
+    feeCategory[_id].active = false;
+    emit Pause(_id);
 }
 
+function unpause(uint256 _id) external onlyManager {
+    feeCategory[_id].active = true;
+    emit Unpause(_id);
+}
 ```

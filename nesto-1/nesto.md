@@ -19,17 +19,17 @@ NestoWrapper 컨트렉트의 기능은 호출자의 Nesto Vault 토큰 전송에
 호출자의 지정된 양의 Nesto Vault 토큰을 래퍼 컨트렉트로 전송하여 동일한 양의 래핑된 Nesto Vault 토큰을 호출자에게 발행합니다.
 
 ```
-// 일정량의 Vault 공유 토큰을 래핑합니다.
-/// "amount" 매개변수는 래핑할 Vault 공유 토큰의 총량입니다.
-.
-함수 랩 ( uint256 amount ) public { 
-.
-// 지정된 양의 발신자의 Nesto Vault 토큰을 래퍼로 전송합니다.
-IERC20업그레이드 가능 ( Vault ). safeTransferFrom ( msg . 보낸 사람 , 주소 ( 이 ), 금액 ); 
-// 호출자에게 래핑된 지정된 양의 Nesto Vault 토큰을 생성합니다.
-_mint ( 메시지 . 보낸 사람 , 금액 );
-}
+// Wraps an amount of vault share tokens.
+/// "amount" parameter is the total amount of vault share tokens to be wrapped.
 
+function wrap(uint256 amount) public {
+
+    // Transfers the specified amount of the caller's Beefy Vault tokens to the wrapper.
+    IERC20Upgradeable(vault).safeTransferFrom(msg.sender, address(this), amount);
+    
+    // Mints the specified amount wrapped Beefy Vault tokens to the caller.
+    _mint(msg.sender, amount);
+}
 ```
 
 ### wrapAll()
@@ -37,10 +37,10 @@ _mint ( 메시지 . 보낸 사람 , 금액 );
 wrap() 함수를 사용하지만 호출자의 전체 잔액을 "amount" 매개변수로 사용합니다.
 
 ```
-// 호출자가 소유한 모든 Vault 공유 토큰을 래핑합니다.
-.
-함수 wrapAll () 외부 { 
-wrap ( IERC20Upgradeable ( Vault ) .balanceOf ( msg.sender ) ) ;
+// Wraps all vault share tokens owned by the caller.
+
+function wrapAll() external {
+    wrap(IERC20Upgradeable(vault).balanceOf(msg.sender));
 }
 ```
 
@@ -49,17 +49,17 @@ wrap ( IERC20Upgradeable ( Vault ) .balanceOf ( msg.sender ) ) ;
 호출자의 래핑된 Nesto Vault 토큰의 지정된 양을 소각하여 동일한 양의 래핑되지 않은 토큰을 래퍼 컨트렉트에서 호출자에게 다시 전송합니다.
 
 ```
-// 일정량의 Vault 공유 토큰을 풉니다.
-/// "amount" 매개변수는 언래핑할 Vault 공유 토큰의 총량입니다.
-.
-함수 풀기 ( uint256 양 ) public { 
-.
-// 발신자의 래핑된 Nesto Vault 토큰의 지정된 양을 소각합니다.
-_burn ( 메시지 . 보낸 사람 , 금액 );
-// 지정된 양의 Nesto Vault 토큰을 호출자에게 다시 전송합니다.
-IERC20업그레이드 가능 ( Vault ). safeTransfer ( msg . 보낸 사람 , 금액 );
-}
+// Unwraps an amount of vault share tokens.
+/// "amount" parameter is the total amount of vault share tokens to be unwrapped.
 
+function unwrap(uint256 amount) public {
+
+    // Burns the specified amount of the caller's wrapped Beefy Vault tokens.
+    _burn(msg.sender, amount);
+    
+    // Transfers the specified amount of Beefy Vault tokens back to the caller.
+    IERC20Upgradeable(vault).safeTransfer(msg.sender, amount);
+}
 ```
 
 ### 언랩올()
@@ -67,12 +67,11 @@ IERC20업그레이드 가능 ( Vault ). safeTransfer ( msg . 보낸 사람 , 금
 unwrap() 함수를 활용하지만 호출자의 전체 잔액을 "amount" 매개변수로 사용합니다.
 
 ```
-// 호출자가 소유한 모든 래핑된 토큰을 언래핑합니다.
-.
-함수 unwrapAll () 외부 { 
-unwrap ( balanceOf ( msg.sender ) ) ;
-}
+// Unwraps all wrapped tokens owned by the caller.
 
+function unwrapAll() external {
+    unwrap(balanceOf(msg.sender));
+}
 ```
 
 ### \_보증금()
@@ -80,28 +79,36 @@ unwrap ( balanceOf ( msg.sender ) ) ;
 래핑되지 않은 버전 대신 래퍼 컨트렉트 및 발급된 래핑된 Nesto Vault 토큰과 상호 작용하도록 표준 \_deposit() 함수를 재정의합니다. 그렇지 않으면 Nesto Vault로의 일반적인 전송을 용이하게 합니다.
 
 ```
-// 자산을 Vault에 예치하고 동일한 수의 래핑된 토큰을 Vault 공유에 발행합니다.
-/// "caller" 매개변수는 자산 발신자의 주소입니다.
-/// "수신자" 매개변수는 래핑된 토큰의 수신자 주소입니다.
-/// "assets" 매개변수는 예치되는 자산의 양입니다.
-/// "shares 매개변수는 발행되는 주식의 양입니다.
-.
-함수 _deposit ( 주소 호출자 , 주소 수신자 , uint256 자산 , uint256 공유 ) 내부 가상 재정의 { 
-.
-// 호출자의 토큰을 래퍼로 전송합니다.
-IERC20업그레이드 가능 ( 자산 ()). safeTransferFrom ( 호출자 , 주소 ( this ), 자산 ); 
-uint balance = IERC20Upgradeable ( Vault ). balanceOf ( 주소 ( 이 )); 
-// 호출자의 토큰을 Nesto Vault에 보관합니다.
-IVault ( Vault ). 예금 ( 자산 );
-.
-// 수신자에게 래핑된 토큰을 생성합니다.
-공유 = IERC20Upgradeable ( 저장소 ). balanceOf ( 주소 ( 이 )) - 잔액 ; 
-_mint ( 수신자 , 공유 );
-.
-// 입금 성공을 알리는 Deposit 이벤트를 발생시킵니다.
-Deposit ( 발신자 , 수신자 , 자산 , 공유 ) 방출 ; 
-}
+// Burn wrapped tokens and withdraw assets from the vault.
+/// "caller" parameter is the address of the caller of the withdraw.
+/// "receiver" parameter is the address of the receiver of the assets.
+/// "owner" parameter is the address of the owner of the burnt shares.
+/// "assets" parameter is the amount of assets being withdrawn.
+/// "shares parameter is the amount of shares being burnt.
 
+function _withdraw(address caller, address receiver, address owner, uint256 assets, uint256 shares) internal virtual override {
+    
+    // Checks caller is not the contract's owner, and that the caller's spend                 allowance is sufficient for the call.
+    if (caller != owner) {
+        _spendAllowance(owner, caller, shares);
+    }
+    
+    // Burns the caller's wrapped tokens.
+    _burn(owner, shares);
+
+    // Withdraws the caller's assets from the Beefy Vault.
+    IVault(vault).withdraw(shares);
+    uint balance = IERC20Upgradeable(asset()).balanceOf(address(this));
+    if (assets > balance) {
+        assets = balance;
+    }
+
+    // Transfers the caller's assets back to the receiver.
+    IERC20Upgradeable(asset()).safeTransfer(receiver, assets);
+    
+    // Emits the Withdraw event to signify a successful withdrawal.
+    emit Withdraw(caller, receiver, owner, assets, shares);
+}
 ```
 
 총 자산()
@@ -109,14 +116,13 @@ Deposit ( 발신자 , 수신자 , 자산 , 공유 ) 방출 ;
 Vault가 보유한 총 자산을 가져오도록 표준 totalAssets() 함수를 재정의합니다.
 
 ```
-// 총 자산을 uint256 값으로 가져와서 반환합니다.
-.
-함수 totalAssets () 공개 보기 가상 재정의 반환 ( uint256 ) { 
-.
-IVault ( Vault )를 반환합니다 . 균형 (); 
-.
-}
+// Fetches and returns the total assets as a uint256 value.
 
+function totalAssets() public view virtual override returns (uint256) {
+
+    return IVault(vault).balance();
+
+}
 ```
 
 ### 총공급()
@@ -124,13 +130,13 @@ IVault ( Vault )를 반환합니다 . 균형 ();
 표준 totalSupply() 함수를 재정의하여 Vault의 총 공유 문제를 가져옵니다.
 
 ```
-// 총 Vault 공유를 uint256 값으로 가져와서 반환합니다.
-.
-함수 totalSupply () 공개 보기 가상 재정의 ( ERC20Upgradeable , IERC20Upgradeable ) 반환 ( uint256 ) { 
-.
-IERC20Upgradeable ( Vault )을 반환합니다 . 총공급 (); 
-}
+// Fetches and returns the total vault shares as a uint256 value.
 
+function totalSupply() public view virtual override(ERC20Upgradeable, IERC20Upgradeable) returns (uint256) {
+
+    return IERC20Upgradeable(vault).totalSupply();
+    
+}
 ```
 
 ## NestoWrapperFactory 컨트렉트
@@ -144,21 +150,24 @@ NestoWrapperFactory를 통해 NestoWrapper 컨트렉트를 모든 Vault에 배�
 OpenZeppelin 표준 프록시 템플릿 [ClonesUpgradeable.sol을](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/proxy/ClonesUpgradeable.sol) 사용하여 NestoWrapper 컨트렉트의 복제본인 프록시 컨트렉트를 생성합니다.
 
 ```
-// 템플릿 인스턴스의 프록시로 새 Nesto Vault 래퍼를 생성합니다.
-/// "_vault" 매개변수는 복제된 Nesto Vault입니다.
-/// "proxy" 반환은 새로운 프록시된 Nesto Vault 래퍼입니다.
-.
-함수 복제 ( 주소 _vault ) 외부 반환 ( 주소 프록시 ) { 
-// 프록시는 NestoWrapper 컨트렉트 인스턴스의 복제본으로 설정됩니다.
-프록시 = 구현 . 클론 ();
-// 위에서 설정한 래퍼 프록시를 초기화합니다.
-IWrapper ( 프록시 ). 초기화 (
-_Vault ,
-문자열 . concat ( "W" , IVault ( _vault ). 이름 ()), 
-문자열 . concat ( "w" , IVault ( _vault ). 기호 ()) 
-);
-// ProxyCreated 이벤트를 내보내 성공적인 배포를 나타냅니다.
-ProxyCreated ( 프록시 ) 방출 ; 
+// Creates a new Beefy Vault wrapper as a proxy of the template instance.
+/// "_vault" parameter is the cloned Beefy Vault.
+/// "proxy" return is the new proxied Beefy Vault wrapper.
+
+function clone(address _vault) external returns (address proxy) {
+    
+    // Proxy is set as a clone of the instance of the BeefyWrapper contract.
+    proxy = implementation.clone();
+    
+    // Initializes the wrapper proxy set above.
+    IWrapper(proxy).initialize(
+        _vault,
+        string.concat("W", IVault(_vault).name()),
+        string.concat("w", IVault(_vault).symbol())
+    );
+    
+    // Emits the ProxyCreated event to signify a successful deployment.
+    emit ProxyCreated(proxy);
 }
 
 ```
