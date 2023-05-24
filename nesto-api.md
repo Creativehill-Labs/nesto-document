@@ -121,7 +121,28 @@
 
 <summary>GET /apy</summary>
 
+각 Nesto 보관소의 현재 및 실시간 연간 수익률을 제공합니다.
 
+```
+// Sample response for the /apy endpoint
+
+{
+  ...
+  "balancer-usdc-link-eth-bal-aave": 0.03705509745347668,
+  "balancer-matic-usdc-eth-bal": 0.052770609595836904,
+  "baby-wbnb-busd": 0.1612595689122669,
+  "baby-usdc-wbnb": 0.16031283171896837,
+  "balancer-vst-dai-usdt-usdc": 0.029489187277781825,
+  "balancer-bal-eth": 0.024578537703132453,
+  "curve-matic-stmatic": 0.08866966650936048,
+  "sushi-poly-weth-sx": 0.7135292677781775,
+  "sushi-poly-bct-klima": 0.0007036903322936716,
+}
+```
+
+**필드 참조 사항**
+
+* **Vault APY** - 보관소 APY - 각 필드는 보관소의 고유한 ID 문자열을 반영하며, 실시간 APY를 소수로 나타내는 값을 반환합니다. 예를 들어, "0.037"은 3.7% APY를 나타냅니다.
 
 </details>
 
@@ -129,7 +150,56 @@
 
 <summary>GET /apy/breakdown</summary>
 
+각 Nesto 보관소의 수익률에 관련된 더 자세한 정보를 제공합니다. 이 정보는 연이율(APR), 복리 속도, 적용 가능한 수수료 등과 같은 요소를 기반으로 예상 APY를 평가하는 데 필요합니다.
 
+```
+// Sample response from the /apy/breakdown endpoint (e.g. Polygon Cometh UST-ETH LP)
+
+{
+  "bifi-maxi": {
+    "totalApy": 0.07598675804818633
+  },
+  "cometh-must-eth": {
+    "vaultApr": 1.186973388240745,
+    "compoundingsPerYear": 2190,
+    "beefyPerformanceFee": 0.045,
+    "vaultApy": 2.1057844292858614,
+    "lpFee": 0.005,
+    "tradingApr": 0.22324214039526927,
+    "totalApy": 2.8825691266420788
+  }
+}
+```
+
+**필드 참조 사항**
+
+
+
+* **vaultApr** - 보관소의 연간 수익률로, 보관소의 예상 연간 보상을 $USD로 환산한 값으로, 보관소에 투자된 총 금액으로 나눈 것입니다.
+
+<!---->
+
+* **compoundingsPerYear** - 연간 복리 이벤트("수확" 호출)의 현재 예상 횟수입니다.
+
+<!---->
+
+* **beefyPerformanceFee** - 계산에 포함된 고정 Beefy 성과 수수료입니다.
+
+<!---->
+
+* **vaultApy** - 보관소의 연간 수익률(APY)은 위에서 설명한 vaultApr을 compoundingsPerYear 숫자를 사용하여 복리하고, NestoPerformanceFee를 고려해 조정하여 계산됩니다.
+
+<!---->
+
+* **lpFee** - 각 거래에 부과되는 유동성 제공자(LP) 수수료입니다.
+
+<!---->
+
+* **tradingApr** - 복리 효과를 적용하거나 고려하지 않고 거래 수수료로부터 받는 연간 이자입니다.
+
+<!---->
+
+* **totalApy** - 알려진 총 APY로, totalApy = (1 + vaultApy) \* (1 + tradingApr) - 1로 계산됩니다.
 
 </details>
 
@@ -137,7 +207,23 @@
 
 <summary>GET /tvl</summary>
 
+각 Nesto 보관소의 현재 및 실시간 총 잠긴 가치를 제공합니다. 이 값은 해당 보관소가 현재 보유한 모든 자산의 현재 시가 총액의 합으로, $USD로 표시됩니다.
 
+```
+// Sample response from the /tvl endpoint
+
+{
+    ...
+    "optimism-bifi-maxi": 37679.65,
+    "velodrome-wsteth-weth": 295597.74,
+    "beets-lido-shuffle": 101185.39,
+    "beets-yellow-submarine": 5828.15,
+    "beets-its-mai-life": 178994.42,
+    "velodrome-usdc-mim": 488943.72,
+    "velodrome-weth-bifi": 133635.5,
+    ...
+}
+```
 
 </details>
 
@@ -145,6 +231,36 @@
 
 <summary>GET /fees</summary>
 
+각 Nesto 보관소의 현재 수수료 구조에 대한 상세한 내역을 제공합니다.
+
+```
+// Sample response from the /fees endpoint (e.g. Celo BIFI Maxi vault)
+
+{
+  "celo-bifi-maxi": {
+    "performance": {
+      "total": 0.0005,
+      "strategist": 0,
+      "call": 0.0005,
+      "treasury": 0,
+      "stakers": 0
+    },
+    "withdraw": 0,
+    "lastUpdated": 1665603844026
+  },
+  ...
+}
+```
+
+* performance - 각 보관소의 모든 복리 이벤트("수확")에 부과되는 성과 수수료로 구성된 수수료 설정 목록입니다.
+* total - 부과된 총 성과 수수료로, "performance" 목록의 다른 항목들의 합입니다.
+* strategist - 보관소를 배포하는 전략가에게 지급되는 수수료로, 커뮤니티 기여를 장려하기 위한 형태로 지급됩니다.
+* call - 복리를 발생시키는 수확 함수의 호출자에게 지급되는 수수료입니다.
+* treasury - 프로토콜을 지원하기 위해 Beefy 자금에 지급되는 수수료입니다. stakers - BIFI 토큰의 소유자 및 스테이커에게 지급되는 수수료로, BIFI 수익 풀 보관소에 지급되거나 BIFI Maxi 보관소를 위해 BIFI 토큰을 매입하는 데 사용됩니다.
+* withdraw - 보관소에서 인출 시 예금 가치에 부과되는 수수료로, 보관소의 공격 및 남용으로부터 보호하기 위해 부과됩니다.
+*   lastUpdated - API의 데이터가 마지막으로 업데이트된 보관소의 관련 블록입니다.
+
+    \
 
 
 </details>
