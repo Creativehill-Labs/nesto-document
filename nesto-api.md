@@ -509,7 +509,15 @@ Nesto 애플리케이션에서 호스팅하는 모든 런치풀 부스트에 관
 
 <summary>GET /holders</summary>
 
+NEFI 토큰의 현재 보유자 수를 구체적으로 제공합니다.
 
+```
+// Sample respones from the /holders endpoint
+
+{
+  "holderCount": 36882
+}
+```
 
 </details>
 
@@ -521,6 +529,55 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 
 <summary>GET /cmc</summary>
 
+CoinMarketCap에서 Nesto 보관소를 수익률 농장 섹션에 표시하기 위해 필요한 정보를 제공합니다.
+
+```
+// Sample response for the /cmc endpoint
+
+{
+  "provider": "Beefy",
+  "provider_logo": "https://beefy.finance/img/beefy.svg",
+  "links": [
+    {
+      "title": "Twitter",
+      "link": "https://twitter.com/beefyfinance"
+    },
+    {
+      "title": "Telegram",
+      "link": "https://t.me/beefyfinance"
+    },
+    {
+      "title": "Discord",
+      "link": "https://discord.gg/yq8wfHd"
+    },
+    {
+      "title": "Medium",
+      "link": "https://medium.com/beefyfinance"
+    },
+    {
+      "title": "Github",
+      "link": "https://github.com/beefyfinance"
+    }
+  ],
+  "pools": [
+    {
+      "name": "BIFI Maxi",
+      "pair": "BIFI",
+      "pairLink": "https://app.beefy.finance/",
+      "logo": "https://beefy.finance/vaults/bifi/BIFI.png",
+      "poolRewards": [
+        "BIFI"
+      ],
+      "apyId": "bifi-maxi",
+      "contract": "0xf7069e41C57EcC5F122093811d8c75bdB5f7c14e",
+      "oracle": "tokens",
+      "oracleId": "BIFI"
+    },
+    ...
+  ]
+}
+```
+
 
 
 </details>
@@ -529,7 +586,16 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 
 <summary>GET /supply</summary>
 
+Coingecko에서 NEFI의 총 공급량과 유통 공급량을 사이트에 표시하기 위해 필요한 정보를 제공합니다.
 
+```
+// Sample response for the /supply endpoint
+
+{
+  "total": 80000,
+  "circulating": 80000
+}
+```
 
 </details>
 
