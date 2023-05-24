@@ -173,8 +173,6 @@
 
 **필드 참조 사항**
 
-
-
 * **vaultApr** - 보관소의 연간 수익률로, 보관소의 예상 연간 보상을 $USD로 환산한 값으로, 보관소에 투자된 총 금액으로 나눈 것입니다.
 
 <!---->
@@ -252,6 +250,8 @@
 }
 ```
 
+**필드 참조 사항**
+
 * performance - 각 보관소의 모든 복리 이벤트("수확")에 부과되는 성과 수수료로 구성된 수수료 설정 목록입니다.
 * total - 부과된 총 성과 수수료로, "performance" 목록의 다른 항목들의 합입니다.
 * strategist - 보관소를 배포하는 전략가에게 지급되는 수수료로, 커뮤니티 기여를 장려하기 위한 형태로 지급됩니다.
@@ -290,8 +290,12 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
   "dfyn-aave-dfyn": 2.878265077862883,
   "dfyn-bifi-dfyn": 6.083434553784047,
   ...
-}ㅣ - 각 필드는 LP 보관소의 고유한 oracleId 문자열을 반영하며, 미국 달러로 표시된 실시간 가격을 나타내는 값을 반환합니다. 예를 들어, "1.165"는 1.17달러의 가격을 나타냅니다.
+}
 ```
+
+**필드 참조 사항**
+
+* **LP price** - 각 필드는 LP 보관소의 고유한 oracleId 문자열을 반영하며, 미국 달러로 표시된 실시간 가격을 나타내는 값을 반환합니다. 예를 들어, "1.165"는 1.17달러의 가격을 나타냅니다.
 
 </details>
 
@@ -299,7 +303,32 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 
 <summary>GET /lps/breakdown</summary>
 
+각 Nesto 보관소에서 사용되는 유동성 풀에 관련된 보다 자세한 정보를 제공합니다.
 
+```
+// Sample response from the /lps/breakdown endpoint (eg. 2omb 2omb-2share LP)
+
+{
+  "2omb-2omb-2share": {
+    "price": 0.29050984564246707,
+    "tokens": [
+      "0x7a6e4E3CC2ac9924605DCa4bA31d1831c84b44aE",
+      "0xc54A1684fD1bef1f077a336E6be4Bd9a3096a6Ca"
+    ],
+    "balances": [
+      "114463.728388652710537014",
+      "391.331589320557497638"
+    ],
+    "totalSupply": "5873.360029904692639438"
+  },
+```
+
+**필드 참조 사항**
+
+* **price** - LP 토큰의 전체 주당 현재 및 실시간 가격으로, $USD로 표시됩니다.
+* **tokens** - LP에 포함된 각 기초 자산/토큰의 계약 주소 목록입니다.
+* **balances** - 보관소의 각 토큰의 현재 잔액 목록으로, 이전 필드에 나열된 기초 토큰으로 표시됩니다.
+* **totalSupply** - 현재 및 실시간 발행된 LP 토큰의 총량입니다.
 
 </details>
 
@@ -307,7 +336,33 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 
 <summary>GET /tokens</summary>
 
+Nesto에서 사용하는 모든 토큰에 대한 정보를 제공합니다. 개별 자산 및 통화, 스테이킹된 자산 및 LP를 블록체인별로 정렬하여 제공합니다.
 
+```
+// Sample response for /tokens endpoint (e.g. polygon spUSDC LP token)
+
+{
+  "polygon": {
+    "spUSDC": {
+      "name": "Stargate USD Coin LP",
+      "symbol": "spUSDC",
+      "address": "0x1205f31718499dBf1fCa446663B532Ef87481fe1",
+      "decimals": 6
+    },
+    ...
+}
+```
+
+**필드 참조 사항**
+
+* **name** - 해당 ID와 관련된 토큰의 전체 이름을 나타내는 문자열입니다.
+* **symbol** - 발행자가 할당한 토큰의 심볼을 나타내는 문자열입니다.
+* **address** - 해당 토큰의 계약 주소입니다.
+* **decimals** - 발행자가 허용한 토큰의 소수점 자릿수로, 체인 상에서의 분할 가능성을 나타냅니다.
+
+**GET /tokens/{blockchain}**&#x20;
+
+더 구체적인 정보를 원하신다면, /tokens 엔드포인트에 {blockchain} 매개변수를 추가하여 특정 블록체인에서만 토큰을 반환할 수 있습니다. (예: /tokens/polygon은 Polygon 블록체인에서 발행된 토큰만 반환합니다.)
 
 </details>
 
@@ -319,7 +374,47 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 
 <summary>GET /config</summary>
 
+[Nesto 애플리케이션](https://app.beefy.finance/)에서 사용되는 각 블록체인을 운영하기 위해 사용되는 현재 지갑 구성의 주소에 대한 정보를 제공합니다.
 
+<pre><code>// Sample response from /config endpoint (e.g. Polygon blockchain)
+<strong>
+</strong><strong>{
+</strong>  "polygon": {
+    "devMultisig": "0x09dc95959978800E57464E962724a34Bb4Ac1253",
+    "treasuryMultisig": "0xe37dD9A535c1D3c9fC33e3295B7e08bD1C42218D",
+    "strategyOwner": "0x6fd13191539e0e13B381e1a3770F28D96705ce91",
+    "vaultOwner": "0x94A9D4d38385C7bD5715A2068D69B87FF81F4BF3",
+    "keeper": "0x4fED5491693007f0CD49f4614FFC38Ab6A04B619",
+    "treasurer": "0xe37dD9A535c1D3c9fC33e3295B7e08bD1C42218D",
+    "launchpoolOwner": "0x09dc95959978800E57464E962724a34Bb4Ac1253",
+    "rewardPool": "0xDeB0a777ba6f59C78c654B8c92F80238c8002DD2",
+    "treasury": "0x09EF0e7b555599A9F810789FfF68Db8DBF4c51a0",
+    "beefyFeeRecipient": "0x7313533ed72D2678bFD9393480D0A30f9AC45c1f",
+    "bifiMaxiStrategy": "0xD126BA764D2fA052Fc14Ae012Aef590Bc6aE0C4f",
+    "voter": "0x5e1caC103F943Cd84A1E92dAde4145664ebf692A",
+    "beefyFeeConfig": "0x8E98004FE65A2eAdA63AD1DE0F5ff76d845f14E7"
+  },
+...
+</code></pre>
+
+**필드 참조 사항**
+
+* **devMultisig** - 체인에서 개발 업데이트를 관리하기 위해 사용되는 Nesto 개발자 다중 서명 지갑의 주소입니다.
+* **treasuryMultisig** - 체인에서 Nesto의 핵심 자금을 관리하기 위해 사용되는 Nesto 자금 다중 서명 지갑의 주소입니다.
+* **strategyOwner** - 체인에서 전략 계약의 소유자로 작동하는 일반적인 Nesto 지갑의 주소입니다.
+* **vaultOwner** - 체인에서 보관소 계약의 소유자로 작동하는 일반적인 Nesto 지갑의 주소입니다.
+* **keeper** - 체인에서 보관소 계약의 관리자로 작동하는 일반적인 Nesto 지갑의 주소입니다. 이에는 보관소에서 사용되는 전략 화이트리스트를 관리하고 필요한 경우 보관소를 일시 중지하거나 비상 상태로 전환하는 작업이 포함됩니다.
+* **treasurer** - 체인에서 회계 관리자로 작동하는 일반적인 Beefy 지갑의 주소입니다. 이에는 다양한 이유로부터의 자금 지불을 관리하며, 자주 treasuryMultisig와 동일한 지갑입니다.
+* **launchpoolOwner** - 체인에 배포된 런치풀/부스트 계약의 소유자로 작동하는 일반적인 Beefy 지갑의 주소입니다. 이는 일반적으로 devMultisig와 동일한 지갑입니다.
+* **rewardPool** - 체인에서 부스트를 위해 할당된 보상을 보유하는 일반적인 Beefy 지갑의 주소입니다.
+* **treasury** - 체인에서 자금관리자로 작동하는 일반적인 Beefy 지갑의 주소이며, 회계관리자와 treasuryMultisig에 의해 관리됩니다.
+* **beefyFeeRecipient** - 체인 상의 모든 Beefy 보관소에서 수확 시 부과되는 성과 수수료를 수취하는 일반적인 Beefy 지갑의 주소입니다.
+* **bifiMaxiStrategy** - 체인 상의 기본 $BIFI Maxi 보관소에 연결된 전략의 주소입니다. voter - 다양한 타사 프로토콜에 대한 Beefy의 투표 권한을 지시하는 데 사용되는 일반적인 Beefy 지갑의 주소입니다.
+* **beefyFeeConfig** - 체인 상의 보관소에 부과되는 성과 수수료 설정을 위해 사용되는 업그레이드 가능한 프록시 계약의 주소입니다.
+
+**GET /config/{blockchain}**
+
+더 구체적인 정보를 원하신다면, /config 엔드포인트에 {blockchain} 매개변수를 추가하여 특정 블록체인의 구성
 
 </details>
 
@@ -327,7 +422,53 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 
 <summary>GET /bursts</summary>
 
+Nesto 애플리케이션에서 호스팅하는 모든 런치풀 부스트에 관한 정보를 제공합니다. 이 정보에는 실시간 및 과거의 [버스트](undefined-1/undefined-1.md#burst)도 포함됩니다.
 
+```
+// Sample response from /boosts endpoint (e.g. Optimism BIFI-WETH LP token)
+
+{
+  "id": "moo_velodrome-weth-bifi-beefy",
+  "poolId": "velodrome-weth-bifi",
+  "name": "Beefy",
+  "assets": [
+    "BIFI",
+    "ETH"
+  ],
+  "tokenAddress": "0x3532b6f723948eF39d5DCf44C16855239aF81082",
+  "earnedToken": "OP",
+  "earnedTokenDecimals": 18,
+  "earnedTokenAddress": "0x4200000000000000000000000000000000000042",
+  "earnContractAddress": "0x8F755873546F4D0EDf7d41fF8604C8A632113eB7",
+  "earnedOracle": "tokens",
+  "earnedOracleId": "OP",
+  "partnership": true,
+  "status": "active",
+  "isMooStaked": true,
+  "partners": [
+    "beefy"
+  ],
+  "chain": "optimism",
+  "periodFinish": 1667843632
+},
+...
+```
+
+* **id** - 동일한 보관소의 별도 버전을 포함하여 각 보관소에 할당된 고유한 식별 문자열입니다.
+* **poolId** - Nesto가 보관하는 각 LP에 할당된 고유한 식별 문자열입니다. 동일한 LP의 별도 버전을 포함합니다.
+* **name** - burst를 기금한 파트너(들)의 전체 이름입니다. assets - 보관소 또는 기초 LP에 사용되는 기초 자산의 목록입니다.
+* **tokenAddress** - 예금 및 인출을 처리하고 사용자에게 AmmVault 토큰을 발급하는 Nesto 보관소 계약의 주소입니다.
+* **earnedToken** - burst 참가자가 획득하는 burst 보상 토큰의 이름입니다.
+* **earnedTokenDecimals** - earnedToken의 생성 시 할당된 소수점 위치의 수입니다.
+* **earnTokenAddress** - earnedToken의 계약 주소입니다.
+* **earnContractAddress** - burst 계약의 계약 주소로, 할당된 burst 보상을 보유하고 burst 참가자에게 분배합니다.
+* **isMooStaked** - burst를 받기 위해 사용자가 Amm 토큰을 nesto와의 추가 계약에 스테이킹해야 하는지 여부입니다.
+* **partners** - burst를 기금한 파트너(들)에 대한 약식 레이블입니다.
+* **periodFinish** - burst가 종료되는 호스팅 블록체인의 블록입니다.
+
+**GET /boosts/{blockchain}**
+
+더 구체적인 정보를 원하신다면, /bursts 엔드포인트에 {blockchain} 매개변수를 추가하여 특정 블록체인의 부스트만 반환할 수 있습니다. (예: /bursts/polygon은 Polygon 블록체인에서 호스팅되는 부스트만 반환합니다.)
 
 </details>
 
@@ -335,7 +476,24 @@ Nesto 또는 그 제품에 대한 정보를 사이트에 표시하기 위해 제
 
 <summary>GET /NEFIbuyback</summary>
 
+각 블록체인에서 수행되는 일일 NEFI 매입량에 대한 세부 정보를 제공합니다.
 
+```
+// Sample response from the /bifibuyback endpoint (e.g. BSC data)
+
+{
+  "bsc": {
+    "buybackTokenAmount": "0.377849674473987141",
+    "buybackUsdAmount": "121.1485184178464957989921757592912"
+  },
+  ...
+}
+```
+
+**필드 참조 사항**
+
+* **buybackTokenAmount** - 해당 체인에서 프로토콜이 일일로 매입하는 $BIFI 토큰의 현재 양을 나타냅니다.
+* **buybackUsdAmount** - 위의 양을 미국 달러로 환산한 현재 가치를 나타냅니다.
 
 </details>
 
