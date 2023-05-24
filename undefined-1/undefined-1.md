@@ -12,7 +12,7 @@ Nesto 보관소(Vault)에 예금을 하면, 'Bird'로 접두사가 붙은 '영�
 
 ## Nesto Burst는 어떻게 사용하나요?
 
-먼저 메인 앱에서 부스팅된 볼트를 찾아 볼트에서 요청된 토큰을 예치하세요. 그런 다음 부스팅 섹션으로 이동하여 "영수증"인 <mark style="color:red;">birdToken(링크 바로 밑에 birdtoken 설명으로)</mark>을 스테이킹하세요. 이 <mark style="color:red;">birdToken</mark>을 스테이킹하고 나면 모든 작업이 완료됩니다! 여기서 언제든지 파트너 토큰을 확인하고 인출할 수 있습니다.
+먼저 메인 앱에서 부스팅된 볼트를 찾아 볼트에서 요청된 토큰을 예치하세요. 그런 다음 부스팅 섹션으로 이동하여 "영수증"인 [<mark style="color:red;">birdToken</mark>](undefined-1.md#birdtoken)을 스테이킹하세요. 이 [<mark style="color:red;">birdToken</mark>](undefined-1.md#birdtoken)을 스테이킹하고 나면 모든 작업이 완료됩니다! 여기서 언제든지 파트너 토큰을 확인하고 인출할 수 있습니다.
 
 ## 휙득한 토큰을 어떻게 볼 수 있나요?
 
@@ -25,31 +25,31 @@ birdToken은 Nesto 보관소(Vault)에 예치할 때 받게 되는 이자 지급
 * birdToken이란 무엇인가요?
 * birdToken은 어떻게 이자를 벌어들이나요?
 * 처음 예치한 토큰을 위해 Token을 어떻게 교환하나요?
-* mooToken 시스템의 장점은 무엇인가요?
+* birdToken 시스템의 장점은 무엇인가요?
 
-## Bursted는 얼마나 오래 지속되나요?
+## Burst된 보관소는 얼마나 오래 지속되나요?
 
-부스팅된 보관소(Vault)에는 Boost 섹션에서 타이머가 표시됩니다. 그러나 보관소(Vault)가 끝난 후 언제든지 다시 돌아와 인출할 수 있으므로 이 타이머를 따로 신경 쓰시진 않으셔도.됩니다.
+Burst된 보관소(Vault)에는 Burst 섹션에서 타이머가 표시됩니다. 그러나 보관소(Vault)가 끝난 후 언제든지 다시 돌아와 인출할 수 있으므로 이 타이머를 따로 신경 쓰시진 않으셔도 됩니다.
 
 ## Burst가 완료되면 수동으로 언스테이킹 해야하나요?
 
-네, Burst가 종료되면 반드시 사용자가 수행해야 하는 작업입니다. 안전상의 이유로 Nesto는 사용자의 토큰을 지갑으로 다시 이동시키지 않습니다. Burst가 끝난 후에는 언제든지 "Claim & Unstake"를 눌러 <mark style="color:red;">birdToken</mark>과 함께 파트너 토큰을 인출하고 언스테이크할 수 있습니다.
+네, Burst가 종료되면 반드시 사용자가 수행해야 하는 작업입니다. 안전 상의 이유로 Nesto는 사용자의 토큰을 지갑으로 다시 이동시키지 않습니다. Burst가 끝난 후에는 언제든지 "Claim & Unstake"를 눌러 <mark style="color:red;">birdToken</mark>과 함께 파트너 토큰을 인출하고 스테이킹을 해제할 수 있습니다.
 
 ## 한 번에 여러 개에 Burst 보관소(Vault)를 사용할 수 있나요?
 
-가능합니다! 각 Burst된 보관소(Vault)에 필요한 토큰을 입금한 후, Burst 섹션에서 <mark style="color:red;">birdToken</mark>을 입금하면 됩니다. 참여하고자 하는 각 Busrt된 보관소(Vault)마다 이 단계를 반복하면 됩니다.
+가능합니다! 각 Burst된 보관소(Vault)에 필요한 토큰을 입금한 후, Burst 섹션에서 <mark style="color:red;">birdToken</mark>을 입금하면 됩니다. 참여하고자 하는 각 Burst된 보관소(Vault)마다 이 단계를 반복하면 됩니다.
 
-## Burst 보관소(Vault)는 안전한가요?
+## Burst된 보관소(Vault)는 안전한가요?
 
-네! Nesto는 항상 안전성을 우선으로 개발하며, Burst된 보관소(Vault)가 완전히 안전할 수 있게 노력했습니다. 이들은 Nesto에 의해 호스팅되며, Nesto는 파트너로부터 Burst된 토큰을 받아들이고 자체 보관소(Vault)를 사용하여 보상합니다. Burst 토큰을 받기 위해 사용하는 <mark style="color:red;">birdToken</mark>은 Nesto를 떠나지 않습니다.
+네! Nesto는 항상 안전성을 우선으로 개발하며, Burst된 보관소(Vault)가 완전히 보안을 유지할 수 있게 노력했습니다. 이들은 Nesto에 의해 호스팅되며, Nesto는 파트너로부터 Burst된 토큰을 받아들이고 자체 보관소(Vault)를 사용하여 보상합니다. Burst 토큰을 받기 위해 사용하는 <mark style="color:red;">birdToken</mark>은 Nesto를 떠나지 않습니다.
 
-## 내 birdToken으로 파트너 보관소(Vault)에 들어가도 일반 보관소(Vault) 보상을 받을 수 있나요?
+## birdToken으로 파트너 보관소(Vault)에 들어가도 일반 보관소(Vault) 보상을 받을 수 있나요?
 
-네! 메인 보관소(Vault) 예금한 일반 토큰들은 일반적인 보상을 받으며 평소와 같이 복리됩니다. 이는 Launchpool Burst에 참여하기 위해 예치하는 birdToken이 이자를 받기 때문입니다. Bursted Vault를 사용하여, 일반 보상 뿐만 아니라 파트너 토큰도 보너스로 얻을 수 있습니다.
+네! 메인 보관소(Vault) 예금한 일반 토큰들은 일반적인 보상을 받으며 평소와 같이 복리화됩니다. 이는 Launchpool Burst에 참여하기 위해 예치하는 birdToken이 이자를 받기 때문입니다. Burst된Vault를 사용하여, 일반 보상 뿐만 아니라 파트너 토큰도 보너스로 얻을 수 있습니다.
 
 ## "Pre-stake"는 무슨 뜻인가요?
 
-이는 이 보관소(Vault)에 대한 예정된 Burst가 있다는 것을 의미합니다. 미리 birdTokens를 스테이킹하여 Burst가 시작되자마자 Busrt 보상을 받을 수 있습니다.
+Pre-stake는 이 보관소(Vault)에 대한 예정된 Burst가 있다는 것을 의미합니다. 미리 birdTokens를 스테이킹하여 Burst가 시작되자마자 Busrt 보상을 받을 수 있습니다.
 
 ## 왜 출시 당시에 표시된 APY가 지금과 다른가요?
 
@@ -57,4 +57,4 @@ APY는 "연간 수익률"로 일일 이자 수익을 복리로 계산하여 산�
 
 ## 홍보된 프로젝트와 해당 토큰은 안전한가요?
 
-특정 프로젝트와 협력할 때, Nesto는 항상 해당 프로젝트를 성실하고 안전하게 보장하기 위해 전반적인 심사를 거칩니다. 이를 위해 Nesto는 [Nesto SAFU Practices](../nesto-safu/nesto-amfu.md)에서 제시한 안전 규칙을 준수합니다. 코드 측면에서 프로젝트가 안전하더라도 파트너 토큰의 가치가 유지 되는 지는 보장할 수 없습니다. 따라서 파트너 프로젝트를 지원할 것인지 여부와 파트너 토큰을 보유할 것인지 판단하는 것은 언제나 사용자의 개인적인 몫이며 Nesto는 사용자의 개인적인 행동에 대한 책임을 지지 않습니다.
+특정 프로젝트와 협력할 때, Nesto는 항상 해당 프로젝트를 성실하고 안전하게 보장하기 위해 전반적인 심사를 거칩니다. 이를 위해 Nesto는 [Nesto SAFU Practices](../nesto-safu/nesto-amfu.md)에서 제시한 안전 규칙을 준수합니다. 코드 측면에서 프로젝트가 안전하더라도 파트너 토큰의 가치가 유지되는지는 보장할 수 없습니다. 따라서 파트너 프로젝트를 지원할 것인지 여부와 파트너 토큰을 보유할 것인지 판단하는 것은 언제나 사용자의 개인적인 몫이며 Nesto는 사용자의 개인적인 행동에 대한 책임을 지지 않습니다.
