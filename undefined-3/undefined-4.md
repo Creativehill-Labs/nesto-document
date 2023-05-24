@@ -4,7 +4,7 @@
 
 Nesto의 핵심 기여자들은 다양한 영역에서 Nesto를 개선하기 위해 매일 열심히 노력하고 있습니다. 대부분 유료 기능이 있습니다.
 
-| Name                  | Discord                    | Twitter           |
+| Name \*\*             | Discord                    | Twitter           |
 | --------------------- | -------------------------- | ----------------- |
 | AllTrades             | AllTrades#1704             | @AllTradesz       |
 | chebiN                | chebiN#2624                | -                 |
