@@ -10,18 +10,19 @@ Nesto [Vault 컨트렉트는](https://github.com/beefyfinance/beefy-contracts/bl
 
 Nesto Vault 및 전략 컨트렉트 모두에서 사용되는 기본 팜 토큰(예: LP 토큰)의 주소를 반환합니다. 이는 팜에 사용되는 기본 자산과 동일하지 않습니다.
 
-<pre><code>function want () 공개 보기 반환 ( IERC20Upgradeable ) {     
-<strong>    IERC20Upgradeable ( 전략 . 원함 ())을 반환합니다 .
-</strong>}
-</code></pre>
+```
+function want() public view returns (IERC20Upgradeable) {
+    return IERC20Upgradeable(strategy.want());
+}
+```
 
 ### 균형()
 
 Vault와 전략 및 수익 소스에 저장된 "원"(예: 기본 팜 토큰)의 양을 정수로 반환합니다.
 
 ```
-function balance () public view return ( uint ) {     
-    원하는 반환 (). balanceOf ( 주소 ( this )) + IStrategyV7 ( 전략 ). balanceOf ();  
+function balance() public view returns (uint) {
+    return want().balanceOf(address(this)) + IStrategyV7(strategy).balanceOf();
 }
 ```
 
@@ -30,8 +31,8 @@ function balance () public view return ( uint ) {
 Vault에만 정수로 저장된 "원하는"(예: 기본 팜 토큰)의 양을 반환합니다.
 
 ```
-사용 가능한 함수 () 공개 보기 반환 ( uint256 ) {     
-    원하는 반환 (). balanceOf ( 주소 ( 이 ));
+function available() public view returns (uint256) {
+    return want().balanceOf(address(this));
 }
 ```
 
@@ -50,8 +51,8 @@ Vault에만 정수로 저장된 "원하는"(예: 기본 팜 토큰)의 양을 �
 Vault의 주당 현재 가격(예: ammToken당)을 "원함"(예: 기본 팜 토큰)에 지정된 정수로 반환합니다. _전체 주당 가격_ =[균형()](https://docs.beefy.finance/developer-documentation/vault-contract#balance)_/_[총공급()](https://docs.beefy.finance/developer-documentation/vault-contract#totalsupply).
 
 ```
-function getPricePerFullShare () 공개 보기 반환 ( uint256 ) {     
-    return totalSupply () == 0 ? 1e18 : 잔고 () * 1e18 / 총 공급량 ();          
+function totalSupply() public view virtual override returns (uint256) {
+    return _totalSupply;
 }
 ```
 
@@ -60,7 +61,7 @@ function getPricePerFullShare () 공개 보기 반환 ( uint256 ) {
 Vault가 수익을 생성하는 데 사용하는 현재 기본 전략 컨트렉트의 주소를 반환합니다.
 
 ```
-함수 전략 () 외부 보기 반환 ( 주소 );    
+function strategy() external view returns (address);
 ```
 
 ## 쓰기 기능
@@ -70,20 +71,20 @@ Vault가 수익을 생성하는 데 사용하는 현재 기본 전략 컨트렉�
 예금자로부터 Vault로 지정된 양의 "원하는"(예: 기본 팜 토큰) 전송을 실행한 다음 그에 대한 대가로 예금자에게 ammTokens의 비례 수량을 발행합니다.
 
 ```
-입금 함수 ( uint _amount ) public nonReentrant { 
-    전략 . 사전입금 ();
-    uint256 _pool = 잔액 ();
-    원하는 (). safeTransferFrom ( msg . 보낸 사람 , 주소 ( this ), _amount );
-    적립 ();
-    uint256 _after = 균형 ();
-    _amount = _after - _pool ; // 디플레이션 토큰 추가 확인
-    uint256 공유 = 0 ;
-    경우 ( totalSupply () == 0 ) {   
-        주식 = _amount ;
-    } 다른 { 
-        공유 = ( _amount * totalSupply ()) / _pool ;  
+function deposit(uint _amount) public nonReentrant {
+    strategy.beforeDeposit();
+    uint256 _pool = balance();
+    want().safeTransferFrom(msg.sender, address(this), _amount);
+    earn();
+    uint256 _after = balance();
+    _amount = _after - _pool; // Additional check for deflationary tokens
+    uint256 shares = 0;
+    if (totalSupply() == 0) {
+        shares = _amount;
+    } else {
+        shares = (_amount * totalSupply()) / _pool;
     }
-    _mint ( msg . 보낸 사람 , 공유 );
+    _mint(msg.sender, shares);
 }
 ```
 
@@ -94,20 +95,20 @@ Vault가 수익을 생성하는 데 사용하는 현재 기본 전략 컨트렉�
 예금자로부터 ammTokens의 지정된 \_amount의 소각을 실행한 다음 비례 수량의 "원하는"(예: 기본 팜 토큰)을 예금자에게 전송합니다.
 
 ```
-함수 철회 ( uint256 _shares ) 공개 {  
-    uint256 r = ( 잔고 () * _공유 ) / 총 공급량 ();   
-    _burn ( msg . 보낸 사람 , _shares );
-    uint b = 원하는 (). balanceOf ( 주소 ( 이 ));
-    경우 ( b < r ) { 
-        uint _withdraw = r - b ;
-        전략 . 철수 ( _withdraw );
-        uint _after = 원하는 (). balanceOf ( 주소 ( 이 ));
-        uint _diff = _after - b ;
-        if ( _diff < _withdraw ) { 
-            r = b + _diff ;
+function withdraw(uint256 _shares) public {
+    uint256 r = (balance() * _shares) / totalSupply();
+    _burn(msg.sender, _shares);
+    uint b = want().balanceOf(address(this));
+    if (b < r) {
+        uint _withdraw = r - b;
+        strategy.withdraw(_withdraw);
+        uint _after = want().balanceOf(address(this));
+        uint _diff = _after - b;
+        if (_diff < _withdraw) {
+            r = b + _diff;
         }
     }
-    원하는 (). safeTransfer ( msg . 발신자 , r );
+    want().safeTransfer(msg.sender, r);
 }
 ```
 
@@ -118,10 +119,10 @@ Vault가 수익을 생성하는 데 사용하는 현재 기본 전략 컨트렉�
 전송을 실행합니다[사용 가능()](https://docs.beefy.finance/developer-documentation/vault-contract#available)Vault 컨트렉트에서 전략 컨트렉트로 "원"(예: 기본 팜 토큰)하고 전략의 _deposit()_ 기능을 트리거하여 자금을 배포하고 수익을 시작합니다.
 
 ```
-함수 적립 () 공개 {  
-    uint _bal = 사용 가능 ();
-    원하는 (). safeTransfer ( 주소 ( 전략 ), _bal );
-    전략 . 예금 ();
+function earn() public {
+    uint _bal = available();
+    want().safeTransfer(address(strategy), _bal);
+    strategy.deposit();
 }
 ```
 
@@ -130,32 +131,33 @@ Vault가 수익을 생성하는 데 사용하는 현재 기본 전략 컨트렉�
 다음을 사용하여 현재 전략을 대체 전략으로 업그레이드할 것을 예상하여 대체 전략의 주소를 Vault 컨트렉트의 메모리에 씁니다.[업그레이드전략()](https://docs.beefy.finance/developer-documentation/vault-contract#upgradestrat).
 
 ```
-function proposalStrat ( address _implementation ) public onlyOwner { 
-    require ( address ( this ) == IStrategyV7 ( _implementation ). vault (), "이 Vault에 유효하지 않은 제안" );  
-    요구 ( 원하는 () == IStrategyV7 ( _implementation ). 원하는 (), "다른 원하는" );  
-    StratCandidate = StratCandidate ({
-        구현 : _implementation ,
-        제안 시간 : 블록 . 타임스탬프
+function proposeStrat(address _implementation) public onlyOwner {
+    require(address(this) == IStrategyV7(_implementation).vault(), "Proposal not valid for this Vault");
+    require(want() == IStrategyV7(_implementation).want(), "Different want");
+    stratCandidate = StratCandidate({
+        implementation: _implementation,
+        proposedTime: block.timestamp
     });
-    NewStratCandidate ( _implementation ) 방출 ;
-}function proposalStrat ( address _implementation ) public onlyOwner { 
+    emit NewStratCandidate(_implementation);
+}
 ```
 
 ### 업그레이드전략()
 
 현재 전략의 주소를 다음에 지정된 대체 전략으로 바꿉니다.[프로포즈스트랫()](https://docs.beefy.finance/developer-documentation/vault-contract#proposestrat).
 
-<pre><code><strong>기능 upgradeStrat () 공개 onlyOwner { 
-</strong>    require ( stratCandidate . implementation != address ( 0 ), "후보가 없습니다" ); 
-    require ( stratCandidate . 제안된 시간 + 승인 지연 &#x3C; 블록 . 타임스탬프 , "지연이 지나지 않았습니다" );
-    UpgradeStrat ( stratCandidate . 구현 ) 방출 ;
-    전략 . 퇴역전략 ();
-    전략 = IStrategyV7 ( stratCandidate . 구현 );
-    StratCandidate . 구현 = 주소 ( 0 );
-    StratCandidate . 제안 시간 = 5000000000 ;
-    적립 ();
+```
+function upgradeStrat() public onlyOwner {
+    require(stratCandidate.implementation != address(0), "There is no candidate");
+    require(stratCandidate.proposedTime + approvalDelay < block.timestamp, "Delay has not passed");
+    emit UpgradeStrat(stratCandidate.implementation);
+    strategy.retireStrat();
+    strategy = IStrategyV7(stratCandidate.implementation);
+    stratCandidate.implementation = address(0);
+    stratCandidate.proposedTime = 5000000000;
+    earn();
 }
-</code></pre>
+```
 
 ## NestoVaultV7.sol
 
