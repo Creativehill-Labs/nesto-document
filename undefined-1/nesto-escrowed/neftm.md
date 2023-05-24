@@ -6,15 +6,15 @@ description: Nesto-escrowed Fantom
 
 ## neFTM이 뭔가요?
 
-neFTM은 Nesto-Esrowed Fantom의 줄임말입니다. neFTM을 스테이킹하면 개별 투자자가 1년간 FTM을 잠금하지 않으면 보상으로 받을 수 없는 최적화된 Validator 노드 보상에 액세스할 수 있습니다. neFTM 토큰은 1:1로 FTM과 동일하게 보장되며, Nesto 플랫폼과 주요 DEX의 팜에서 스테이킹할 수 있습니다.
+neFTM은 Nesto-Esrowed Fantom의 줄임말입니다. neFTM을 스테이킹하면 개별 투자자가 1년 간 FTM을 잠금하지 않으면 보상으로 받을 수 없는 최적화된 Validator 노드 보상에 액세스할 수 있습니다. neFTM 토큰은 1:1로 FTM과 동일하게 보장되며, Nesto 플랫폼과 주요 DEX의 팜에서 스테이킹할 수 있습니다.
 
-## 어떻게neFTM 얻나요?
+## 어떻게 neFTM을 얻나요?
 
-BeFTM을 얻으려면 먼저 사용자가 FTM을 Beeky Delegator Vault에 예치해야 합니다. 그런 다음 FTM을 사용하여 유동성 풀에서 beFTM을 구입하거나 사용자에게 가장 수익성이 높은 것에 따라 1:1로 발행됩니다.
+NeFTM을 얻으려면 먼저 사용자가 FTM을 Beeky Delegator Vault에 예치해야 합니다. 그런 다음 FTM을 사용하여 유동성 풀에서 beFTM을 구입하거나 사용자에게 가장 수익성이 높은 것에 따라 1:1로 발행됩니다.
 
 \-----------이미지영역--------------
 
-neFTM은 Solidly, BeethovenX, SpiritSwap 및 SpukeySwap과 같은 많은 DEX에서 수동으로 구매할 수도 있습니다. 또한거래를 위해 beFTM 계약 주소가 필요할 수 있습니다. [~~0x7381eD41F6dE418DdE5e84B55590422a57917886~~](https://ftmscan.com/token/0x7381eD41F6dE418DdE5e84B55590422a57917886)
+neFTM은 Solidly, BeethovenX, SpiritSwap 및 SpukeySwap과 같은 많은 DEX에서 수동으로 구매할 수도 있습니다. 또한 거래를 위해 beFTM 계약 주소가 필요할 수 있습니다. [~~0x7381eD41F6dE418DdE5e84B55590422a57917886~~](https://ftmscan.com/token/0x7381eD41F6dE418DdE5e84B55590422a57917886)
 
 ## neFTM 위임은 어떻게 작동하나요?
 
