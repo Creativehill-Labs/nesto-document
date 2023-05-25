@@ -18,7 +18,7 @@ neSPIRIT은 inSPIRIT의 고정된 비프 에스크로 버전으로, SPIRIT에 �
 
 ## neSPIRIT은 어떻게 얻나요?
 
-사용자는[ neSPIRIT 볼트 페이지](https://app.beefy.finance/vault/beefy-binspirit)에서 1:1 비율로 neSPIRIT을 생성할 수 있습니다. 만약 neSPIRIT을 사는 것이 더 이익이 된다면, nesto의 smart minter는 그대로 실행 할것이며, 사용자는 그들의 SPIRIT에 더 많은 neSPIRIT을 얻을 수 있습니다. 사용자는 또한 분산된 거래소에서 neSPIRIT을 구매할 수 있습니다.
+사용자는[ neSPIRIT 볼트 페이지](https://app.beefy.finance/vault/beefy-binspirit)에서 1:1 비율로 neSPIRIT을 생성할 수 있습니다. 만약 neSPIRIT을 사는 것이 더 이익이 된다면, Nesto의 smart minter는 그대로 실행 할것이며, 사용자는 그들의 SPIRIT에 더 많은 neSPIRIT을 얻을 수 있습니다. 사용자는 또한 분산된 거래소에서 neSPIRIT을 구매할 수 있습니다.
 
 \-----------이미지영역--------------
 
@@ -40,7 +40,7 @@ neSPIRIT으로 수익을 벌 수 있는 방법입니다.
 
 1. inSPIRIT을 보유한 사용자들은 Nesto neSPIRIT 금고에 예치하여 더 많은 neSPIRIT을 자동으로 받을 수 있습니다.&#x20;
 2. 분산 거래소(예: SpiritSwap, SushiSwap)에서 neSPIRIT을 유동성 풀에 예치하여 거래 수수료와 잠재적 보상을 받을 수 있습니다.&#x20;
-3. 스피릿스왑의 SPIRIT-neSPIRIT LP에 입금하고, [비피 스피릿-neSPIRIT LP 금고](https://app.beefy.finance/vault/spirit-binspirit-spirit)에 지분을 보유하면 자동 복리 수수료와 보상을 받을 수 있습니다.
+3. 스피릿스왑의 SPIRIT-neSPIRIT LP에 입금하고, [ neSPIRIT-SPIRIT LP 보관소](https://app.beefy.finance/vault/spirit-binspirit-spirit)에 지분을 보유하면 자동 복리 수수료와 보상을 받을 수 있습니다.
 
 ## 하지만 수수료는 어떤가요?
 
