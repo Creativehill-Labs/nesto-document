@@ -164,7 +164,7 @@ function upgradeStrat() public onlyOwner {
 표준 Nesto Vault 컨트렉트의 현재 릴리스는 2022년 8월에 [릴리스된 ](https://github.com/beefyfinance/beefy-contracts/pull/83)[NestoVaultV7.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyVaultV7.sol) 입니다 . V7 릴리스는 몇 가지 주요 방식에서 이전 버전보다 개선되었습니다.
 
 * 사용 중단 및 재배포할 필요 없이 라이브 Nesto Vault에 대한 업데이트 및 변경을 용이하게 하기 위해 프록시 패턴을 통해 Vault 업그레이드 기능을 도입했습니다.
-* 업그레이드 가능한 전략을 허용하도록 전략 인터페이스를 업데이트했습니다. 그리고
+* 업그레이드 가능한 전략을 허용하도록 전략 인터페이스를 업데이트했습니다.
 * Solidity v0.8에 기능을 통합한 후 일반적으로 폐기된 SafeMath 라이브러리에 대한 의존도를 제거하기 위해 모든 컨트렉트를 수정했습니다.
 
-이와는 별도로 2022년 11월 V7 Vault에 대한 ERC-4646 호환 래퍼 컨트렉트가 출시되어 개발자가 표준화된 Vault 기능 및 인터페이스를 사용하여 Nesto Vault를 프로젝트에 통합할 수 있습니다. 보다[NestoWrapper 컨트렉트](https://docs.beefy.finance/developer-documentation/other-beefy-contracts/beefywrapper-contract)자세한 내용은.
+이와는 별도로 2022년 11월 V7 Vault에 대한 ERC-4646 호환 래퍼 컨트렉트가 출시되어 개발자가 표준화된 Vault 기능 및 인터페이스를 사용하여 Nesto Vault를 프로젝트에 통합할 수 있습니다. 보다 자세한 내용은 [NestoWrapper 컨트랙트](https://docs.beefy.finance/developer-documentation/other-beefy-contracts/beefywrapper-contract) 확인하세요
