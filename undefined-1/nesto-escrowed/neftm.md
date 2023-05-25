@@ -10,7 +10,7 @@ neFTM은 Nesto-Esrowed Fantom의 줄임말입니다. neFTM을 스테이킹하면
 
 ## 어떻게 neFTM을 얻나요?
 
-NeFTM을 얻으려면 먼저 사용자가 FTM을 Beeky Delegator Vault에 예치해야 합니다. 그런 다음 FTM을 사용하여 유동성 풀에서 beFTM을 구입하거나 사용자에게 가장 수익성이 높은 것에 따라 1:1로 발행됩니다.
+neFTM을 얻으려면 먼저 사용자가 FTM을 Beeky Delegator Vault에 예치해야 합니다. 그런 다음 FTM을 사용하여 유동성 풀에서 beFTM을 구입하거나 사용자에게 가장 수익성이 높은 것에 따라 1:1로 발행됩니다.
 
 \-----------이미지영역--------------
 
