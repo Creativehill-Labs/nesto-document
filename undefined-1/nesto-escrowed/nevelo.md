@@ -66,4 +66,4 @@ neVELO 예치금에서 사용 가능한 VELO 토큰이 있을 때, 기존 neVELO
 
 일반적으로, 투표는 거래 수수료와 뇌물이 가장 많이 제공되는 유동성 풀 또는 BIFI 토큰(예:NEFI-OP LP)을 지원하는 유동성 풀로 보내집니다. neVELO 계약은 모든 거래 수수료와 뇌물을 수집하고 이를 더 많은 VELO와 교환하여 neVELO 금고에서 자동으로 합성합니다.&#x20;
 
-Velodrome의 인센티브 유동성 풀에 대한 투표는 [Web app](https://app.velodrome.finance/vote)에서 이루어집니다. 뇌물을 제안하는 데 관심이 있는 경우, Core 팀에게 Discord, Telegram 또는 Twitter에서 연락하여 자세한 내용을 알아볼 수 있습니다.
+Velodrome의 인센티브 유동성 풀에 대한 투표는 [Web app](https://app.velodrome.finance/vote)에서 이루어집니다. 후원에 관심이 있으신 경우 Core 팀에게 Discord, Telegram 또는 Twitter를 통해연락하여 자세한 내용을 알아볼 수 있습니다.
