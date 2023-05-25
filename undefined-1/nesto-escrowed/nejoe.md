@@ -12,7 +12,7 @@ JOE는 Trader Joe라는 Avalanche 블록체인의 탈중앙화 거래소에서 �
 
 ## neJOE란 무엇인가요?
 
-neJOE는 veJOE를 얻기 위해 보유한 Neey-scrowed JOE 버전으로, neJOE 사용자는 VeJOE를 강화한 보관소(Vault)에서 발행량의 5%를 획득할 수 있습니다.&#x20;
+neJOE는 veJOE를 얻기 위해 보유한 Nesto-escrowed JOE 버전으로, neJOE 사용자는 VeJOE를 강화한 보관소(Vault)에서 발행량의 5%를 획득할 수 있습니다.&#x20;
 
 이 토큰은 JOE를 기반으로 1:1로 완전히 지원되며, JOE를 상환하기 위해 보유하고 있습니다. 이 예비금은 새로운 사용자가 입금할 때만 채워집니다.
 
