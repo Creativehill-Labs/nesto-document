@@ -77,7 +77,7 @@
 
 <!---->
 
-* **earnContractAddress** - 예금 및 인출을 처리하고 사용자에게  bird 보관소 토큰을 발급하는 Beefy 보관소 계약의 주소입니다.
+* **earnContractAddress** - 예금 및 인출을 처리하고 사용자에게  bird 보관소 토큰을 발급하는 Nesto 보관소 계약의 주소입니다.
 
 <!---->
 
@@ -162,7 +162,7 @@
   "cometh-must-eth": {
     "vaultApr": 1.186973388240745,
     "compoundingsPerYear": 2190,
-    "beefyPerformanceFee": 0.045,
+    "NestoPerformanceFee": 0.045,
     "vaultApy": 2.1057844292858614,
     "lpFee": 0.005,
     "tradingApr": 0.22324214039526927,
@@ -181,7 +181,7 @@
 
 <!---->
 
-* **beefyPerformanceFee** - 계산에 포함된 고정 Nesto 성과 수수료입니다.
+* **NestoPerformanceFee** - 계산에 포함된 고정 Nesto 성과 수수료입니다.
 
 <!---->
 
@@ -389,10 +389,10 @@ Nesto에서 사용하는 모든 토큰에 대한 정보를 제공합니다. 개�
     "launchpoolOwner": "0x09dc95959978800E57464E962724a34Bb4Ac1253",
     "rewardPool": "0xDeB0a777ba6f59C78c654B8c92F80238c8002DD2",
     "treasury": "0x09EF0e7b555599A9F810789FfF68Db8DBF4c51a0",
-    "beefyFeeRecipient": "0x7313533ed72D2678bFD9393480D0A30f9AC45c1f",
+    "NestoFeeRecipient": "0x7313533ed72D2678bFD9393480D0A30f9AC45c1f",
     "bifiMaxiStrategy": "0xD126BA764D2fA052Fc14Ae012Aef590Bc6aE0C4f",
     "voter": "0x5e1caC103F943Cd84A1E92dAde4145664ebf692A",
-    "beefyFeeConfig": "0x8E98004FE65A2eAdA63AD1DE0F5ff76d845f14E7"
+    "NestoFeeConfig": "0x8E98004FE65A2eAdA63AD1DE0F5ff76d845f14E7"
   },
 ...
 </code></pre>
@@ -428,9 +428,9 @@ Nesto 애플리케이션에서 호스팅하는 모든 런치풀 부스트에 관
 // Sample response from /boosts endpoint (e.g. Optimism BIFI-WETH LP token)
 
 {
-  "id": "moo_velodrome-weth-bifi-beefy",
+  "id": "moo_velodrome-weth-bifi-nesto",
   "poolId": "velodrome-weth-bifi",
-  "name": "Beefy",
+  "name": "Nesto",
   "assets": [
     "BIFI",
     "ETH"
@@ -446,7 +446,7 @@ Nesto 애플리케이션에서 호스팅하는 모든 런치풀 부스트에 관
   "status": "active",
   "isMooStaked": true,
   "partners": [
-    "beefy"
+    "Nesto"
   ],
   "chain": "optimism",
   "periodFinish": 1667843632
@@ -479,7 +479,7 @@ Nesto 애플리케이션에서 호스팅하는 모든 런치풀 부스트에 관
 각 블록체인에서 수행되는 일일 NEFI 매입량에 대한 세부 정보를 제공합니다.
 
 ```
-// Sample response from the /bifibuyback endpoint (e.g. BSC data)
+// Sample response from the /NEFIbuyback endpoint (e.g. BSC data)
 
 {
   "bsc": {
@@ -535,16 +535,16 @@ CoinMarketCap에서 Nesto 보관소를 수익률 농장 섹션에 표시하기 �
 // Sample response for the /cmc endpoint
 
 {
-  "provider": "Beefy",
-  "provider_logo": "https://beefy.finance/img/beefy.svg",
+  "provider": "Nesto",
+  "provider_logo": "https://Nesto.finance/img/Nesto.svg",
   "links": [
     {
       "title": "Twitter",
-      "link": "https://twitter.com/beefyfinance"
+      "link": "https://twitter.com/Nestofinance"
     },
     {
       "title": "Telegram",
-      "link": "https://t.me/beefyfinance"
+      "link": "https://t.me/Nestofinance"
     },
     {
       "title": "Discord",
@@ -552,19 +552,19 @@ CoinMarketCap에서 Nesto 보관소를 수익률 농장 섹션에 표시하기 �
     },
     {
       "title": "Medium",
-      "link": "https://medium.com/beefyfinance"
+      "link": "https://medium.com/Nestofinance"
     },
     {
       "title": "Github",
-      "link": "https://github.com/beefyfinance"
+      "link": "https://github.com/Nestofinance"
     }
   ],
   "pools": [
     {
       "name": "BIFI Maxi",
       "pair": "BIFI",
-      "pairLink": "https://app.beefy.finance/",
-      "logo": "https://beefy.finance/vaults/bifi/BIFI.png",
+      "pairLink": "https://app.Nesto.finance/",
+      "logo": "https://Nesto.finance/vaults/bifi/BIFI.png",
       "poolRewards": [
         "BIFI"
       ],
@@ -601,7 +601,7 @@ Coingecko에서 NEFI의 총 공급량과 유통 공급량을 사이트에 표시
 
 ## 하위 그래프
 
-Nesto는 현재 프로토콜의 하위 그래프를 운영하지 않고 있으며 서브그래프만 존재합니다. 이 서브그래프는 Messari에서 BSC 체인에서의 우리를 위한 서브그래프를 개발했으며, 이는[https://api.thegraph.com/subgraphs/name/messari/beefy-finance-bsc](https://api.thegraph.com/subgraphs/name/messari/beefy-finance-bsc) 및 The Graph의 [웹사이트](https://thegraph.com/hosted-service/subgraph/messari/beefy-finance-bsc/) (ID: QmfEtMEgjik9FSZdqAmp2DkNFG4M9TK4Go8uyCUj8EVxY6)에서 이용할 수 있습니다.&#x20;
+Nesto는 현재 프로토콜의 하위 그래프를 운영하지 않고 있으며 서브그래프만 존재합니다. 이 서브그래프는 Messari에서 BSC 체인에서의 우리를 위한 서브그래프를 개발했으며, 이는[https://api.thegraph.com/subgraphs/name/messari/Nesto-finance-bsc](https://api.thegraph.com/subgraphs/name/messari/beefy-finance-bsc) 및 The Graph의 [웹사이트](https://thegraph.com/hosted-service/subgraph/messari/beefy-finance-bsc/) (ID: QmfEtMEgjik9FSZdqAmp2DkNFG4M9TK4Go8uyCUj8EVxY6)에서 이용할 수 있습니다.&#x20;
 
 Nesto는 이 서브그래프의 개발이나 유지보수에 아무런 역할을 하지 않았습니다. 만약 서브그래프와 관련된 도움이 필요할 경우 직접 Messari에게 문의해주시기 바랍니다.
 
