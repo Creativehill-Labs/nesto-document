@@ -190,11 +190,11 @@ function chargeFees(address callFeeRecipient) internal {
     uint256 nativeBal = IERC20(native).balanceOf(address(this)) * fees.total / DIVISOR;
     uint256 callFeeAmount = nativeBal * fees.call / DIVISOR;
     IERC20(native).safeTransfer(callFeeRecipient, callFeeAmount);
-    uint256 beefyFeeAmount = nativeBal * fees.beefy / DIVISOR;
-    IERC20(native).safeTransfer(beefyFeeRecipient, beefyFeeAmount);
+    uint256 NestoFeeAmount = nativeBal * fees.Nesto / DIVISOR;
+    IERC20(native).safeTransfer(NestoFeeRecipient, NestoFeeAmount);
     uint256 strategistFeeAmount = nativeBal * fees.strategist / DIVISOR;
     IERC20(native).safeTransfer(strategist, strategistFeeAmount);
-    emit ChargedFees(callFeeAmount, beefyFeeAmount, strategistFeeAmount);
+    emit ChargedFees(callFeeAmount, NestoFeeAmount, strategistFeeAmount);
 }
 
 ```

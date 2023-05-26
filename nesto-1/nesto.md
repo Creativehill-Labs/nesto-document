@@ -24,10 +24,10 @@ NestoWrapper 컨트렉트의 기능은 호출자의 Nesto Vault 토큰 전송에
 
 function wrap(uint256 amount) public {
 
-    // Transfers the specified amount of the caller's Beefy Vault tokens to the wrapper.
+    // Transfers the specified amount of the caller's Nesto Vault tokens to the wrapper.
     IERC20Upgradeable(vault).safeTransferFrom(msg.sender, address(this), amount);
     
-    // Mints the specified amount wrapped Beefy Vault tokens to the caller.
+    // Mints the specified amount wrapped Nesto Vault tokens to the caller.
     _mint(msg.sender, amount);
 }
 ```
@@ -54,10 +54,10 @@ function wrapAll() external {
 
 function unwrap(uint256 amount) public {
 
-    // Burns the specified amount of the caller's wrapped Beefy Vault tokens.
+    // Burns the specified amount of the caller's wrapped Nesto Vault tokens.
     _burn(msg.sender, amount);
     
-    // Transfers the specified amount of Beefy Vault tokens back to the caller.
+    // Transfers the specified amount of Nesto Vault tokens back to the caller.
     IERC20Upgradeable(vault).safeTransfer(msg.sender, amount);
 }
 ```
@@ -96,7 +96,7 @@ function _withdraw(address caller, address receiver, address owner, uint256 asse
     // Burns the caller's wrapped tokens.
     _burn(owner, shares);
 
-    // Withdraws the caller's assets from the Beefy Vault.
+    // Withdraws the caller's assets from the Nesto Vault.
     IVault(vault).withdraw(shares);
     uint balance = IERC20Upgradeable(asset()).balanceOf(address(this));
     if (assets > balance) {
@@ -150,13 +150,13 @@ NestoWrapperFactory를 통해 NestoWrapper 컨트렉트를 모든 Vault에 배�
 OpenZeppelin 표준 프록시 템플릿 [ClonesUpgradeable.sol을](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/proxy/ClonesUpgradeable.sol) 사용하여 NestoWrapper 컨트렉트의 복제본인 프록시 컨트렉트를 생성합니다.
 
 ```
-// Creates a new Beefy Vault wrapper as a proxy of the template instance.
-/// "_vault" parameter is the cloned Beefy Vault.
-/// "proxy" return is the new proxied Beefy Vault wrapper.
+// Creates a new Nesto Vault wrapper as a proxy of the template instance.
+/// "_vault" parameter is the cloned Nesto Vault.
+/// "proxy" return is the new proxied Nesto Vault wrapper.
 
 function clone(address _vault) external returns (address proxy) {
     
-    // Proxy is set as a clone of the instance of the BeefyWrapper contract.
+    // Proxy is set as a clone of the instance of the NestoWrapper contract.
     proxy = implementation.clone();
     
     // Initializes the wrapper proxy set above.

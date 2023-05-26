@@ -47,7 +47,7 @@ function getAllFees() external view returns (IFeeConfig.AllFees memory) {
 
 ```
 function getStratFeeId() external view returns (uint256) {
-    return beefyFeeConfig.stratFeeId(address(this));
+    return NestoFeeConfig.stratFeeId(address(this));
 }
 ```
 
@@ -59,7 +59,7 @@ function getStratFeeId() external view returns (uint256) {
 
 ```
 function setStratFeeId(uint256 _feeId) external onlyManager {
-    beefyFeeConfig.setStratFeeId(_feeId);
+    NestoFeeConfig.setStratFeeId(_feeId);
     emit SetStratFeeId(_feeId);
 }
 ```
@@ -126,9 +126,9 @@ function setStrategist(address _strategist) external {
 수확에 대한 Nesto의 수수료(일반적으로 Nesto 재무부 컨트렉트)를 받는 사람의 새 주소를 설정합니다.
 
 ```
-function setBeefyFeeRecipient(address _beefyFeeRecipient) external onlyOwner {
-    beefyFeeRecipient = _beefyFeeRecipient;
-    emit SetBeefyFeeRecipient(_beefyFeeRecipient);
+function setNestoFeeRecipient(address _NestoFeeRecipient) external onlyOwner {
+    NestoFeeRecipient = _NestoFeeRecipient;
+    emit SetNestoFeeRecipient(_NestoFeeRecipient);
 }
 ```
 
@@ -137,8 +137,8 @@ function setBeefyFeeRecipient(address _beefyFeeRecipient) external onlyOwner {
 수수료를 가져오기 위해 전략에서 사용하는 수수료 구성 컨트렉트의 새 주소를 설정합니다.
 
 ```
-function setBeefyFeeConfig(address _beefyFeeConfig) external onlyOwner {
-    beefyFeeConfig = IFeeConfig(_beefyFeeConfig);
-    emit SetBeefyFeeConfig(_beefyFeeConfig);
+function setNestoFeeConfig(address _NestoFeeConfig) external onlyOwner {
+    NestoFeeConfig = IFeeConfig(_NestoFeeConfig);
+    emit SetNestoFeeConfig(_NestoFeeConfig);
 }
 ```

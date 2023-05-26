@@ -43,7 +43,7 @@ function getFeeCategory(uint256 _id, bool _adjust) public view returns (FeeCateg
     fees = feeCategory[id];
     if (_adjust) {
         uint256 _totalFee = fees.total;
-        fees.beefy = fees.beefy * _totalFee / DIVISOR;
+        fees.Nesto = fees.Nesto * _totalFee / DIVISOR;
         fees.call = fees.call * _totalFee / DIVISOR;
         fees.strategist = fees.strategist * _totalFee / DIVISOR;
     }
@@ -99,10 +99,10 @@ function setFeeCategory(
         _call = _call * DIVISOR / _total;
         _strategist = _strategist * DIVISOR / _total;
     }
-    uint256 beefy = DIVISOR - _call - _strategist;
-    FeeCategory memory category = FeeCategory(_total, beefy, _call, _strategist, _label, _active);
+    uint256 Nesto = DIVISOR - _call - _strategist;
+    FeeCategory memory category = FeeCategory(_total, Nesto, _call, _strategist, _label, _active);
     feeCategory[_id] = category;
-    emit SetFeeCategory(_id, _total, beefy, _call, _strategist, _label, _active);
+    emit SetFeeCategory(_id, _total, Nesto, _call, _strategist, _label, _active);
 }
 ```
 
