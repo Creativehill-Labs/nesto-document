@@ -14,7 +14,7 @@ inSPIRIT은 전송할 수 없으며 잠금이 끝나면 보유한 양이 꾸준�
 
 ## neSPIRIT은 무엇인가요?
 
-neSPIRIT은 inSPIRIT의 고정된 비프 에스크로 버전으로, SPIRIT에 축적하기 위한 토큰입니다. 이 토큰은 inSPIRIT의 모든 혜택을 제공하지만 SpiritSwap의 잠금 메커니즘에 제한을 받지 않습니다. neSPIRIT은 SPIRIT에 1:1로 완전히 지원되지만, 영구적으로 SPIRIT 토큰으로 다시 인출할 수 없으며, 대신 ERC-20 토큰으로 전송 가능하므로 분산 거래소의 다른 토큰과 교환할 수 있습니다. 이를 통해 beSPIRIT 보유자는 언제든지 자신의 포지션을 변경할 수 있습니다.
+neSPIRIT은 inSPIRIT의 고정된 비프 에스크로 버전으로, SPIRIT에 축적하기 위한 토큰입니다. 이 토큰은 inSPIRIT의 모든 혜택을 제공하지만 SpiritSwap의 잠금 메커니즘에 제한을 받지 않습니다. neSPIRIT은 SPIRIT에 1:1로 완전히 지원되지만, 영구적으로 SPIRIT 토큰으로 다시 인출할 수 없으며, 대신 ERC-20 토큰으로 전송 가능하므로 분산 거래소의 다른 토큰과 교환할 수 있습니다. 이를 통해 neSPIRIT 보유자는 언제든지 자신의 포지션을 변경할 수 있습니다.
 
 ## neSPIRIT은 어떻게 얻나요?
 
@@ -56,6 +56,6 @@ neSPIRIT이 페깅 가격 이하가 되면, 계약은 SpiritSwap 프로토콜 �
 
 ## neSPIRIT로 투표할 수 있나요?
 
-아니요, Nesto는 이전에[ neSPIRIT 투표 시스템과 전용 스냅샷 페이지](https://snapshot.org/#/binspirit.eth)를 구축했지만, Spirit Swap V2로 전환함으로써 보유자에게 최고의 수익을 제공할 수 있는 프로세스를 자동화했습니다. 이제 Beefy는 모든 수익을 neSPIRIT Vault로 직접 반환하여 최소한의 노력으로 높은 수익률을 달성합니다.
+아니요, Nesto는 이전에[ neSPIRIT 투표 시스템과 전용 스냅샷 페이지](https://snapshot.org/#/binspirit.eth)를 구축했지만, Spirit Swap V2로 전환함으로써 보유자에게 최고의 수익을 제공할 수 있는 프로세스를 자동화했습니다. 이제 Nesto는 모든 수익을 neSPIRIT Vault로 직접 반환하여 최소한의 노력으로 높은 수익률을 달성합니다.
 
 Nesto가 절차를 자동화했지만, 여전히 neSPIRIT 대한 직접적인 제안을 받을 수 있습니다. 자세한 내용은 코어 팀에게 디스코드, 텔레그램 또는 트위터를 통해 연락해 보세요.
