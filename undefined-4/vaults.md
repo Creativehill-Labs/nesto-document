@@ -6,7 +6,7 @@ Nesto [Vault 컨트렉트는](https://github.com/beefyfinance/beefy-contracts/bl
 
 ## 기능 보기
 
-### 원하다()
+### want()
 
 Nesto Vault 및 전략 컨트렉트 모두에서 사용되는 기본 팜 토큰(예: LP 토큰)의 주소를 반환합니다. 이는 팜에 사용되는 기본 자산과 동일하지 않습니다.
 
@@ -16,7 +16,7 @@ function want() public view returns (IERC20Upgradeable) {
 }
 ```
 
-### 균형()
+### balance()
 
 Vault와 전략 및 수익 소스에 저장된 "원"(예: 기본 팜 토큰)의 양을 정수로 반환합니다.
 
@@ -26,7 +26,7 @@ function balance() public view returns (uint) {
 }
 ```
 
-### 사용 가능()
+### available()
 
 Vault에만 정수로 저장된 "원하는"(예: 기본 팜 토큰)의 양을 반환합니다.
 
@@ -36,7 +36,7 @@ function available() public view returns (uint256) {
 }
 ```
 
-### 총공급()
+### totalSupply()
 
 발행된 ammTokens의 총량을 정수로 반환하며 항상 18자리 토큰으로 표시됩니다. 이것은 ERC-20 표준에서 상속된 표준 방법입니다. 보다[ammToken이 무엇인가요?](https://docs.beefy.finance/products/vaults#what-are-mootokens)상세 사항은.
 
@@ -56,7 +56,7 @@ function totalSupply() public view virtual override returns (uint256) {
 }
 ```
 
-### 전략()
+### strategy()
 
 Vault가 수익을 생성하는 데 사용하는 현재 기본 전략 컨트렉트의 주소를 반환합니다.
 
@@ -66,7 +66,7 @@ function strategy() external view returns (address);
 
 ## 쓰기 기능
 
-### 보증금()
+### deposit()
 
 예금자로부터 Vault로 지정된 양의 "원하는"(예: 기본 팜 토큰) 전송을 실행한 다음 그에 대한 대가로 예금자에게 ammTokens의 비례 수량을 발행합니다.
 
@@ -90,7 +90,7 @@ function deposit(uint _amount) public nonReentrant {
 
 또한 거래 시 사용자의 지갑에 "want"의 전체 잔액을 입금하는 도우미 함수 _depositAll()이_ 있습니다 .
 
-### 철회하다()
+### withdraw()
 
 예금자로부터 ammTokens의 지정된 \_amount의 소각을 실행한 다음 비례 수량의 "원하는"(예: 기본 팜 토큰)을 예금자에게 전송합니다.
 
@@ -114,7 +114,7 @@ function withdraw(uint256 _shares) public {
 
 유사하게[보증금()](https://docs.beefy.finance/developer-documentation/vault-contract#deposit)_,_ 트랜잭션 시점에 사용자의 지갑에 있는 ammTokens의 전체 잔액을 인출하는 helper 함수 _withdrawAll()_ 이 있습니다 .
 
-### 벌다()
+### earn()
 
 전송을 실행합니다[사용 가능()](https://docs.beefy.finance/developer-documentation/vault-contract#available)Vault 컨트렉트에서 전략 컨트렉트로 "원"(예: 기본 팜 토큰)하고 전략의 _deposit()_ 기능을 트리거하여 자금을 배포하고 수익을 시작합니다.
 
@@ -126,7 +126,7 @@ function earn() public {
 }
 ```
 
-### 프로포즈스트랫()
+### proposeStrat()
 
 다음을 사용하여 현재 전략을 대체 전략으로 업그레이드할 것을 예상하여 대체 전략의 주소를 Vault 컨트렉트의 메모리에 씁니다.[업그레이드전략()](https://docs.beefy.finance/developer-documentation/vault-contract#upgradestrat).
 
@@ -142,7 +142,7 @@ function proposeStrat(address _implementation) public onlyOwner {
 }
 ```
 
-### 업그레이드전략()
+### upgradeStrat()
 
 현재 전략의 주소를 다음에 지정된 대체 전략으로 바꿉니다.[프로포즈스트랫()](https://docs.beefy.finance/developer-documentation/vault-contract#proposestrat).
 

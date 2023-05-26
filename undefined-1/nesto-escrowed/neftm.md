@@ -10,11 +10,11 @@ neFTM은 Nesto-Esrowed Fantom의 줄임말입니다. neFTM을 스테이킹하면
 
 ## 어떻게 neFTM을 얻나요?
 
-neFTM을 얻으려면 먼저 사용자가 FTM을 Beeky Delegator Vault에 예치해야 합니다. 그런 다음 FTM을 사용하여 유동성 풀에서 beFTM을 구입하거나 사용자에게 가장 수익성이 높은 것에 따라 1:1로 발행됩니다.
+neFTM을 얻으려면 먼저 사용자가 FTM을 Beeky Delegator Vault에 예치해야 합니다. 그런 다음 FTM을 사용하여 유동성 풀에서 neFTM을 구입하거나 사용자에게 가장 수익성이 높은 것에 따라 1:1로 발행됩니다.
 
 \-----------이미지영역--------------
 
-neFTM은 Solidly, BeethovenX, SpiritSwap 및 SpukeySwap과 같은 많은 DEX에서 수동으로 구매할 수도 있습니다. 또한 거래를 위해 beFTM 계약 주소가 필요할 수 있습니다. [0x7381eD41F6dE418DdE5e84B55590422a57917886](https://ftmscan.com/token/0x7381eD41F6dE418DdE5e84B55590422a57917886)
+neFTM은 Solidly, BeethovenX, SpiritSwap 및 SpukeySwap과 같은 많은 DEX에서 수동으로 구매할 수도 있습니다. 또한 거래를 위해 neFTM 계약 주소가 필요할 수 있습니다. [0x7381eD41F6dE418DdE5e84B55590422a57917886](https://ftmscan.com/token/0x7381eD41F6dE418DdE5e84B55590422a57917886)
 
 ## neFTM 위임은 어떻게 작동하나요?
 
@@ -22,7 +22,7 @@ FTM의 전체 풀은 [Nesto의 Validator](https://ftmscan.com/address/0xe97a5292
 
 ## neFTM 수익 풀 및 neFTM 보관소(Vault)
 
-neFTM의 수익을 얻을 수 있는 방법으로는 neFTM 수익 풀과 neFTM 보관소(Vault)가 있습니다. 사용자들이 FTM을 입금하면, 이 FTM은 Nesto의 검증인 노드에 위임됩니다. 검증인들은 FTM 토큰에 예치하고 WFTM 토큰을 보상으로 받습니다. 매일 수집된 WFTM 보상은 사용자들이 FTM에 지분을 가질 수 있는 beFTM 수익 풀로 분배됩니다.
+neFTM의 수익을 얻을 수 있는 방법으로는 neFTM 수익 풀과 neFTM 보관소(Vault)가 있습니다. 사용자들이 FTM을 입금하면, 이 FTM은 Nesto의 검증인 노드에 위임됩니다. 검증인들은 FTM 토큰에 예치하고 WFTM 토큰을 보상으로 받습니다. 매일 수집된 WFTM 보상은 사용자들이 FTM에 지분을 가질 수 있는 neFTM 수익 풀로 분배됩니다.
 
 neFTM Vault는 neFTM을 예치하고, 이를 사용하여 WFTM 보상으로 neFTM을 다시 구매합니다. 이를 통해 neFTM 볼트는 neFTM 토큰 가격에 지속적인 구매 압력을 추가하며, 사용자들은 neFTM 토큰을 예치하여 수익을 얻을 수 있습니다.
 
@@ -30,7 +30,7 @@ neFTM Vault는 neFTM을 예치하고, 이를 사용하여 WFTM 보상으로 neFT
 
 * neFTM 보관소(Vault)에 neFTM을 예치하여 더 많은 neFTM을 획득합니다.
 * WFTM 수익 풀에 neFTM을 예치하여 WFTM 보상과 함께 약간의 이자를 지급받습니다.
-* Fantom의 모든 주요 DEX에서 beFTM-FTM 유동성 풀에 참여하여 수익을 얻습니다.
+* Fantom의 모든 주요 DEX에서 neFTM-FTM 유동성 풀에 참여하여 수익을 얻습니다.
 
 ## neFTM 전략은 어떻게 작동하나요?
 

@@ -35,7 +35,7 @@ function balanceOfWant() public view returns (uint256) {
 }
 ```
 
-### 균형 풀()
+### balanceOfPool()
 
 요리사 컨트렉트에 저장된 기본 팜 토큰(또는 "원")의 양을 확인합니다. 특정 양의 토큰을 반환합니다.
 
@@ -46,7 +46,7 @@ function balanceOfPool() public view returns (uint256) {
 }
 ```
 
-### 보상 사용 가능()
+### rewardsAvailable()
 
 전략 컨트랙트에서 청구할 수 있는 셰프 컨트랙트에서 보유하고 있는 보류 중인 보상의 양을 확인합니다. 특정 양의 토큰을 반환합니다.
 
@@ -92,7 +92,7 @@ function callReward() external view returns (uint256) {
 
 ## 쓰기 기능
 
-### 보증금()
+### deposit()
 
 연결된 셰프 컨트렉트를 통해 기본 팜 토큰(또는 "원함")을 팜에 입금합니다. 먼저 셰프에게 전체 잔액을 예치하기 전에 전략이 기본 팜 토큰(또는 "원함") 중 일부를 보유하고 있는지 확인합니다.
 
@@ -106,7 +106,7 @@ function deposit() public whenNotPaused {
 }
 ```
 
-### 철회
+### withdraw()
 
 사용자 인출을 용이하게 하기 위해 Vault에서 호출하는 외부 기능. 먼저 기본 팜 토큰(또는 "want")의 잔액이 요청을 이행하기에 충분한지 확인한 다음 Vault 컨트렉트로 다시 전송하기 전에 요리사 컨트렉트에서 해당 금액을 인출합니다.
 
@@ -130,7 +130,7 @@ function withdraw(uint256 _amount) external {
 }
 ```
 
-### 수확
+### harvest()
 
 Harvest는 모든 사용자를 위해 Vault 합성을 호출합니다. 특히 이것은 셰프 컨트렉트에서 수확하고 수확에 대한 수수료를 부과한 다음 수확된 보상을 농장에 다시 예치하여 자동 합성 효과를 달성합니다.
 
@@ -168,7 +168,7 @@ function _harvest(address callFeeRecipient) internal whenNotPaused {
 }
 ```
 
-### 요금()
+### chargeFees()
 
 모든 비용을 청구하는 내부 방법[수확하다()](https://docs.beefy.finance/developer-documentation/strategy-contract#harvest)라우터 컨트렉트를 통해 전략의 기본 토큰을 출력 토큰으로 교환하여 호출합니다. 그런 다음 컨트렉트는 다른 수수료 수신자에 대한 출력을 계산하고 할당에 따라 출력 토큰을 전송합니다. 수신자는 수확 호출자, 컨트렉트를 배치한 전략가 및 Nesto 재무부입니다.
 
@@ -245,7 +245,7 @@ function setHarvestOnDeposit(bool _harvestOnDeposit) external onlyManager {
 }
 ```
 
-### 입금 전전()
+### beforeDeposit()
 
 활성화된 경우 예치금 수확을 촉진하는 데 사용되는 외부 기능입니다. 수확하기 전에 예금에 대한 수확이 활성화되어 있고 호출자가 Vault인지 먼저 확인합니다.
 
@@ -258,7 +258,7 @@ function beforeDeposit() external override {
 }
 ```
 
-### 공황()
+### panic()
 
 Nesto는 프로토콜에 보관된 사용자 자금을 직접 건드리지 않습니다. _불확실하거나 기본 수익률 농장으로 업그레이드하는 동안 Nesto는 제3자 컨트렉트에서 모든 자금을 인출하고 panic() 기능_ 을 사용하여 전략에 안전하게 보관할 수 있습니다 . 전략을 "패닉"함으로써 사용자는 지연이나 제3자 위험에 노출되지 않고 Vault에서 자금을 인출할 수 있습니다. 이 기능은 또한 UniRouter와 기본 이자 농사 컨트렉트에 대한 모든 허용치를 제거하여 해당 컨트렉트로 자금이 인출되지 않도록 합니다.
 
@@ -269,7 +269,7 @@ function pause() public onlyManager {
 }
 ```
 
-### 일시정지() / 일시정지해제()
+### pause() / unpause()
 
 모든 Nesto 전략은 일시 중지할 수 있습니다. 즉, 전략 관리자가 전략의 일반 작업 중에 기능을 중지할 수 있습니다. 이는 [StratManager.sol 을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/strategies/Common/StratManager.sol) 통해 상속되며 표준 [Pausable.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/Pausable.sol) 추상 컨트렉트에 의존합니다. 이 기능은 또한 UniRouter와 기본 이자 농사 컨트렉트에 대한 모든 허용치를 제거하여 해당 컨트렉트로 자금이 인출되지 않도록 합니다.
 
@@ -317,7 +317,7 @@ function _removeAllowances() internal {
 
 ```
 
-퇴역전략()
+### retireStrat()
 
 한 전략에서 다른 전략으로의 마이그레이션의 일부로 사용되는 외부 기능. 이것은 모든 자금을 인출하고 Vault로 다시 이체함으로써 전략을 효과적으로 종료합니다. Vault 컨트렉트의 호출에 의해서만 트리거될 수 있습니다.
 

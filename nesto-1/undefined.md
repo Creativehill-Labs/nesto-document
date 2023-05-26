@@ -117,7 +117,7 @@ function setKeeper(address _keeper) external onlyManager {
 }
 ```
 
-### 일시정지() / 일시정지해제()
+### pause() / unpause()
 
 특정 FeeCategory(카테고리 ID를 인수로 사용)를 활성("일시 중지됨")(해당 범주로 설정된 전략이 해당 범주를 사용함을 의미함) 또는 비활성("일시 중지됨")(전략이 기본값으로 되돌아감)으로 설정합니다. 수수료 구성.
 
