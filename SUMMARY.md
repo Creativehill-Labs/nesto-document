@@ -53,15 +53,15 @@
   * [NEFI 크로스체인을 연결하는 방법](undefined-2/undefined-2/nefi.md)
   * [보관소(Vaults)의 수확 및 복리이자율을 확인하는 방법](undefined-2/undefined-2/vaults-1.md)
 
-## NESTO SAFU 프로토콜
+## NESTO AMFU 프로토콜
 
-* [NESTO AMFU 관행](nesto-safu/nesto-amfu.md)
-* [계약 & 타임록](nesto-safu/and.md)
-* [버그 바운티 프로그램](nesto-safu/undefined.md)
-* [NESTO 안전 점수](nesto-safu/nesto.md)
-* [토큰 수당](nesto-safu/undefined-1.md)
-* [NESTO 백업](nesto-safu/nesto-1.md)
-* [보험](nesto-safu/undefined-2.md)
+* [NESTO AMFU 관행](nesto-amfu/nesto-amfu.md)
+* [계약 & 타임락](nesto-amfu/and.md)
+* [버그 바운티 프로그램](nesto-amfu/undefined.md)
+* [NESTO 안전 점수](nesto-amfu/nesto.md)
+* [토큰 수당](nesto-amfu/undefined-1.md)
+* [NESTO 백업](nesto-amfu/nesto-1.md)
+* [보험](nesto-amfu/undefined-2.md)
 
 ## 커뮤니티/거버넌스
 
