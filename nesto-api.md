@@ -156,7 +156,7 @@
 // Sample response from the /apy/breakdown endpoint (e.g. Polygon Cometh UST-ETH LP)
 
 {
-  "bifi-maxi": {
+  "Nesto-maxi": {
     "totalApy": 0.07598675804818633
   },
   "cometh-must-eth": {
@@ -212,13 +212,13 @@
 
 {
     ...
-    "optimism-bifi-maxi": 37679.65,
+    "optimism-NEFI-maxi": 37679.65,
     "velodrome-wsteth-weth": 295597.74,
     "beets-lido-shuffle": 101185.39,
     "beets-yellow-submarine": 5828.15,
     "beets-its-mai-life": 178994.42,
     "velodrome-usdc-mim": 488943.72,
-    "velodrome-weth-bifi": 133635.5,
+    "velodrome-weth-NEFI": 133635.5,
     ...
 }
 ```
@@ -235,7 +235,7 @@
 // Sample response from the /fees endpoint (e.g. Celo BIFI Maxi vault)
 
 {
-  "celo-bifi-maxi": {
+  "celo-NEFI-maxi": {
     "performance": {
       "total": 0.0005,
       "strategist": 0,
@@ -390,7 +390,7 @@ Nesto에서 사용하는 모든 토큰에 대한 정보를 제공합니다. 개�
     "rewardPool": "0xDeB0a777ba6f59C78c654B8c92F80238c8002DD2",
     "treasury": "0x09EF0e7b555599A9F810789FfF68Db8DBF4c51a0",
     "NestoFeeRecipient": "0x7313533ed72D2678bFD9393480D0A30f9AC45c1f",
-    "bifiMaxiStrategy": "0xD126BA764D2fA052Fc14Ae012Aef590Bc6aE0C4f",
+    "NEFIMaxiStrategy": "0xD126BA764D2fA052Fc14Ae012Aef590Bc6aE0C4f",
     "voter": "0x5e1caC103F943Cd84A1E92dAde4145664ebf692A",
     "NestoFeeConfig": "0x8E98004FE65A2eAdA63AD1DE0F5ff76d845f14E7"
   },
@@ -428,11 +428,11 @@ Nesto 애플리케이션에서 호스팅하는 모든 런치풀 부스트에 관
 // Sample response from /boosts endpoint (e.g. Optimism BIFI-WETH LP token)
 
 {
-  "id": "moo_velodrome-weth-bifi-nesto",
+  "id": "bird_velodrome-weth-bifi-nesto",
   "poolId": "velodrome-weth-bifi",
   "name": "Nesto",
   "assets": [
-    "BIFI",
+    "NEFI",
     "ETH"
   ],
   "tokenAddress": "0x3532b6f723948eF39d5DCf44C16855239aF81082",
@@ -561,24 +561,22 @@ CoinMarketCap에서 Nesto 보관소를 수익률 농장 섹션에 표시하기 �
   ],
   "pools": [
     {
-      "name": "BIFI Maxi",
-      "pair": "BIFI",
+      "name": "NEFI Maxi",
+      "pair": "NEFI",
       "pairLink": "https://app.Nesto.finance/",
       "logo": "https://Nesto.finance/vaults/bifi/BIFI.png",
       "poolRewards": [
-        "BIFI"
+        "NEFI"
       ],
-      "apyId": "bifi-maxi",
+      "apyId": "NEFI-maxi",
       "contract": "0xf7069e41C57EcC5F122093811d8c75bdB5f7c14e",
       "oracle": "tokens",
-      "oracleId": "BIFI"
+      "oracleId": "NEFI"
     },
     ...
   ]
 }
 ```
-
-
 
 </details>
 
