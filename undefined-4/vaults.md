@@ -1,6 +1,6 @@
 # 보관소(Vaults) 계약
 
-Nesto [Vault 컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyVaultV7.sol) Nesto 프로토콜의 중앙 사용자 대면 구현으로, 사용자 예치금을 수락 및 관리하고 인출을 용이하게 하기 위한 수령 증명으로 ammToken을 생성합니다. [대체 가능하고 양도 가능한 토큰에 대한 ERC-20 표준을](https://eips.ethereum.org/EIPS/eip-20) 따릅니다 .
+Nesto [Vault 컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyVaultV7.sol) Nesto 프로토콜의 중앙 사용자 대면 구현으로, 사용자 예치금을 수락 및 관리하고 인출을 용이하게 하기 위한 수령 증명으로 birdToken을 생성합니다. [대체 가능하고 양도 가능한 토큰에 대한 ERC-20 표준을](https://eips.ethereum.org/EIPS/eip-20) 따릅니다 .
 
 예금과 인출을 처리하는 것 외에도 Vault의 주요 기능은 예금된 자금을 관련 자동 복리로 보내는 것입니다.[전략 컨트렉트](https://docs.beefy.finance/developer-documentation/strategy-contract). Vault 및 전략 컨트렉트는 사용자 예치금에서 전략의 모든 위험을 격리하기 위해 별도로 유지됩니다.
 
@@ -38,7 +38,7 @@ function available() public view returns (uint256) {
 
 ### totalSupply()
 
-발행된 ammTokens의 총량을 정수로 반환하며 항상 18자리 토큰으로 표시됩니다. 이것은 ERC-20 표준에서 상속된 표준 방법입니다. 보다[ammToken이 무엇인가요?](https://docs.beefy.finance/products/vaults#what-are-mootokens)상세 사항은.
+발행된 birdTokens의 총량을 정수로 반환하며 항상 18자리 토큰으로 표시됩니다. 이것은 ERC-20 표준에서 상속된 표준 방법입니다. 보다[birdToken이 무엇인가요?](https://docs.beefy.finance/products/vaults#what-are-mootokens)상세 사항은.
 
 ```
 함수 totalSupply () 공개 보기 가상 재정의 반환 ( uint256 ) {    
@@ -48,7 +48,7 @@ function available() public view returns (uint256) {
 
 ### getPricePerFullShare()
 
-Vault의 주당 현재 가격(예: ammToken당)을 "원함"(예: 기본 팜 토큰)에 지정된 정수로 반환합니다. _전체 주당 가격_ =[균형()](https://docs.beefy.finance/developer-documentation/vault-contract#balance)_/_[총공급()](https://docs.beefy.finance/developer-documentation/vault-contract#totalsupply).
+Vault의 주당 현재 가격(예: birdToken당)을 "원함"(예: 기본 팜 토큰)에 지정된 정수로 반환합니다. _전체 주당 가격_ =[균형()](https://docs.beefy.finance/developer-documentation/vault-contract#balance)_/_[총공급()](https://docs.beefy.finance/developer-documentation/vault-contract#totalsupply).
 
 ```
 function totalSupply() public view virtual override returns (uint256) {
@@ -68,7 +68,7 @@ function strategy() external view returns (address);
 
 ### deposit()
 
-예금자로부터 Vault로 지정된 양의 "원하는"(예: 기본 팜 토큰) 전송을 실행한 다음 그에 대한 대가로 예금자에게 ammTokens의 비례 수량을 발행합니다.
+예금자로부터 Vault로 지정된 양의 "원하는"(예: 기본 팜 토큰) 전송을 실행한 다음 그에 대한 대가로 예금자에게 birdTokens의 비례 수량을 발행합니다.
 
 ```
 function deposit(uint _amount) public nonReentrant {
@@ -92,7 +92,7 @@ function deposit(uint _amount) public nonReentrant {
 
 ### withdraw()
 
-예금자로부터 ammTokens의 지정된 \_amount의 소각을 실행한 다음 비례 수량의 "원하는"(예: 기본 팜 토큰)을 예금자에게 전송합니다.
+예금자로부터 birdTokens의 지정된 \_amount의 소각을 실행한 다음 비례 수량의 "원하는"(예: 기본 팜 토큰)을 예금자에게 전송합니다.
 
 ```
 function withdraw(uint256 _shares) public {
@@ -112,7 +112,7 @@ function withdraw(uint256 _shares) public {
 }
 ```
 
-유사하게[보증금()](https://docs.beefy.finance/developer-documentation/vault-contract#deposit)_,_ 트랜잭션 시점에 사용자의 지갑에 있는 ammTokens의 전체 잔액을 인출하는 helper 함수 _withdrawAll()_ 이 있습니다 .
+유사하게[보증금()](https://docs.beefy.finance/developer-documentation/vault-contract#deposit)_,_ 트랜잭션 시점에 사용자의 지갑에 있는 birdTokens의 전체 잔액을 인출하는 helper 함수 _withdrawAll()_ 이 있습니다 .
 
 ### earn()
 

@@ -10,7 +10,7 @@ Nesto의 중심에는 혁신과 빠른 개발 문화가 있습니다. 1일 차�
 
 ## 토큰 분배
 
-Nesto에서 우리는 효과적인 보상 수단으로 거버넌스 토큰에 의존하지 않는 단순하지만 매우 효과적인 토크노믹스 설계에 자부심을 느낍니다. [토크노믹스 및 거버넌스 섹션](https://docs.beefy.finance/ecosystem/bifi-token/tokenomics-and-governance) 에서 설명한 바와 같이, 우리의 거버넌스 토큰인 NEFI는 80,000개의 토큰으로 고정 공급이 제한되어 있으므로 회원들에게 보상하기 위해 새로운 토큰을 발행할 수 없습니다. 실제로 2020년 9월 Nesto가 가동된 후 첫 2개월 동안 총 NEFI 공급량의 90% 이상이 cowammnity에 분배되었습니다.[국고](https://docs.beefy.finance/community-governance/treasury)갓 주조된 NEFI 비축량도 포함하지 않습니다.
+Nesto에서 우리는 효과적인 보상 수단으로 거버넌스 토큰에 의존하지 않는 단순하지만 매우 효과적인 토크노믹스 설계에 자부심을 느낍니다. [토크노믹스 및 거버넌스 섹션](https://docs.beefy.finance/ecosystem/bifi-token/tokenomics-and-governance) 에서 설명한 바와 같이, 우리의 거버넌스 토큰인 NEFI는 80,000개의 토큰으로 고정 공급이 제한되어 있으므로 회원들에게 보상하기 위해 새로운 토큰을 발행할 수 없습니다. 실제로 2020년 9월 Nesto가 가동된 후 첫 2개월 동안 총 NEFI 공급량의 90% 이상이 community에 분배되었습니다.[국고](https://docs.beefy.finance/community-governance/treasury)갓 주조된 NEFI 비축량도 포함하지 않습니다.
 
 오히려 우리는 NEFI의 두 가지 사용 사례, 즉 NEFI Maxi 및 NEFI 적립 풀 Vault를 통해 지급되는 거버넌스 권한 및 프로토콜 수익에 집중하는 것을 선호합니다. 우리는 이러한 메커니즘이 보유자가 NEFI를 소중히 여기고 투자자나 투기자가 아닌 소유자로서 프로토콜의 성공을 공유하도록 장려한다고 생각합니다.
 
@@ -42,15 +42,7 @@ Nesto 개발 초기 몇 달 동안 소급 보상은 커뮤니티의 노력을 �
 
 그 이후로 반복되는 기여자 지불 요청은 DAO 투표에 의해 반복적으로 승인되었습니다. 현재까지의 전체 목록은 다음과 같습니다.
 
-| 기간                                            |         | 제안                                                                                                     |
-| --------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
-| 2021년 11월<mark style="color:red;">\*\*</mark> | 94,000  | 아카이브 페이지                                                                                               |
-| 2021년 12월 \~ 2022년 1월                         | 97,500  | 아카이브 페이지                                                                                               |
-| 2022년 2월 \~ 2022년 4월                          | 102,000 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
-| 2022년 5월 \~ 2022년 7월                          | 127,500 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
-| 2022년 8월 \~ 2022년 10월                         | 102,400 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
-| 2022년 11월 \~ 2023년 1월                         | 104,000 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
-| 2023년 2월 \~ 2023년 4월                          | 104,000 | 스냅샷[ ](https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19)페이지 |
+<table><thead><tr><th>기간</th><th width="158.33333333333331"></th><th>제안</th></tr></thead><tbody><tr><td>2021년 11월<mark style="color:red;">**</mark></td><td>94,000</td><td>아카이브 페이지</td></tr><tr><td>2021년 12월 ~ 2022년 1월</td><td>97,500</td><td>아카이브 페이지</td></tr><tr><td>2022년 2월 ~ 2022년 4월</td><td>102,000</td><td>스냅샷<a href="https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19"> </a>페이지</td></tr><tr><td>2022년 5월 ~ 2022년 7월</td><td>127,500</td><td>스냅샷<a href="https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19"> </a>페이지</td></tr><tr><td>2022년 8월 ~ 2022년 10월</td><td>102,400</td><td>스냅샷<a href="https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19"> </a>페이지</td></tr><tr><td>2022년 11월 ~ 2023년 1월</td><td>104,000</td><td>스냅샷<a href="https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19"> </a>페이지</td></tr><tr><td>2023년 2월 ~ 2023년 4월</td><td>104,000</td><td>스냅샷<a href="https://snapshot.org/#/beefydao.eth/proposal/QmbM3gLpX7KtWecTgeLGaKHm9mVj3vQFQ5Quu1TkigDw19"> </a>페이지</td></tr></tbody></table>
 
 ## NestoGrants
 
