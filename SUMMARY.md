@@ -57,11 +57,11 @@
 
 * [NESTO AMFU 관행](nesto-safu/nesto-amfu.md)
 * [계약 & 타임락](nesto-safu/and.md)
-* [버그 바운티 프로그램](nesto-safu/undefined.md)
+* [버그 바운티(Bug Bounty) 프로그램](nesto-amfu/bug-bounty.md)
 * [NESTO 안전 점수](nesto-safu/nesto.md)
-* [토큰 수당](nesto-safu/undefined-1.md)
+* [토큰 수당](nesto-amfu/undefined.md)
 * [NESTO 백업](nesto-safu/nesto-1.md)
-* [보험](nesto-safu/undefined-2.md)
+* [보험](nesto-amfu/undefined-1.md)
 
 ## 커뮤니티/거버넌스
 
