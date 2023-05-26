@@ -8,11 +8,11 @@
 
 Vault UI를 통해 전략 주소와 Vault 주소를 쉽게 찾을 수 있습니다. 또한, 모든 Nesto 보관소 컨트랙트는 [dashboard.Nesto.finance](https://dashboard.beefy.finance/)에서 확인할 수 있습니다. 예를 들어,&#x20;
 
-이 대시보드를 사용하여 보관소의 [수확비율 및 복리수익률](https://github.com/beefyfinance/beefy-api/tree/master/packages/address-book)을 확인할 수 있습니다.
+이 대시보드를 사용하여 보관소의 [수확 비율 및 복리수익률](https://github.com/beefyfinance/beefy-api/tree/master/packages/address-book)을 확인할 수 있습니다.
 
 ## 오라클
 
-Nesto 컨트렉트는 외부 오라클를 사용하지 않습니다. 간단히 말해서, 오라클의 데이터는 부정확하거나 조작될 수 있으며, 신뢰할 수 없는 오라클은 악용으로 이어질 수 있습니다. Nesto 컨트랙트는 자산가격과 같은 어떠한 형태의 외부 데이터에도 의존하지 않기 때문에, 우리의 보관소는 플래시론 악용에 취약하지 않습니다.
+Nesto 컨트랙트는 외부 오라클을 사용하지 않습니다. 간단히 말해서, 오라클의 데이터는 부정확하거나 조작될 수 있으며, 신뢰할 수 없는 오라클은 악용으로 이어질 수 있습니다. Nesto 컨트랙트는 자산가격 등 어떠한 형태의 외부 데이터에도 의존하지 않기 때문에, 우리의 보관소는 플래시론 공격에 취약하지 않습니다.
 
 ## 컨트랙트 예시
 
@@ -24,7 +24,7 @@ Nesto 컨트렉트는 외부 오라클를 사용하지 않습니다. 간단히 �
 
 ## 타임락
 
-컨트렉트는 타임락 및 다중서명 개발 ​​지갑으로 보호됩니다. 6시간 타임락은 컨트랙트를 안전하게 유지하기 위해 필요한 변경을 민첩하게 수행하는 데 사용되며 추가 보호 계층으로 타임락은 3/5 서명자 다중서명에 의해 관리됩니다.
+컨트랙트는 타임락 및 다중서명개발​​지갑(multi-sig dev wallets)으로 보호됩니다. 6시간 타임락은 컨트랙트를 안전하게 유지하기 위해 필요한 변경을 민첩하게 수행하는 데 사용되며 추가적보호절차로써 타임락은 3/5 서명자 다중서명에 의해 관리됩니다.
 
 l  Arbitrum (6 hours): [0x6d28afD25a1FBC5409B1BeFFf6AEfEEe2902D89F](https://arbiscan.io/address/0x6d28afD25a1FBC5409B1BeFFf6AEfEEe2902D89F)<mark style="color:red;">\*\*</mark>
 
@@ -52,9 +52,9 @@ l  Polygon (6 hours): [0x6fd13191539e0e13B381e1a3770F28D96705ce91](https://polyg
 
 &#x20;
 
-## 개발자 멀티시그
+## 개발자 다중서명(Developer Multisigs)
 
-멀티 싸인 개발 ​​지갑은 Vault 전략 업그레이드와 같은 컨트렉트 변경 사항을 배포하는 데 사용됩니다. 이를 통해 Nesto의 개발자가 모든 변경 사항을 승인하는 안전한 워크플로우를 보장합니다.
+다중서명 개발​​지갑(Multi-signature developer wallets)은 보관서(Vault)전략 업그레이드와 같은 컨트랙트 변경 사항을 배포하는 데 사용됩니다. 이를 통해 Nesto의 개발자가 모든 변경 사항을 승인하는 안전한 작업흐름(workflow)을 보장합니다.
 
 l  Arbitrum: [0xf7EC8986c660Fa8269f6440A631B22337f398Ccd](https://gnosis-safe.io/app/arb1:0xf7EC8986c660Fa8269f6440A631B22337f398Ccd/)<mark style="color:red;">\*\*</mark>
 
@@ -76,9 +76,9 @@ l  Ammnriver: [0x1fdd00b45eba7f6d35b92803eaddd68f7cc4a193](https://multisig.moon
 
 &#x20;
 
-## 재무부 멀티시그
+## 프로젝트 기금 다중서명(Treasury Multisigs)
 
-Nesto 자금 지출은 신뢰할 수 있는 (커뮤니티) 회원들의 여러 서명이 필요로 하여 보호됩니다. DAO에서 투표를 통해 선출된 다음 회원들이 자금 위원회를 대표합니다: Power, AllTrades, Pablo, mjoaris, TBC, DefiDebauchery 및 YR2150. Nesto 자금에 대한 자세한 정보는 자금 페이지를 참조하십시오.
+Nesto 프로젝트 기금의 지출은 신뢰할 수 있는 (커뮤니티) 회원들의 다중서명을 필요하기에호보됩니다. DAO에서 투표를 통해 선출된 다음 회원들이 자금 위원회를 대표합니다: <mark style="color:red;">Power, AllTrades, Pablo, mjoaris, TBC, DefiDebauchery, YR2150</mark>. Nesto 프로젝트 기금에 대한 자세한 정보는 [프로젝트기금 ](../undefined-3/undefined-3.md)페이지를 참조하십시오.
 
 l  Arbitrum: [0x3f5eddad52C665A4AA011cd11A21E1d5107d7862](https://gnosis-safe.io/app/arb1:0x3f5eddad52C665A4AA011cd11A21E1d5107d7862/balances)<mark style="color:red;">\*\*</mark>
 

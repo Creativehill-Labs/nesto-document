@@ -35,7 +35,7 @@ NEFI를 예치하여 WETH를 벌 수 있으며 NEFI Earnings Pool도 표시됩�
 
 \-----------이미지영역--------------
 
-보관소 내부에는 TVL(Total Value Locked), 가격 및 APY(Annual Percentage Yield) 과거 수익률, [Nesto 안전점수](../../nesto-amfu/nesto.md), 토큰 자산 세부 정보, 보관소의 복리 전략[(#보관소 전략이란 무엇인가요?](../../undefined-1/undefined.md))등 다양한 정보가 제공됩니다.
+보관소 내부에는 TVL(Total Value Locked), 가격 및 APY(Annual Percentage Yield) 과거 수익률, [Nesto 안전점수](../../nesto-safu/nesto.md), 토큰 자산 세부 정보, 보관소의 복리 전략[(#보관소 전략이란 무엇인가요?](../../undefined-1/undefined.md))등 다양한 정보가 제공됩니다.
 
 ### 5.입출금 모듈
 
