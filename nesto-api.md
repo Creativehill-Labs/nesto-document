@@ -1,6 +1,6 @@
 # NESTO API
 
-이 페이지에서는 타사 사이트의 웹 애플리케이션, 대시보드 및 페이지를 지원하는 Nesto의 REST API의 기능 및 작동에 대한 자세한 내용을 제공합니다.
+이 페이지는 우리의 웹 애플리케이션, 대시보드, 그리고 서드파티 사이트의 페이지를 구동하는 Nesto의 REST API의 기능 및 운영에 대한 자세한 정보를 제공합니다.
 
 [https://api.Nesto.finance/](https://api.beefy.finance/) 에서 API에 액세스할 수 있으며 공개 리포지토리는 [Nesto GitHub](https://github.com/beefyfinance/beefy-api) 에서 사용할 수 있습니다 . API는 MIT 라이선스에 따라 유지 관리되며 자세한 내용은 [GitHub 저장소](https://github.com/beefyfinance/beefy-api/blob/master/LICENSE) 에서 확인할 수 있습니다 .
 
@@ -16,7 +16,7 @@
 
 <summary>GET /Vault</summary>
 
-다음은 각 Nesto 보관소에 대한 실시간 정보입니다. 이 정보에는 해당 보관소의 이름/ID, 체인, 토큰, 기초 자산, 관련 계약 및 현재 상태를 나타내는 필드가 포함됩니다. 또한 "위험" 필드에는 보관소의 안전 점수를 계산하는 데 사용되는 위험 요인 매트릭스에서 가져온 보관소의 특징이 나열됩니다.
+각 Nesto 보관소에 대한 실시간 정보를 제공하며, 퇴출된 (eol) 보관소들도 포함됩니다. 정보에는 관련 보관소의 이름/ID, 체인, 토큰, 근거 자산, 관련 계약 및 현재 상태를 위한 필드가 포함됩니다. 또한 "risks" 필드를 포함하여, 보관소의 안전 점수를 계산하는데 사용되는 위험 요소 행렬에서 가져온 보관소의 특징들을 나열합니다.
 
 ```
 // Sample response for the /vaults endpoint (e.g. Polygon aTriCrypto3 vault)
