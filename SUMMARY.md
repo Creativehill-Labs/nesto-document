@@ -51,7 +51,7 @@
   * [NESTO ZAP 사용방법](undefined-2/undefined-2/nesto-zap.md)
   * [NESTO에서 네트워크를 추가하고 전환하는 방법](undefined-2/undefined-2/nesto.md)
   * [NEFI 크로스체인을 연결하는 방법](undefined-2/undefined-2/nefi.md)
-  * [보관소(Vaults)의 수확 및 합성 비율을 확인하는 방법](undefined-2/undefined-2/vaults-1.md)
+  * [보관소(Vaults)의 수확 및 복리이자율을 확인하는 방법](undefined-2/undefined-2/vaults-1.md)
 
 ## NESTO SAFU 프로토콜
 
