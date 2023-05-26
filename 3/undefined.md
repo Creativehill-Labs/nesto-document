@@ -167,12 +167,12 @@ function clearDelegate(bytes32 id) public {
 
 DelegateRegistry 컨트렉트 및 Nesto 스냅샷 공간은 다음 주소에 배포됩니다.
 
-* DelegateRegistry - [0x469788fE6E9E9681C6ebF3bF78e7Fd26Fc015446](https://bscscan.com/address/0x469788fE6E9E9681C6ebF3bF78e7Fd26Fc015446) .
-* Nesto Space ID - 0x626565667964616f2e657468 또는 Nestodao.eth.
+* DelegateRegistry - [0x469788fE6E9E9681C6ebF3bF78e7Fd26Fc015446](https://bscscan.com/address/0x469788fE6E9E9681C6ebF3bF78e7Fd26Fc015446) .<mark style="color:red;">\*\*</mark>
+* <mark style="color:red;">Nesto Space ID - 0x626565667964616f2e657468 또는 Nestodao.eth.</mark>
 
 ### 추가 정보
 
-Nesto의 거버넌스에서 투표 위임이 작동하는 방식에 대한 자세한 내용은 다음을 참조하십시오.[통치](https://docs.beefy.finance/community-governance/governance)페이지(구체적으로[내 투표권을 어떻게 위임합니까?](https://docs.beefy.finance/community-governance/governance#how-do-i-delegate-my-vote) 그리고 [대리인이 되려면 어떻게 해야 합니까?](https://docs.beefy.finance/community-governance/governance#how-do-i-become-a-delegate)). [이 Google 시트](https://docs.google.com/spreadsheets/d/1sJH4jg3eEEJDpbws55qUmzPeLDiDuL\_5OAQobSn7m2Y/edit?usp=sharing) 에서 현재 유지 관리되는 투표 대리인 목록을 찾을 수도 있습니다 .
+Nesto의 거버넌스에서 투표 위임이 작동하는 방식에 대한 자세한 내용은 다음을 참조하십시오.[통치](https://docs.beefy.finance/community-governance/governance)페이지 (구체적으로[내 투표권을 어떻게 위임합니까?](https://docs.beefy.finance/community-governance/governance#how-do-i-delegate-my-vote) 그리고 [대리인이 되려면 어떻게 해야 합니까?](https://docs.beefy.finance/community-governance/governance#how-do-i-become-a-delegate)). [이 Google 시트](https://docs.google.com/spreadsheets/d/1sJH4jg3eEEJDpbws55qUmzPeLDiDuL\_5OAQobSn7m2Y/edit?usp=sharing) 에서 현재 유지 관리되는 투표 대리인 목록을 찾을 수도 있습니다 .
 
 [Snapshot Labs의 DelegateRegistry 컨트렉트에서 관리하는 모든 위임에 대한 자세한 내용은 여기에서](https://thegraph.com/hosted-service/subgraph/snapshot-labs/snapshot) Snapshot Subgraph를 탐색할 수 있습니다 . 자세한 내용은 Snapshot [문서](https://docs.snapshot.org/guides/delegation) 에서 확인할 수 있습니다 .
 
