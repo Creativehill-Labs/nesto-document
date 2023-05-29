@@ -69,9 +69,9 @@
 * [기여자 보상](undefined-3/undefined.md)
 * [거버넌스](undefined-3/undefined-1.md)
 * [제안 저장소](undefined-3/undefined-2.md)
-* [자금](undefined-3/undefined-3.md)
-* [커뮤니티](undefined-3/undefined-4.md)
-* [파트너쉽](undefined-3/undefined-5.md)
+* [프로젝트 기금(Treasury)](undefined-3/treasury.md)
+* [커뮤니티](undefined-3/undefined-3.md)
+* [파트너쉽](undefined-3/undefined-4.md)
 
 ## 개발자 문서
 

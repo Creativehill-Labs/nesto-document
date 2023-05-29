@@ -1,69 +1,71 @@
-# 커뮤니티
+---
+description: Nesto와의 콜라보레이션을 찾고 계신가요? 필요한 모든 정보가 여기에 있습니다.
+---
 
-핵심 기여자
+# 파트너쉽
 
-Nesto의 핵심 기여자들은 다양한 영역에서 Nesto를 개선하기 위해 매일 열심히 노력하고 있습니다. 대부분 유료 기능이 있습니다.
+Nesto의 전 세계 DeFi 파트너 및 협력자 네트워크는 우리가 프로토콜로서 수행하는 작업의 중심에 있습니다. 여러 DeFi 시장에서 오랫동안 신뢰할 수 있는 이름으로서 우리가 협력하지 않은 프로젝트 유형은 거의 없습니다(항상 더 추가하고 싶어하지만!). 이 페이지에서는 파트너 관계 팀과 노력, 그리고 잠재 파트너의 요청을 처리하기 위해 마련한 프로세스에 대해 간략하게 설명합니다.
 
-<table><thead><tr><th width="234">Name </th><th width="255.33333333333331">Discord</th><th>Twitter</th></tr></thead><tbody><tr><td>AllTrades<mark style="color:red;">**</mark></td><td>AllTrades#1704</td><td>@AllTradesz</td></tr><tr><td>chebiN</td><td>chebiN#2624</td><td>-</td></tr><tr><td>DefiDebauchery</td><td>DefiDebauchery#3115</td><td>@DefiDebauchery</td></tr><tr><td>Dieter</td><td>Dieter#8010</td><td>@Dieter_Design</td></tr><tr><td>EPETE</td><td>EPETE#3333</td><td>@__ePete</td></tr><tr><td>Eren</td><td>Eren Jaegar#9562</td><td>@eren_Nesto</td></tr><tr><td>frondoto</td><td>frondoto#1954</td><td>@frondoto1</td></tr><tr><td>kexley</td><td>kexley#7853</td><td>@kexleyNesto</td></tr><tr><td>mjoaris </td><td>mjoaris#5328</td><td>@mjoaris</td></tr><tr><td>Pablo</td><td>Pablo#9688</td><td>@pablo_Nesto</td></tr><tr><td>Power - Nesto.Finance</td><td>Power - Nesto.Finance#3933</td><td>@PowerNesto</td></tr><tr><td>ReflectiveChimp</td><td>ReflectiveChimp#4499</td><td>@ReflectiveChimp</td></tr><tr><td>Roman Monk</td><td>Roman Monk#7468</td><td>@roman_mnk</td></tr><tr><td>TheCow</td><td>TheCow#9890</td><td>@thecow</td></tr><tr><td>w18o - 18 Chains.NEfi</td><td>Weso#1643</td><td>@w3so</td></tr><tr><td>YR2150 | Pulse</td><td>YR2150 | Pulse#5907</td><td>@yr2150T / @pulse</td></tr><tr><td>Zapmore</td><td>Zapmore#3433</td><td>@Zapmore3</td></tr></tbody></table>
+## Nesto 파트너십 팀
 
-## Nesto의 OG
+기존 및 신규 파트너와의 관계는 전담 파트너십 팀에서 관리합니다. 팀의 주요 구성원은 다음과 같습니다.
 
-아래는 Nesto의 첫 해에 있었던 Nesto OG의 목록입니다. 일부는 처음부터 Nesto를 초기 단계에서 성장시키는 데 도움을 주었습니다. 통계는 [Nesto의 Discord](https://discord.gg/yq8wfHd) 와 가능한 경우 Twitter 계정을 기반으로 합니다. 이 역할은 더 이상 새로운 기여자에게 주어지지 않습니다. Nesto의 핵심 기여자 대부분은 Nesto OG도 마찬가지입니다.
+<mark style="color:red;">Weso - 전략적 파트너십 책임자</mark>
 
-<table data-header-hidden><thead><tr><th width="265.3333333333333">Name</th><th>Discord </th><th width="172">Twitter</th><th>Primary Role</th></tr></thead><tbody><tr><td>Name</td><td>Discord </td><td>Twitter</td><td>Primary Role</td></tr><tr><td>0xNesto<mark style="color:red;">**</mark></td><td>0xNesto#0679</td><td>-</td><td>-</td></tr><tr><td>zxcvzxcv</td><td>bagholder#0845</td><td>-</td><td>-</td></tr><tr><td>barnyard</td><td>barnyard#6764</td><td>-</td><td>-</td></tr><tr><td>Broken Robot (they/them)</td><td>brknrobot#0952</td><td>-</td><td>Dev</td></tr><tr><td>Cassandra</td><td>Cassandra#2104</td><td>-</td><td>-</td></tr><tr><td>CHIP - BLUE CHIP/LOW RISK</td><td>Chip#1528</td><td>@Chip_Penguin</td><td>Mod</td></tr><tr><td>Destructible Fruit</td><td>Destructible Fruit#4578</td><td>-</td><td>-</td></tr><tr><td>Dibby</td><td>Dibby#5165</td><td>-</td><td>-</td></tr><tr><td>dingbat</td><td>dingbatx#6073</td><td>-</td><td>Dev</td></tr><tr><td>DoD4uFN | NEFI Maxi</td><td>DoD4uFN#9980</td><td>@DoD4uFN</td><td>Dev</td></tr><tr><td>dydymoon.eth</td><td>dydymoon.eth#3133</td><td>@dydymoon1</td><td>-</td></tr><tr><td>FEEDZED</td><td>FEEDZED#9625</td><td>-</td><td>-</td></tr><tr><td>felipe_nefi</td><td>felipe_nefi#1224</td><td>-</td><td>-</td></tr><tr><td>GPMS</td><td>GPMS#0844</td><td>-</td><td>Mod</td></tr><tr><td>kaltoro</td><td>kaltoro#2974</td><td>-</td><td>-</td></tr><tr><td>kevboard</td><td>kevboard#3813</td><td>-</td><td>-</td></tr><tr><td>Mo0o0</td><td>Mo0o0#1628</td><td>-</td><td>Dev</td></tr><tr><td>mooncow</td><td>mooncow#8411</td><td>-</td><td>-</td></tr><tr><td>Moonster</td><td>Moonster#4130</td><td>@Moonster_BSC</td><td>Dev</td></tr><tr><td>Oglop</td><td>Oglop#8007</td><td>-</td><td>-</td></tr><tr><td>Ravified</td><td>Ravified#4133</td><td>-</td><td>Mod</td></tr><tr><td>Zupori</td><td>redwoods#0108</td><td>-</td><td>-</td></tr><tr><td>roastyb</td><td>roastyb#3775</td><td>@roastyb1</td><td>-</td></tr><tr><td>Sens0ryYard</td><td>Sens0ryYard#6988</td><td>-</td><td>-</td></tr><tr><td>shibacrypt</td><td>shibacrypt#2756</td><td>-</td><td>-</td></tr><tr><td>Snorlax</td><td>Snorlax#5376</td><td>-</td><td>-</td></tr><tr><td>SpittingNickels</td><td>SpittingNickels#7142</td><td>-</td><td>-</td></tr><tr><td>Tumbledyer</td><td>Tumbledyer#8408</td><td>@tumblenomics</td><td>Dev</td></tr><tr><td>UnphaZeD</td><td>UnphaZeD#4758</td><td>-</td><td>-</td></tr><tr><td>wivern</td><td>wivern#0410</td><td>-</td><td>Dev</td></tr><tr><td>wwp</td><td>wwp#2782</td><td>-</td><td>-</td></tr></tbody></table>
+<mark style="color:red;">Frondoto - 파트너십 리드</mark>
 
-기여자                                                     &#x20;
+<mark style="color:red;">Zapmore - 파트너십 리드</mark>
 
-Nesto는 기여자들의 커뮤니티입니다. 다음은 활발히 활동 중인 커뮤니티 멤버들의 명단이다.
+<mark style="color:red;">The Nesto Cow(TBC) - 소셜 미디어/마케팅 리드</mark>
 
-| Name                                          | Discord                | Primary Role            |
-| --------------------------------------------- | ---------------------- | ----------------------- |
-| MrTitoune<mark style="color:red;">\*\*</mark> | MrTitoune#9043         | Dev                     |
-| Timelock-Watcher                              | Timelock-Watcher#9763  | Dev                     |
-| 52x13                                         | 52x13#5502             | Cowmoonity Hero         |
-| Agiziga                                       | Agiziga#1264           | Cowmoonity Hero         |
-| Appel \| Gear                                 | Appel#8795             | Cowmoonity Hero / Gear  |
-| armads (Ark, Ark)                             | armads#1337            | Cowmoonity Hero / Mod   |
-| NefiPeter                                     | crypto\_peter#0412     | Cowmoonity Hero         |
-| jackgale.eth                                  | jackgale.eth#3663      | Cowmoonity Hero         |
-| MisterDollahSignz                             | MisterDollahSignz#6345 | Cowmoonity Hero / Media |
-| Sim One                                       | Sim One#9602           | Cowmoonity Hero / Mod   |
-| Terry (TheTopDefi.com)                        | terrys999#6597         | Cowmoonity Hero         |
-| ZukoWick (AVAX, Maxi)                         | ZukoWick#2604          | Cowmoonity Hero / Mod   |
-| cl 🇲🇾                                       | C L#8898               | Mod                     |
-| dcFX0                                         | dcFX0#9639             | Mod                     |
-| TA                                            | TA Tokenhalter#2694    | Mod                     |
-| ab.0x                                         | ab.0x#3716             | Strategist              |
-| ABeely                                        | ABeely#0760            | Strategist              |
-| Cartman                                       | cartman#6481           | Strategist              |
-| cmdrkeen.eth                                  | CmdrKeen#2408          | Strategist              |
-| Frog                                          | geschnarkus#8191       | Strategist              |
-| Galmoli                                       | Galmoli#9531           | Strategist              |
-| Hym                                           | Hym#6244               | Strategist              |
-| jaxx                                          | jaxx#5948              | Strategist              |
-| Marth007                                      | Marth007#4920          | Strategist              |
-| Matty                                         | Matty#0005             | Strategist              |
-| plainview.eth                                 | plainview.eth#0643     | Strategist              |
-| pumpingGhost                                  | pumpingGhost#6020      | Strategist              |
-| Qkyrie                                        | Qkyrie#7908            | Strategist              |
-| shatterproof                                  | shatterproof#0001      | Strategist              |
+<mark style="color:red;">Community Heroes and Farmhands - 파트너십 심사 조수</mark>
 
-고유 기여자
+전담 팀이 있어도 여전히 파트너십 요청이 넘쳐납니다. 이를 관리하기 위해 잠재 파트너는 팀에 직접 연락하기보다는 아래에 설명된 프로세스를 따라 작업을 시작하도록 요청합니다.
 
-2023년 9월 2일 기준으로 다음 역할 중 101명의 고유 기여자가 있습니다.
+## Nesto와 어떻게 연결합니까?
 
-<mark style="color:red;">·  17 @Core</mark>
+[예비 파트너는 Nesto Discord 서버](https://discord.gg/yq8wfHd) 의 #🕵-partnership-vetting 채널로 이동하여 Community에 자신을 소개해야 합니다. 이 채널은 신규 및 기존 파트너십 기회를 논의하고 잠재 파트너가 자신과 프로젝트를 Community에 소개할 수 있는 전용 공간입니다.
 
-<mark style="color:red;">·  18 @Dev</mark>
+또는 Discord를 통해 연락하기를 원하지 않는 경우 다른 소셜 미디어 채널( [Twitter](https://twitter.com/beefyfinance) , [Reddit](https://www.reddit.com/r/Beefy/) 및 [Telegram](https://t.me/beefyfinance) 포함 )을 통해 문의할 수 있습니다. 그러면 심사 보조원과 연결해 드리겠습니다.
 
-<mark style="color:red;">·  23 @Strategist</mark>
+## 수의는 무엇으로 구성됩니까?
 
-<mark style="color:red;">·  47 @Nesto OGs</mark>
+우리의 심사 과정은 엄격한 지침이나 절차를 따르지 않고 회원들이 귀하로부터 정보를 수집하고 이를 Core 팀과 Community에 다시 제시하고 귀하를 Core 팀에 추천할지 여부를 결정하는 것입니다. 우리 회원들은 프로젝트나 조직의 규모와 성장, 제품의 특성과 적합성, 추구할 수 있는 파트너십의 종류를 평가할 것입니다. 자체 정보를 자발적으로 제공하는 프로젝트를 기쁘게 받아들이지만(과거 사례는 채널에서 확인) 회원은 귀하의 요청을 Core에 회부할지 여부에 대한 자체적인 판단을 내리는 것을 목표로 할 것입니다.
 
-<mark style="color:red;">·  29 @ Heroes</mark>
+프로세스를 보드 위에 유지하려면 특별히 초대하지 않는 한 Core 팀이나 Community Heroes 또는 Farmhands에게 직접 메시지를 보내지 마시기 바랍니다. 우리는 파트너십 프로세스가 투명성을 수용하는 것을 자랑스럽게 생각하며 공개 심사를 통해 귀하의 프로젝트를 Community에 소개할 플랫폼을 제공할 수 있기를 바랍니다.
 
-<mark style="color:red;">·  27 @ Farmhand</mark>
+## 그냥 코어랑 얘기하면 안되나요?
 
-<mark style="color:red;">·  13 @Mod</mark>
+우리는 그것을 얻는다. 때로는 요청이 너무 시급하게 느껴지거나 프로젝트가 심사를 거치기에는 너무 중요하다고 느껴질 수 있습니다. 또는 귀하는 우리의 심사 과정을 시도했지만 우리 조수가 귀하의 길을 가로막고 있음을 발견했을 수 있습니다. 귀하의 요청이 제대로 전달되었는지 확인하기 위해 핵심 팀에 직접 메시지를 보내는 것이 좋은 생각이라고 생각할 수 있습니다... 하지만 제발 그러지 마십시오.
 
-\
+우리의 Community Heroes와 Farmhands는 DAO의 오랜 친구이며 우리의 최고의 이익을 진심으로 생각합니다. 그들은 또한 요청이 _정말로_ 중요한 때를 잘 알고 있으며 필요한 경우 주저하지 않고 바로 Core에 연락할 것입니다. 그러나 직접 문제를 해결하면 Nesto의 핵심 리소스가 프로토콜을 구축하는 노력에서 멀어질 가능성이 높으며, 그런 다음 심사를 다시 받는 경우 최고의 첫인상이 아닙니다. 그러니 심호흡을 하고 미소를 지으며 그 과정을 믿으세요... 저희 수의사 보조원이 여러분을 돕기 위해 여기 있습니다.
+
+## 어떤 종류의 파트너십이 있습니까?
+
+Nesto의 파트너 네트워크는 DeFi 세계의 모든 구석과 그 이상에 걸쳐 있습니다. Nesto와의 파트너십이 수반할 수 있는 것에는 실제로 제한이 없습니다. 즉, 우리가 정기적으로 참여하는 몇 가지 일반적인 유형의 파트너십이 있습니다.
+
+블록체인 파트너 - Nesto를 체인에 추가하여 DeFi 생태계를 구축하세요.
+
+분산형 교환 파트너 - Nesto가 농장 위에 자동 합성 Vault를 구축하도록 하여 교환에 유동성을 가져옵니다.
+
+프로토콜 공동 마케팅 파트너 - Nesto의 Vault 및 런치 풀을 사용하여 프로젝트를 마케팅하십시오.
+
+지갑 통합 파트너 - Nesto가 귀하의 지갑을 당사 사이트에 통합하도록 하십시오.
+
+보험 파트너 - 전용 상품으로 Nesto 사용자를 보호하고 마케팅합니다.
+
+인프라 및 보안 파트너 - 귀하의 기술과 서비스를 가져와 Nesto의 운영을 강화하십시오.
+
+## 잠재 파트너를 위한 마지막 팁이 있습니까?
+
+이제 언급했으므로 다음과 같습니다.
+
+* Discord의 #🕵-partnership-vetting 채널과 연결된 모든 스레드를 살펴보세요. 이렇게 하면 심사 과정이 어떻게 진행되고 어떤 종류의 정보를 제공해야 하는지 알 수 있습니다.
+* 정말 좋은 첫인상을 주고 싶다면 이전 요청에 대해 심사 보조원이 채택한 스타일로 자신의 요약을 준비하는 것이 좋습니다. 저희 어시스턴트는 여전히 귀하의 말을 다시 확인하기를 원할 것이지만 이렇게 하면 귀하와 우리 모두 상당한 시간과 노력을 절약할 수 있습니다.
+* 우리는 종종 Nesto가 파트너십에 가져오기를 바라는 것과 귀하의 프로젝트가 가져올 것을 제안하는 것에 대해 알고 싶어할 것입니다. 미리 고려할 수 있는 몇 가지 사항은 다음과 같습니다.
+  * 지갑을 사이트에 통합하는 것과 같은 일반적인 요청의 경우 요청하는 모든 사람에게 예라고 말할 수 없습니다. 따라서 귀하를 시장의 다른 사람들과 차별화하는 요소가 무엇인지 또는 가치 있는 추가 통합을 위해 Nesto에 가져올 계획이 무엇인지 설명하십시오.
+  * 공동 마케팅을 요청하는 경우 프로젝트와 우리의 상대적인 규모를 염두에 두십시오. Nesto의 경우 작은 신생 프로토콜과 협력한다는 것은 종종 마케팅 노력에서 얻는 것보다 더 많은 것을 제공한다는 것을 의미합니다.
+  * Nesto의 개발 팀에게 제품 구축을 도와달라고 요청하는 것을 고려하고 있다면 다음 사항을 생각해 볼 가치가 있습니다. (1) 기존의 성공적인 프로토콜을 계속 구축하는 것보다 제품이 시간을 더 잘 사용합니까? 그리고 (2) Nesto의 팀이 그 제품을 만들고 싶었다면 왜 그들이 직접 하기보다 당신과 함께 하기를 원하거나 필요로 할까요?
+* 자체 토큰이 있는 프로젝트의 경우 프로젝트에 유동성을 끌어들이기 위해 Nesto [Vault를](https://docs.beefy.finance/products/vaults) 원하는지 여부 와 [런치풀](https://docs.beefy.finance/products/boost) 파트너십이 도움이 될 수 있는지 여부를 고려하십시오.
+* 귀하의 프로젝트를 위한 Nesto Vault에 관심이 있으시면 먼저 [AMFU 사례 페이지를 읽고 귀하가 당사의 기준을 충족하는지 평가하는 것이 좋습니다. ](https://docs.beefy.finance/safu-protocol)이것은 귀하가 조사에서 받게 될 첫 번째 질문 중 하나이므로 "예"로 준비하는 것이 가장 좋습니다!
+* Nesto에 참여하려는 개인이라면 공식적인 파트너십이 필요하지 않습니다! Nesto Discord의 #💼-we-are-hiring 페이지로 이동하여 어떤 종류의 유급 및 자원봉사 역할을 사용할 수 있는지 확인하세요. 그리고 거기에서 우리와 함께하십시오.

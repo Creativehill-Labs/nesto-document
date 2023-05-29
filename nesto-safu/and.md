@@ -78,7 +78,7 @@ l  Ammnriver: [0x1fdd00b45eba7f6d35b92803eaddd68f7cc4a193](https://multisig.moon
 
 ## 프로젝트 기금 다중서명(Treasury Multisigs)
 
-Nesto 프로젝트 기금의 지출은 신뢰할 수 있는 (커뮤니티) 회원들의 다중서명을 필요하기에호보됩니다. DAO에서 투표를 통해 선출된 다음 회원들이 자금 위원회를 대표합니다: <mark style="color:red;">Power, AllTrades, Pablo, mjoaris, TBC, DefiDebauchery, YR2150</mark>. Nesto 프로젝트 기금에 대한 자세한 정보는 [프로젝트기금 ](../undefined-3/undefined-3.md)페이지를 참조하십시오.
+Nesto 프로젝트 기금의 지출은 신뢰할 수 있는 (커뮤니티) 회원들의 다중서명을 필요하기에호보됩니다. DAO에서 투표를 통해 선출된 다음 회원들이 자금 위원회를 대표합니다: <mark style="color:red;">Power, AllTrades, Pablo, mjoaris, TBC, DefiDebauchery, YR2150</mark>. Nesto 프로젝트 기금에 대한 자세한 정보는 [프로젝트기금 ](../undefined-3/treasury.md)페이지를 참조하십시오.
 
 l  Arbitrum: [0x3f5eddad52C665A4AA011cd11A21E1d5107d7862](https://gnosis-safe.io/app/arb1:0x3f5eddad52C665A4AA011cd11A21E1d5107d7862/balances)<mark style="color:red;">\*\*</mark>
 
