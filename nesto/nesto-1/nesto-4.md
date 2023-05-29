@@ -24,7 +24,7 @@ _우리의 보관소(Vault)를 사용하면 APY에 자동으로 성과 수수료
 
 **그래서 투자자는 화면 상에서 보이는 수익률과 똑같은 수익을 얻을 수 있습니다.**
 
-Nesto의 보관소(Vault)는 [#보관소(Vault)구조란?](../../undefined-1/vaults.md) 항목에 적혀있는 것과 같이, 해당 수수료는 NEFI 지분보유자,  Nesto [자금](../../undefined-3/treasury.md)[ 보관함](../../undefined-3/treasury.md)(Treasury), 전략가(Strategist), 해당 보관소(Vault)를 수확하는 사용자에게 분배됩니다. 이 수수료는 플랫폼의 주요 수익원입니다.
+Nesto의 보관소(Vault)는 [#보관소(Vault)구조란?](../../undefined-1/vaults.md) 항목에 적혀있는 것과 같이, 해당 수수료는 NEFI 지분보유자,  Nesto [자금](../../undefined-3/undefined-3.md)[ 보관함](../../undefined-3/undefined-3.md)(Treasury), 전략가(Strategist), 해당 보관소(Vault)를 수확하는 사용자에게 분배됩니다. 이 수수료는 플랫폼의 주요 수익원입니다.
 
 **일반적인 보관소(Vault)의 구조는 이렇습니다.**
 
