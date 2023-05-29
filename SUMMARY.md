@@ -36,14 +36,14 @@
   * [neQI](undefined-1/nesto-escrowed/neqi.md)
   * [neVELO](undefined-1/nesto-escrowed/nevelo.md)
   * [neOPX](undefined-1/nesto-escrowed/neopx.md)
-* [고급 보관소(Advanced Vaults)](undefined-1/advanced-vaults/README.md)
-  * [GMX 및 GLP](undefined-1/advanced-vaults/gmx-glp.md)
+* [고급 보관소(Advanced Vaults)](undefined-1/vaults-1/README.md)
+  * [GMX 및 GLP](undefined-1/vaults-1/gmx-glp.md)
 
 ## 자주하는 질문
 
 * [자주하는 질문](undefined-2/undefined.md)
 * [인포그래픽](undefined-2/undefined-1.md)
-* [보관소 APY](undefined-2/apy.md)
+* [보관소 APY](undefined-2/vaults-apy.md)
 * [사용법 가이드](undefined-2/undefined-2/README.md)
   * [보관소(vaults)에 입금하는 방법](undefined-2/undefined-2/vaults.md)
   * [메타마스크에 커스텀 토큰을 추가하는 방법](undefined-2/undefined-2/undefined.md)
@@ -57,7 +57,7 @@
 
 * [NESTO AMFU 관행](nesto-safu/nesto-amfu.md)
 * [계약 & 타임락](nesto-safu/and.md)
-* [버그 바운티 프로그램 (Bug Bounty Program)](nesto-amfu/bug-bounty-program.md)
+* [버그 바운티 프로그램 (Bug Bounty Program)](nesto-safu/undefined.md)
 * [NESTO 안전성 점수(Safety Score)](nesto-safu/nesto.md)
 * [토큰 수당](nesto-safu/undefined-1.md)
 * [NESTO 백업](nesto-safu/nesto-1.md)

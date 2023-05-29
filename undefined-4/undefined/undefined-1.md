@@ -1,6 +1,6 @@
 # 가스 비용 제한 계약
 
-GasFeeThrottler [컨트렉트](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/utils/GasFeeThrottler.sol) (이전의 GasThrottler)은 하위 컨트렉트 트랜잭션의 가스 가격이 항상 고정된 최대값 아래로 떨어지거나 그렇지 않으면 트랜잭션이 되돌려지도록 하는 데 사용되는 스마트 컨트렉트 장치입니다. [이를 위해 특정 GasPrice 컨트렉트을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/utils/GasPrice.sol) 가리키며 컨트렉트 소유자가 최대 가스 가격을 구성할 수 있습니다.
+GasFeeThrottler [컨트랙트](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/utils/GasFeeThrottler.sol) (이전의 GasThrottler)은 하위 컨트렉트 트랜잭션의 가스 가격이 항상 고정된 최대값 아래로 떨어지거나 그렇지 않으면 트랜잭션이 되돌려지도록 하는 데 사용되는 스마트 컨트렉트 장치입니다. [이를 위해 특정 GasPrice 컨트렉트을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/utils/GasPrice.sol) 가리키며 컨트렉트 소유자가 최대 가스 가격을 구성할 수 있습니다.
 
 ## GasFeeThrottler.sol
 
