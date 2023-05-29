@@ -22,7 +22,7 @@ DeFi가 확장됨에 따라 기업 및 분산형 공급자가 사용 가능한 �
 * **프로토콜 보험**- 컨트랙트 버그, 경제 공격 및 거버넌스 공격과 같은 다양한 일반적인 위험 및 문제에 대한 특정 DeFi 프로토콜을 다룹니다. **예:** [Nexus의 프로토콜 커버](https://nexusmutual.gitbook.io/docs/users/types-of-cover/protocol-cover) .
 * **토큰 보험**- 보험 상품이 구축된 기본 자산 및 프로토콜의 교차 스택 위험에 대한 특정 토큰 상품(예: LP 또는 자동 합성 Vault)을 다룹니다. **예:** [Nexus의 Yield Token Cover](https://nexusmutual.gitbook.io/docs/users/types-of-cover/full-stack-coverage-with-yield-token-cover) (예: Convex 3CRV)는 발행 프로토콜(Convex), LP/농장 프로토콜(Curve) 및 기본 토큰(DAI, USDC, USDT 및 CRV)의 실패를 다룹니다.
 * **포트폴리오 보험**- 지갑이 보유하고 있는 보험 프로토콜의 모든 해당 자산을 포함하여 지정된 손실 가치까지 특정 지갑을 다룹니다. **예:** [Solace의 포트폴리오 보험 커버](https://docs.solace.fi/docs/overview/faq/cover-products) .
-* **자금수탁/관리인 보험**- 인출 중단, 관리인 해킹 및 잘못된 자금수탁관리로 인해 발생하는 헤어컷을 포함하여 중앙집중식 기관의 관리 지갑 및 컨트랙트와 관련된 위험을 다룹니다. **예:** [InsurAce의 Custodian Risk Cover](https://docs.insurace.io/landing-page/documentation-1/cover-wording/custodian-risk-cover) 및 [Nexus의 Custody Cover](https://nexusmutual.gitbook.io/docs/users/types-of-cover/custody-cover) .
+* **수탁/수탁인 보험**- 인출 중단, 관리인 해킹 및 잘못된 자금수탁관리로 인해 발생하는 헤어컷을 포함하여 중앙집중식 기관의 관리 지갑 및 컨트랙트와 관련된 위험을 다룹니다. **예:** [InsurAce의 Custodian Risk Cover](https://docs.insurace.io/landing-page/documentation-1/cover-wording/custodian-risk-cover) 및 [Nexus의 Custody Cover](https://nexusmutual.gitbook.io/docs/users/types-of-cover/custody-cover) .
 * **De-peg 보험**- 자산 디페깅의 가치로 인해 발생하는 개별 토큰 제품의 위험을 다룹니다(즉, 반영해야 하는 기본 자산과 일치하는 시장 가치를 유지하지 못함). **예:** [InsurAce의 Stablecoin De-Peg Risk Cover](https://docs.insurace.io/landing-page/documentation-1/cover-wording/stablecoin-de-peg-cover) 및 [Nexus의 Yield Token Cover](https://nexusmutual.gitbook.io/docs/users/types-of-cover/full-stack-coverage-with-yield-token-cover) 에는 여러 특정 de-peg 위험이 포함되어 있습니다.
 * **스테이킹 보험**- 보상 누락 및 손실 감소와 같이 블록체인 네트워크 스테이킹 및 검증에서 발생하는 여러 위험을 다룹니다. **예:** [넥서스의 ETH2 스테이킹 커버](https://nexusmutual.gitbook.io/docs/users/types-of-cover/eth2-staking-cover) , 구체적으로 이더리움의 지분 증명 비콘 체인을 다룹니다.
 * **번들 제품 보험**- 다양한 프로토콜, 제품 또는 다양한 위험의 조합을 보장하여 사용자의 전반적인 요구 사항을 충족하는 단일 상품을 생성합니다. **예를 들어** [InsurAce.io의 CRV+CVX 번들 커버는](https://files.insurace.io/public/en/cover/Bundle\_CRV\_CVX\_v3.0.pdf) Convex 사용자를 대상으로 하며 Curve(Convex가 구축된)의 장애에 대한 추가 보장혜택을 제공합니다.
@@ -48,45 +48,45 @@ InsurAce.io
 
 InsurAce는 Ethereum, BSC, Avalanche 및 Polygon을 포함한 다양한 체인에 배포된 멀티체인 보험 제공업체입니다. Nesto가 배포된 체인의 절반 이상에서 Nesto 스마트 컨트랙트 취약성에 대한 보상서비스를 제공합니다.
 
-InsurAce에는 일부 통합된 법적 형식(예: 영국의 InsurAce Global Limited)이 있지만 InsurAce 조직의 정확한 구성은 완전히 명확하지 않습니다. 프로토콜은 보험 부문과 투자 부문의 두 부분으로 구성됩니다. 투자 부문은 보험 활동에 자금을 지원하기 위해 징수한 수수료에서 수익을 창출합니다. 사용자는 적용되는 스마트 컨트랙트를 사용할 때 수수료(일반적으로 APY 2-5%)를 지불하고 실패할 경우 예치금을 상환받습니다.
+InsurAce에는 일부 통합된 법적 형식(예: 영국의 InsurAce Global Limited)이 있지만 InsurAce 조직의 정확한 구성은 완전히 명확하지 않습니다. 프로토콜은 보험 부문과 투자 부문의 두 부분으로 구성됩니다. 투자 부문은 보험 활동에 자금을 지원하기 위해, 징수한 보험수수료에서수익을 창출합니다. 사용자는 적용되는 스마트 컨트랙트를 사용할 때 수수료(일반적으로 APY 2-5%)를 지불하고 실패할 경우 예치금을 상환받습니다.
 
-InsureAce는 제출할 수 있는 다양한 유형의 청구를 검토하고 결과에 투표할 전담 청구 부서를 운영합니다. 청구는 먼저 보험, 보안 및 법률/준수 전문가로 구성된 InsureAce의 자문 위원회에서 조사합니다. InsurAce는 또한 청구 결과를 결정하기 위해 커뮤니티 청구 평가자(플랫폼에 토큰을 스테이킹한 $INSUR 보유자)의 사용을 포함하여 시간이 지남에 따라 분산된 거버넌스 프로세스를 개발하는 것을 목표로 하고 있습니다. 그러나 글을 쓰는 시점에서 [청구 평가자 페이지는](https://app.insurace.io/claim-assessor) 라이브 상태가 아니며 현재 상황은 프로토콜 사이트에서 명확하지 않습니다.
+InsureAce는 제출할 수 있는 다양한 유형의 청구를 검토하고 결과에 투표할 전담 청구 부서를 운영합니다. 보험금 청구는 먼저 보험, 보안 및 법률/준수 전문가로 구성된 InsureAce의 자문 위원회에서 조사합니다. InsurAce는 또한 청구 결과를 결정하기 위해 커뮤니티 청구 평가자(플랫폼에 토큰을 스테이킹한 $INSUR 보유자)의 지원을 받고,  시간이 지남에 따라 탈중앙화된 거버넌스 프로세스를 개발하는 것을 목표로 하고 있습니다. 그러나 글을 쓰는 시점에서 [청구 평가자 페이지는](https://app.insurace.io/claim-assessor) 라이브 상태가 아니며 현재 상황은 프로토콜 사이트에서 명확하지 않습니다.
 
-[자세한 내용은 여기](https://beefy.com/articles/get-to-grips-with-beefy-s-smart-contract-insurance-provided-by-insurace/) 블로그 게시물을 참조 하고 보장 제품 페이지(제품 ID #110)에서 InsurAce Nesto 제품을 찾으십시오. [여기에서](https://data.insurace.io/cover-records) InsurAce의 적용 범위에 대한 원시 데이터를 찾을 수 있습니다.
+[자세한 내용은 여기](https://beefy.com/articles/get-to-grips-with-beefy-s-smart-contract-insurance-provided-by-insurace/) 블로그 게시물을 참조 하고 보험상품 페이지(제품 ID #110)에서 InsurAce Nesto 제품을 찾으십시오. [여기에서](https://data.insurace.io/cover-records) InsurAce의 적용 범위에 대한 원시 데이터를 찾을 수 있습니다.
 
-## 넥서스 상호
+## Nexus Mutual
 
-Nexus Mutual은 특정 프로토콜, 수익 토큰 및 관리인(예: 중앙 집중식 거래소)에 대한 보장을 제공하는 이더리움 기반 보험 대안입니다. 배포된 대부분의 체인에서 Nesto에 대한 프로토콜 범위를 제공합니다.
+Nexus Mutual은 특정 프로토콜, 수익 토큰 및 관리인(예: 중앙 집중식 거래소)에 대한 보장을 제공하는 이더리움 기반 대체보험입니다. 배포된 대부분의 체인에서 Nesto에 대한 프로토콜 범위를 제공합니다.
 
-대부분의 다른 제공업체와 달리 Nexus는 공식적으로 보험을 판매하지는 않지만 회원이 보험과 같은 보호를 받는 재량 상호 조합입니다. 이 프로젝트는 조정된 인센티브를 사용하여 구성원이 프로토콜에 자본을 기부하는 동시에 위험 및 청구 평가자 역할을 하므로 모든 구성원 간에 위험 공유를 가능하게 합니다. Nexus Mutual의 토큰인 NXM의 소유권은 커버를 구입하고 청구 및 위험 평가 프로세스를 탐색하는 데 사용됩니다. 보유자는 또한 Mutual의 거버넌스에도 참여할 수 있습니다.
+대부분의 다른 업체와 달리 Nexus는 공식적으로 보험을 판매하지는 않지만 회원이 보험과 같은 보호를 받는 상호공제조합입니다. 이 프로젝트는 조정된 인센티브를 사용하여 구성원이 프로토콜에 자본을 기부하는 동시에 위험 및 청구 평가자 역할을 하므로 모든 구성원 간에 위험 공유를 가능하게 합니다. Nexus Mutual의 토큰인 NXM의 소유권은 보험상품을 구입하고 청구 및 위험 평가 프로세스를 탐색하는 데 사용됩니다. 보유자는 또한 Mutual의 거버넌스에도 참여할 수 있습니다.
 
-Nexus는 일반 프로토콜 커버(즉, 프로토콜에서 제공하는 모든 다른 제품 커버)와 수익률 베어링 자산(예: 기본 자산, 유동성 풀 및 자동 합성 Vault)의 전체 스택을 커버하는 "수익 토큰 커버"를 포함한 다양한 제품을 제공합니다. ). Nexus는 또한 Ethereum 2.0 스테이킹 커버, 자산을 중앙 집중식 거래소에 보관함으로써 발생하는 손실 위험으로부터 보호하는 커스터디 커버와 같은 다른 새로운 제품을 제공합니다.
+Nexus는 일반 프로토콜 커버(즉, 프로토콜에서 제공하는 모든 다른 제품 커버)와 수익률이 있는 자산(예: 기초자산, 유동성 풀 및 자동복리투자 보관소)의 전체 스택을 커버하는 "수익율 토큰 커버"를 포함한 다양한 제품을 제공합니다. Nexus는 또한 Ethereum 2.0 스테이킹 커버, 자산을 중앙 집중식 거래소에 보관함으로써 발생하는 손실 위험으로부터 보호하는(커스터디 커버) 새로운 제품을 제공합니다.
 
-자세한 내용은 파트너십에 대한 블로그 게시물( [여기 )](https://beefy.com/articles/cover-your-deposits-with-nexus-mutual/) 및 Nexus Nesto 제품 페이지 [( 여기 )](https://app.nexusmutual.io/cover/buy/get-quote?address=0x453D4Ba9a2D594314DF88564248497F7D74d6b2C) 를 참조하십시오 . 다양한 적용 범위 및 이용약관에 대한 자세한 내용은 [여기](https://nexusmutual.gitbook.io/docs/users/types-of-cover) 의 Nexus 문서에서 확인할 수 있습니다 .
+자세한 내용은 파트너십에 대한 블로그 게시물( [여기 )](https://beefy.com/articles/cover-your-deposits-with-nexus-mutual/) 및 Nexus Nesto 제품 페이지 [( 여기 )](https://app.nexusmutual.io/cover/buy/get-quote?address=0x453D4Ba9a2D594314DF88564248497F7D74d6b2C) 를 참조하십시오. 다양한 적용 범위 및 이용약관에 대한 자세한 내용은 [여기](https://nexusmutual.gitbook.io/docs/users/types-of-cover) 의 Nexus 문서에서 확인할 수 있습니다 .
 
-## 위안
+### Solace
 
-Solace는 DAO가 운영하는 탈중앙화 보험 프로토콜로, 혁신을 암호화 탐험가를 위한 직관적인 보호 도구로 만드는 임무를 수행합니다. 포괄적인 포트폴리오 보험 상품의 일부로 Nesto에 투자한 자금에 대한 보장을 제공합니다.
+Solace는 DAO가 운영하는 탈중앙화 보험 프로토콜로, 암호화 탐색기를 위한 직관적인 보호 도구로 혁신을 꾀하는 임무를 수행합니다. 포괄적인 포트폴리오 보험 상품의 일부로 Nesto에 투자한 자금에 대한 보장을 제공합니다.
 
-다른 것들과 달리, Solace는 청구에 대한 새로운 접근 방식(낙관적 지급 시스템)을 채택했습니다. 사용자는 보험에 가입한 사건 이후에 청구를 제출할 필요가 없으며 대신 Solace의 위험 관리 팀이 모든 사건이 발생했다고 평가하면 자동으로 지급됩니다. 온체인 분석을 통해 미래를 위해 Solace는 온체인 분석을 사용하여 손실 이벤트를 자동으로 정량화하는 데 사용될 파라메트릭 자동 청구 평가 시스템도 개발하고 있습니다.
+다른 것들과 달리, Solace는 보험금 청구에 대한 새로운 접근 방식(낙관적 지급 시스템)을 채택했습니다. 사용자는 보험에 가입한 사건 이후에 보험금청구서를 제출할 필요가 없으며 대신 Solace의 위험 관리 팀이 모든 사건이 발생했다고 평가하면 자동으로 지급합니다. 향후 Solace는 온체인 분석을 사용하여 손실 이벤트를 자동으로 정량화하는 데 사용될 자동 파라메트릭 클레임 평가시스템도 개발하고 있습니다.
 
-Solace는 자체 스마트 컨트랙트를 처리하기 위해 프로토콜용 추가 제품(Solace Native)도 제공합니다. 여기에는 더 넓은 언더라이팅 풀에서 프로토콜에 대한 게이지 할당에 투표하는 데 사용할 수 있는 언더라이팅 토큰을 보유한 프로토콜이 포함됩니다.
+Solace는 자체 스마트 컨트랙트를 처리하기 위해 프로토콜용 추가 제품(Solace Native)도 제공합니다. 여기에는 언더라이팅 토큰을 보유한 프로토콜이 포함되며, 이는 광범위한 언더라이팅 풀에서 프로토콜에 대한 게이지 할당에 투표하는 데 사용될 수 있습니다.
 
 자세한 내용은 [여기에서 Nesto 파트너십에 대한 Solace의 트위터 스레드를 참조하고 ](https://twitter.com/SolaceFi/status/1491533263936098305?s=20\&t=jZMt6Lw4uyPfW5NUPtW6UA)[여기에서](https://docs.solace.fi/) Solace의 문서를 확인하십시오.
 
 {% hint style="info" %}
-Solace의 포트폴리오 보험은 지갑에 있는 자산의 가치를 감지하기 위한 Zapper 도구의 구현과 관련되어 있습니다. 이러한 도구가 Nesto 자산을 감지하지 못하는 경우(예: 새로 발행된 경우) 정책에 따라 해당 자산을 복구하지 못할 수 있습니다. Zapper 구현이 감지할 수 있는 것이 무엇인지 확인하려면 Solace 앱의 " 내 [정책" 페이지](https://app.solace.fi/cover) 에서 "내 포트폴리오" 및 "견적 시뮬레이터" 부분을 철저히 확인하십시오. 당신은 더 많은 보장을 구입합니다!).
+Solace의 포트폴리오 보험은 지갑에 있는 자산의 가치를 감지하기 위한 Zapper 도구의 구현과 관련되어 있습니다. 이러한 도구가 Nesto 자산을 감지하지 못하는 경우(예: 새로 발행된 경우) 정책에 따라 해당 자산을 복구하지 못할 수 있습니다. Zapper 구현이 감지할 수 있는 것이 무엇인지 확인하려면 Solace 앱의 "내 [정책" 페이지](https://app.solace.fi/cover) 에서 "내 포트폴리오" 및 "견적 시뮬레이터" 부분을 철저히 확인하십시오.&#x20;
 {% endhint %}
 
 ## 비교
 
-<table><thead><tr><th width="179">기준</th><th>InsurAce.io</th><th width="188">넥서스 상호</th><th>위안</th></tr></thead><tbody><tr><td>배포된 체인</td><td>이더리움, BSC, 폴리곤, 눈사태</td><td>이더리움</td><td>이더리움, 폴리곤, 오로라, 팬텀</td></tr><tr><td>Nesto 체인 커버</td><td>BSC, Polygon 및 Fantom을 포함한 9개의 체인</td><td>BSC, Polygon 및 Fantom을 포함한 15개 체인</td><td>명시되지 않았습니다. Zapper를 통해 감지된 포트폴리오. 배포된 체인 이외의 범위를 포함합니다.</td></tr><tr><td>제품 유형</td><td>스마트 컨트랙트, 관리인, De-Peg, 번들.</td><td>Protocol, Yield Token, Custody, Staking (스마트 컨트랙트 단계적 폐지)</td><td>포트폴리오(및 네이티브)</td></tr><tr><td>Nesto 제품 유형</td><td>스마트 컨트랙트</td><td>규약</td><td>포트폴리오</td></tr><tr><td>청구 평가</td><td>민간 자문 위원회</td><td>공공 회원 투표</td><td>비공개 자동 청구</td></tr></tbody></table>
+<table><thead><tr><th width="179">기준</th><th>InsurAce.io</th><th width="188">Nexus Mutual</th><th>Solace</th></tr></thead><tbody><tr><td>배포된 체인</td><td>이더리움, BSC, 폴리곤, Avalanche</td><td>이더리움</td><td>이더리움, 폴리곤, 오로라, 팬텀</td></tr><tr><td>Nesto 체인 커버</td><td>BSC, Polygon 및 Fantom을 포함한 9개의 체인</td><td>BSC, Polygon 및 Fantom을 포함한 15개 체인</td><td>명시되지 않았습니다. Zapper를 통해 감지된 포트폴리오. 배포된 체인 이외의 범위를 포함합니다.</td></tr><tr><td>제품 유형</td><td>스마트 컨트랙트, 수탁인, De-Peg, 번들</td><td>프로토콜, Yield Token, 수탁,스테이킹(스마트 컨트랙트 단계적 폐지)</td><td>포트폴리오(및 네이티브)</td></tr><tr><td>Nesto 제품 유형</td><td>스마트 컨트랙트</td><td>프로토콜</td><td>포트폴리오</td></tr><tr><td>청구 평가</td><td>민간 자문 위원회</td><td>공공 회원 투표</td><td>비공개 자동 청구</td></tr></tbody></table>
 
 ## 제휴되지 않은 제품
 
-Nesto는 완전히 오픈 소스이며 공개되어 있으므로 누구나 당사 제품 및 코드 위에 자유롭게 빌드할 수 있습니다. 그러나 이러한 투명성으로 인해 우리 팀에서 어떤 제품을 만들고 테스트했는지에 대해 일반 사용자에게 혼란을 줄 수 있습니다. 일부 보험 제공자는 Nesto와 관련이 없을 때 자사 제품이 "공식" 또는 "검증"되었다고 명시함으로써 이러한 혼란을 가중시키려고 합니다. 자신의 조사를 수행하고 제품이 자신이 생각하는 제품인지 확인하는 것은 궁극적으로 사용자에게 달려 있습니다.
+Nesto는 완전히 오픈 소스이며 공개되어 있으므로 누구나 당사 제품 및 코드 위에 자유롭게 빌드할 수 있습니다. 그러나 이러한 투명성으로 인해 우리 팀에서 어떤 제품을 만들고 테스트했는지에 대해 일반 사용자에게 혼란을 줄 수 있습니다. 일부 보험 제공자는 Nesto와 관련이 없을 때 자사 제품이 "공식" 또는 "검증"되었다고 명시함으로써 이러한 혼란을 가중시키려고 합니다. 자신의 리서치를 수행하고 자신이 생각하는 제품인지 확인하는 것은 궁극적으로 사용자에게 달려 있습니다.
 
-아래는 Nesto의 제품 또는 프로토콜에 대한 보장을 제공하지만 Nesto와의 파트너십에서 공식적으로 제공되지 않으며 당사 팀에서 공식적으로 확인하지 않은 알려진 상품 보험 상품 목록입니다. 자신의 책임하에 사용하고 항상 자신의 연구를 수행하십시오.
+아래는 Nesto의 제품 또는 프로토콜에 대한 보장을 제공하지만 Nesto와의 파트너십에서 공식적으로 제공되지 않으며 당사 팀에서 공식적으로 확인하지 않은 알려진 보험 상품 목록입니다. 자신의 책임 하에 사용하고 항상 자신의 리서치를 수행하십시오.
 
 <table><thead><tr><th width="152">공급자</th><th width="161">보험 종류</th><th width="122">블록체인</th><th>스마트 컨트렉트</th></tr></thead><tbody><tr><td><a href="https://app.insuredao.fi/optimism/purchase/0xe3f491c575e02902342ef8488bb3d6c392869fda">InsureDAO</a></td><td>스마트 컨트랙트</td><td>Optimism</td><td>0xe3f491c575e02902342ef8488bb3d6c392869fda</td></tr><tr><td><a href="https://app.bridgemutual.io/user/cover/137/0xf0E147862E069460D2ea8837f65aD5D2fCaC2D14">BridgeMutual</a></td><td>스마트 컨트랙트</td><td>Polygon</td><td>0xf0E147862E069460D2ea8837f65aD5D2fCaC2D14</td></tr></tbody></table>
 
