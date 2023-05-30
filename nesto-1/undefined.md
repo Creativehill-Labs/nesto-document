@@ -4,9 +4,9 @@ NestoFeeConfigurator [컨트랙트는](https://github.com/beefyfinance/beefy-con
 
 _각 체인의 FeeConfigurator_ 컨트랙트_( "NestoFeeConfig" )_ 관련 주소는 다음을 사용하여 Nesto API에 표시됩니다.[가져오기/구성](https://docs.beefy.finance/developer-documentation/beefy-api#get-config)끝점.
 
-## 수식어
+## 제어자
 
-쓰기 기능에 대한 액세스를 제어하는 ​​표준 _onlyManager() 수정자를 포함합니다._
+쓰기 기능에 대한 액세스를 제어하는 ​​표준 _onlyManager() 제어자를 포함합니다._
 
 ```
 modifier onlyManager() {
