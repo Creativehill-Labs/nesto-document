@@ -75,7 +75,7 @@
 
 ## 개발자 문서
 
-* [보관소(Vaults) 계약](undefined-4/vaults.md)
+* [보관소 컨트랙트(Vaults Contract)](undefined-4/vaults-contract.md)
 * [전략 계약](undefined-4/undefined/README.md)
   * [전략적 수수료 관리 계약](undefined-4/undefined/undefined.md)
   * [가스 비용 제한 계약](undefined-4/undefined/undefined-1.md)
