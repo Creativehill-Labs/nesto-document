@@ -57,7 +57,7 @@
 
 * [NESTO AMFU 관행](nesto-safu/nesto-amfu.md)
 * [계약 & 타임락](nesto-safu/and.md)
-* [버그 바운티 프로그램 (Bug Bounty Program)](nesto-safu/undefined.md)
+* [버그 바운티 프로그램(Bug Bounty Program)](nesto-safu/undefined.md)
 * [NESTO 안전성 점수(Safety Score)](nesto-safu/nesto.md)
 * [토큰 수당](nesto-safu/undefined-1.md)
 * [NESTO 백업](nesto-safu/nesto-1.md)
@@ -75,7 +75,7 @@
 
 ## 개발자 문서
 
-* [보관소 컨트랙트(Vaults Contract)](undefined-4/vaults-contract.md)
+* [보관소 컨트랙트(Vaults Contract)](undefined-4/vaults.md)
 * [전략 계약](undefined-4/undefined/README.md)
   * [전략적 수수료 관리 계약](undefined-4/undefined/undefined.md)
   * [가스 비용 제한 계약](undefined-4/undefined/undefined-1.md)

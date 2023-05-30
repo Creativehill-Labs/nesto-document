@@ -1,4 +1,4 @@
-# 보관소(Vaults) 계약
+# 보관소 컨트랙트(Vaults Contract)
 
 Nesto [Vault 컨트랙트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyVaultV7.sol) Nesto 프로토콜의 중앙 사용자 대면 실행으로, 사용자 예치금을 수락 및 관리하고 인출을 용이하게 하기 위한 수령 증명으로 birdToken을 생성합니다. [이는 ERC-20 의](https://eips.ethereum.org/EIPS/eip-20) [교환가능한 토큰에 대한](https://eips.ethereum.org/EIPS/eip-20) [표준을](https://eips.ethereum.org/EIPS/eip-20) 따릅니다 .
 
