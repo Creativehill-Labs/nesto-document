@@ -85,7 +85,7 @@
 * [기타 NESTO 계약](nesto-1/README.md)
   * [수수료 설정 계약](nesto-1/undefined.md)
   * [NESTO 래퍼 계약](nesto-1/nesto.md)
-  * [게이지 스테이커 계약](nesto-1/undefined-1.md)
+  * [GaugeStaker 컨트랙트](nesto-1/gaugestaker.md)
 * [제 3자 계약](3/README.md)
   * [레지스트리 컨트랙트 위임](3/undefined.md)
 * [NESTO API](nesto-api.md)

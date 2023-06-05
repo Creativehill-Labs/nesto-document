@@ -1,14 +1,14 @@
-# 게이지 스테이커 계약
+# GaugeStaker 컨트랙트
 
-게이지스테이커란?
+게이지스테이커(GaugeStaker)란?
 
-GaugeStaker [컨트렉트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/strategies/Gauge/GaugeStaker.sol) inSPIRIT 보유자를 위한 SpiritSwap 프로토콜 수익 수집과 다른 Nesto SpiritSwap Vault로의 inSPIRIT 팜 Aoost 전달을 모두 관리하는 [ainFTM](https://docs.beefy.finance/products/beefy-escrowed-tokens/binspirit) 토큰 의 중앙 스마트 컨트렉트입니다 .
+GaugeStaker [컨트랙트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/strategies/Gauge/GaugeStaker.sol) [neSPIRIT ](../undefined-1/nesto-escrowed/nespirit.md)토큰의 중앙 스마트컨트랙트로 inSPIRIT 보유자에 대한 SpiritSwap 프로토콜 수익 획득과 inSPIRIT farm boost를 다른 Nesto SpiritSwap Vault로 전달하는 작업을 모두 관리합니다.
 
 GaugeStaker는 어떻게 작동합니까?
 
-GaugeStaker에는 세 가지 중요한 역할이 있습니다. (1) inSPIRIT 보상을 축적하기 위해 사용자 SPIRIT 예금을 관리합니다. (2) SpiritSwap Aoost 농장에 대한 투표 관리; (3) 다른 Nesto SpiritSwap 전략과 Aoost 파밍 게이지 간에 토큰을 전달합니다.
+GaugeStaker에는 세 가지 중요한 역할이 있습니다. (1) inSPIRIT 보상을 축적하기 위해 사용자 SPIRIT 예금을 관리합니다. (2) SpiritSwap boosted farm 에 대한 투표체계를 관리합니다. (3) 다른 Nesto SpiritSwap 전략과 boosted farming 게이지 간에 토큰을 전달합니다.
 
-사용자가 SPIRIT를 입금하면 GaugeStaker는 자동으로 SpiritSwap으로 SPIRIT를 스테이킹하여 양도할 수 없는 inSPIRIT를 받습니다. 스테이킹된 모든 SPIRIT도 잠금 상태여야 하므로(따라서 인출할 수 없음), GaugeStaker는 가능한 한 가장 긴 기간(현재 4년) 동안 모든 예치금을 잠가 최대 양의 inSPIRIT를 받습니다. 프로토콜 수익 보상은 잠긴 SPIRIT에서 지속적으로 발생하며 GaugeStaker는 이러한 보상을 자동으로 청구하고 정기적으로 [Nesto ainFTM Vault 에 반환하여 자동으로 합산합니다.](https://app.beefy.finance/#/vault/beefy-binspirit)
+사용자가 SPIRIT를 입금하면 GaugeStaker는 자동으로 SpiritSwap으로 SPIRIT를 스테이킹하여 양도할 수 없는 inSPIRIT를 받습니다. 스테이킹된 모든 SPIRIT도 잠금 상태여야 하므로(따라서 인출할 수 없음), GaugeStaker는 가능한 한 가장 긴 기간(현재 4년) 동안 모든 예치금을 잠가 최대 양의 inSPIRIT를 받습니다. 프로토콜 수익 보상은 잠긴(locekd) SPIRIT에서 지속적으로 발생하며 GaugeStaker는 이러한 보상을 자동으로 청구하고 정기적으로 [Nesto neFTM Vault에 반환하여 자동으로 재투자합니다.](https://app.beefy.finance/#/vault/beefy-binspirit)
 
 inSPIRIT 보유자는 SpiritSwap 거버넌스 및 burst된 농장 보상 분배에 [투표 할 자격이 있으므로 GaugeStaker가 이러한 투표 할당을 관리합니다.](https://docs.beefy.finance/products/beefy-escrowed-tokens/binspirit#can-i-vote-with-binspirit)
 
@@ -16,11 +16,11 @@ inSPIRIT 보유자는 SpiritSwap 거버넌스 및 burst된 농장 보상 분배�
 
 게이지스테이커 기능
 
-GaugeStaker 컨트렉트는 두 가지 역할을 실행하기 위해 다양한 기능과 방법을 통합합니다. 여기에는 다음이 포함됩니다.
+GaugeStaker 컨트랙트는 두 가지 역할을 실행하기 위해 다양한 기능과 방법을 통합합니다. 여기에는 다음이 포함됩니다.
 
 민트 ainFTM에 SPIRIT 입금
 
-사용자는 SPIRIT( `want`)을 입금할 수 있으며 컨트랙트는 이체 전후 잔액을 확인하여 입금된 금액을 확인합니다. 받은 금액이 0이 아닌 경우 SPIRIT에 대한 기존 잠금이 존재하는지 확인합니다. 잠금이 이전에 시작되지 않았거나 만료되도록 남아 있지 않는 한 그럴 것입니다. 만약 잠금이 존재한다면 현재 잠금 시간이 전체 금액보다 적다면 전체 4년으로 연장되며, 받은 SPIRIT의 잔액은 1:1 금액의 inSPIRIT을 얻기 위해 잠깁니다. 현재 잠금이 존재하지 않는 경우 새 잠금을 생성하고 컨트렉트에서 SPIRIT의 균형을 잠급니다. 마지막으로 사용자로부터 받은 SPIRIT 잔액과 동일한 양의 ainFTM를 발행합니다.
+사용자는 SPIRIT( `want`)을 입금할 수 있으며 컨트랙트는 이체 전후 잔액을 확인하여 입금된 금액을 확인합니다. 받은 금액이 0이 아닌 경우 SPIRIT에 대한 기존 잠금이 존재하는지 확인합니다. 잠금이 이전에 시작되지 않았거나 만료되도록 남아 있지 않는 한 그럴 것입니다. 만약 잠금이 존재한다면 현재 잠금 시간이 전체 금액보다 적다면 전체 4년으로 연장되며, 받은 SPIRIT의 잔액은 1:1 금액의 inSPIRIT을 얻기 위해 잠깁니다. 현재 잠금이 존재하지 않는 경우 새 잠금을 생성하고 컨트랙트에서 SPIRIT의 균형을 잠급니다. 마지막으로 사용자로부터 받은 SPIRIT 잔액과 동일한 양의 ainFTM를 발행합니다.
 
 ```
 // deposit 'want' and lock
@@ -44,7 +44,7 @@ function _deposit(address _user, uint256 _amount) internal nonReentrant whenNotP
 
 ### Burst할 게이지 투표
 
-Nesto Keeper는 GaugeStaker의 inSPIRIT 잔액을 보팅 파워로 사용하여 게이지 인센티브에 투표할 수 있습니다. 주로 Nesto 및 전략적 파트너의 게이지에 대한 투표에 사용되며 Nesto DAO에 의해 관리되어 게이지에 대한 다양한 인센티브에 투표할 수 있습니다. 투표 기능은 투표를 기록하고 게이지 인센티브의 분배를 결정하는 SpiritSwap의 게이지 프록시 컨트렉트에 대한 간단한 호출입니다. Nesto 키퍼는 매개변수 배열을 사용하여 단일 호출에서 여러 게이지 간에 투표권을 분할할 수 있습니다.
+Nesto Keeper는 GaugeStaker의 inSPIRIT 잔액을 보팅 파워로 사용하여 게이지 인센티브에 투표할 수 있습니다. 주로 Nesto 및 전략적 파트너의 게이지에 대한 투표에 사용되며 Nesto DAO에 의해 관리되어 게이지에 대한 다양한 인센티브에 투표할 수 있습니다. 투표 기능은 투표를 기록하고 게이지 인센티브의 분배를 결정하는 SpiritSwap의 게이지 프록시 컨트랙랙트에 대한 간단한 호출입니다. Nesto 키퍼는 매개변수 배열을 사용하여 단일 호출에서 여러 게이지 간에 투표권을 분할할 수 있습니다.
 
 ```
 // vote on boosted farms
@@ -87,7 +87,7 @@ function claimGaugeReward(address _gauge) external onlyWhitelist(_gauge) {
 
 ### SpiritSwap 프로토콜 수수료 청구
 
-inSPIRIT를 보유하면 GaugeStaker에게 SpiritSwap 프로토콜 수수료의 일부를 청구할 권리가 부여되며, 이는 보상 풀의 ainFTM 스테이커에게 분배됩니다. 프로토콜 수수료는 일주일에 한 번 SPIRIT의 형태로 분배되며 수수료 분배자 컨트렉트에서 청구해야 합니다. 보상 풀 컨트렉트는 을 통해 청구 기능을 호출합니다 `claimVeWantReward()`. 청구할 수 있는 항목이 있는 경우 SPIRIT( `want`) 보상만 보상 풀로 즉시 다시 전달됩니다.
+inSPIRIT를 보유하면 GaugeStaker에게 SpiritSwap 프로토콜 수수료의 일부를 청구할 권리가 부여되며, 이는 보상 풀의 ainFTM 스테이커에게 분배됩니다. 프로토콜 수수료는 일주일에 한 번 SPIRIT의 형태로 분배되며 수수료 분배자 컨트랙트에서 청구해야 합니다. 보상 풀 컨트랙트를 통해 청구 기능을 호출합니다 `claimVeWantReward()`. 청구할 수 있는 항목이 있는 경우 SPIRIT( `want`) 보상만 보상 풀로 즉시 다시 전달됩니다.
 
 ```
 // pass through rewards from the fee distributor
@@ -133,7 +133,7 @@ function upgradeStrategy(address _gauge) external onlyWhitelist(_gauge) {
 
 ```
 
-### 컨트렉트
+### 컨트랙트
 
 ainFTM/GaugeStaker: 0x44e314190D9E4cE6d4C0903459204F8E21ff940A
 
