@@ -25,7 +25,7 @@ DelegateRegistry 컨트렉트는 일반적인 작업에서 두 ​​가지 가�
 
 ### SetDelegate
 
-컨트렉트의 의미[setDelegate()](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#setdelegate-1)함수가 성공적으로 호출되었으며 결과적으로 호출자가 새 대리자를 선택했습니다.
+컨트렉트의 의미 [setDelegate()](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#setdelegate-1)함수가 성공적으로 호출되었으며 결과적으로 호출자가 새 대리인을 선택했습니다.
 
 ```
 // Using these events it is possible to process the events to build up reverse 
@@ -55,7 +55,7 @@ delegate);
 
 ## 컨트렉트 기능&#x20;
 
-DelegateRegistry 컨트렉트의 기능은 매우 간단하며 대리자를 설정하고 제거하는 두 가지 기능으로 구성됩니다.
+DelegateRegistry 컨트렉트의 기능은 매우 간단하며 대리인을 설정하고 제거하는 두 가지 기능으로 구성됩니다.
 
 ### setDelegate()
 
@@ -87,7 +87,7 @@ function setDelegate(bytes32 id, address delegate) public {
 
 호출이 성공하면 함수는 위임 매핑을 새 위임 주소로 업데이트합니다. 그런 다음 사용자가 이전에 다른 사용자에게 위임했는지 확인하고 위임했다면 다음을 내보냅니다.[ClearDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate) 이전 대리인이 제거되었음을 나타내는 이벤트입니다. 마지막으로 그것은 [SetDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#setdelegate) 새 대리인이 추가되었음을 나타내는 이벤트입니다.
 
-이 기능은 또한 컨트렉트를 사용하도록 요구하지 않습니다.[clearDelegate()](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate-1)기존 대리자를 제거하는 데만 사용되는 함수입니다.
+이 기능은 또한 컨트렉트를 사용하도록 요구하지 않습니다.[clearDelegate()](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate-1)기존 대리인 제거하는 데만 사용되는 함수입니다.
 
 ### clearDelegate()
 
@@ -109,7 +109,7 @@ function clearDelegate(bytes32 id) public {
 }
 ```
 
-호출이 성공하면 함수는 위임 매핑을 null 주소로 업데이트한 다음(즉, 사용자가 투표권을 위임하지 않았음을 나타냄) 다음을 내보냅니다.[ClearDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate)이전 대리자인이이제거되었음을 나타내는 이벤트입니다.
+호출이 성공하면 함수는 위임 매핑을 null 주소로 업데이트한 다음(즉, 사용자가 투표권을 위임하지 않았음을 나타냄) 다음을 내보냅니다.[ClearDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate)이전 대리인이 제거되었음을 나타내는 이벤트입니다.
 
 ## 위임 연습
 
