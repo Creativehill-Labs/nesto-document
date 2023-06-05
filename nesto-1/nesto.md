@@ -14,7 +14,7 @@ ERC-4626 표준의 목적은 DeFi에서 발견되는 Vault 디자인의 다양�
 
 NestoWrapper 컨트랙트의 기능은 호출자의 Nesto Vault 토큰 전송에 대한 대가로 래핑된 Nesto Vault 토큰의 발행 및 소각을 용이하게 합니다. 또한 래핑된 Nesto Vault 토큰의 주조 및 소각에 대한 대가로 기본 Nesto Vault에 대한 예금을 용이하게 하기 위해 표준 입금 및 인출 기능을 무시합니다.
 
-### 래핑()
+### wrap()
 
 호출자의 지정된 양의 Nesto Vault 토큰을 래퍼 컨트랙트로 전송하여 동일한 양의 래핑된 Nesto Vault 토큰을 호출자에게 발행합니다.
 
@@ -44,7 +44,7 @@ function wrapAll() external {
 }
 ```
 
-### 풀다()
+### unwrap()
 
 호출자의 래핑된 Nesto Vault 토큰의 지정된 양을 소각하여 동일한 양의 래핑되지 않은 토큰을 래퍼 컨트랙트에서 호출자에게 다시 전송합니다.
 
@@ -62,7 +62,7 @@ function unwrap(uint256 amount) public {
 }
 ```
 
-### 언랩올()
+### unwrapAll()
 
 unwrap() 함수를 활용하지만 호출자의 전체 잔액을 "amount" 매개변수로 사용합니다.
 
@@ -74,7 +74,7 @@ function unwrapAll() external {
 }
 ```
 
-### \_보증금()
+### \_deposit()
 
 래핑되지 않은 버전 대신 래퍼 컨트렉트 및 발급된 래핑된 Nesto Vault 토큰과 상호 작용하도록 표준 \_deposit() 함수를 재정의합니다. 그렇지 않으면 Nesto Vault로의 일반적인 전송을 용이하게 합니다.
 
@@ -111,7 +111,43 @@ function _withdraw(address caller, address receiver, address owner, uint256 asse
 }
 ```
 
-총 자산()
+### \_withdraw()
+
+랩핑되지 않은(unwrapped) 버전 대신 랩핑된(wrapped) Beefy Vault 토큰과 상호 작용하도록 standard\_withdraw() 함수를 재정의합니다. 그렇지 않으면 일반적으로 Beefy Vault에서 인출하고 기본 토큰을 수신자에게 반환합니다.&#x20;
+
+<pre class="language-solidity" data-overflow="wrap"><code class="lang-solidity">// Burn wrapped tokens and withdraw assets from the vault.
+/// "caller" parameter is the address of the caller of the withdraw.
+/// "receiver" parameter is the address of the receiver of the assets.
+/// "owner" parameter is the address of the owner of the burnt shares.
+/// "assets" parameter is the amount of assets being withdrawn.
+/// "shares parameter is the amount of shares being burnt.
+
+function _withdraw(address caller, address receiver, address owner, uint256 assets, uint256 shares) internal virtual override {
+    
+    // Checks caller is not the contract's owner, and that the caller's spend                 allowance is sufficient for the call.
+    if (caller != owner) {
+        _spendAllowance(owner, caller, shares);
+    }
+    
+    // Burns the caller's wrapped tokens.
+    _burn(owner, shares);
+
+    // Withdraws the caller's assets from the Beefy Vault.
+    IVault(vault).withdraw(shares);
+<strong>    uint balance = IERC20Upgradeable(asset()).balanceOf(address(this));
+</strong>    if (assets > balance) {
+        assets = balance;
+    }
+
+    // Transfers the caller's assets back to the receiver.
+    IERC20Upgradeable(asset()).safeTransfer(receiver, assets);
+    
+    // Emits the Withdraw event to signify a successful withdrawal.
+    emit Withdraw(caller, receiver, owner, assets, shares);
+}
+</code></pre>
+
+### totalAssets()
 
 Vault가 보유한 총 자산을 가져오도록 표준 totalAssets() 함수를 재정의합니다.
 
@@ -125,7 +161,7 @@ function totalAssets() public view virtual override returns (uint256) {
 }
 ```
 
-### 총공급()
+### totalSupply()
 
 표준 totalSupply() 함수를 재정의하여 Vault의 총 공유 문제를 가져옵니다.
 
@@ -141,11 +177,11 @@ function totalSupply() public view virtual override(ERC20Upgradeable, IERC20Upgr
 
 ## NestoWrapperFactory 컨트랙트
 
-NestoWrapperFactory [컨트랙트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapperFactory.sol) 새로운 Nesto Vault 래퍼를 만드는 데 사용할 최소한의 프록시 패턴을 제공하는 공장 컨트랙트입니다. 공장 컨트랙트를 통해 사용자는 논리가 있는 동일한 구현 컨트랙트를 가리키는 고유한 프록시 컨트랙트를 생성하고 배포할 수 있습니다.
+NestoWrapperFactory [컨트랙트는](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapperFactory.sol) 새로운 Nesto Vault 래퍼를 만드는 데 사용할 최소한의 프록시 패턴을 제공하는 Factory 컨트랙트입니다. Factory 컨트랙트를 통해 사용자는 논리가 있는 동일한 구현 컨트랙트를 가리키는 고유한 프록시 컨트랙트를 생성하고 배포할 수 있습니다.
 
 NestoWrapperFactory를 통해 NestoWrapper 컨트랙트를 모든 Vault에 배포할 수 있습니다. 팩토리 컨트랙트에는 하나의 핵심 기능인 clone()만 있습니다.
 
-### 클론()
+### clone()
 
 OpenZeppelin 표준 프록시 템플릿 [ClonesUpgradeable.sol을](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/proxy/ClonesUpgradeable.sol) 사용하여 NestoWrapper 컨트랙트의 복제본인 프록시 컨트랙트를 생성합니다.
 
@@ -174,8 +210,8 @@ function clone(address _vault) external returns (address proxy) {
 
 ### 컨트랙트
 
-템플릿 Nesto Vault 래퍼 컨트랙트는 Nesto의 GitHub 리포지토리에서 공개적으로 유지 관리됩니다. [NestoWrapper.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapper.sol) 및 [NestoWrapperFactory.sol 을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapperFactory.sol) 참조하십시오 .
+템플릿 Nesto Vault 래퍼 컨트랙트는 Nesto의 GitHub 레포지토리에서 공개적으로 유지 관리됩니다. [NestoWrapper.sol](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapper.sol) 및 [NestoWrapperFactory.sol 을](https://github.com/beefyfinance/beefy-contracts/blob/master/contracts/BIFI/vaults/BeefyWrapperFactory.sol) 참조하십시오 .
 
-각 Nesto Vault에 대한 래퍼 컨트랙트는 관련 체인에 별도로 배포되며 반드시 유사한 컨트랙트 주소에 배포되지는 않습니다. [Polygon 블록체인에 배포된 샘플 컨트랙트를 테스트하려면 이 NestoWrapper.sol](https://polygonscan.com/address/0x776994eab59b894fb892d08a46329c5077c9e226) 인스턴스 및 이 [NestoWrapperFactory.sol](https://polygonscan.com/address/0xd1cedfb11994ebbc1608ae46d7c7176294bdd599) 인스턴스를 참조하십시오 .
+각 Nesto Vault에 대한 래퍼 컨트랙트는 관련 체인에 별도로 배포되며 반드시 유사한 컨트랙트 주소에 배포되지는 않습니다. [Polygon 블록체인에 배포된 샘플 컨트랙트를 테스트하려면 NestoWrapper.sol](https://polygonscan.com/address/0x776994eab59b894fb892d08a46329c5077c9e226) 인스턴스 및 [NestoWrapperFactory.sol](https://polygonscan.com/address/0xd1cedfb11994ebbc1608ae46d7c7176294bdd599) 인스턴스를 참조하십시오 .
 
 \
