@@ -8,9 +8,9 @@ GaugeStaker는 어떻게 작동합니까?
 
 GaugeStaker에는 세 가지 중요한 역할이 있습니다. (1) inSPIRIT 보상을 축적하기 위해 사용자 SPIRIT 예금을 관리합니다. (2) SpiritSwap boosted farm 에 대한 투표체계를 관리합니다. (3) 다른 Nesto SpiritSwap 전략과 boosted farming 게이지 간에 토큰을 전달합니다.
 
-사용자가 SPIRIT를 입금하면 GaugeStaker는 자동으로 SpiritSwap으로 SPIRIT를 스테이킹하여 양도할 수 없는 inSPIRIT를 받습니다. 스테이킹된 모든 SPIRIT도 잠금 상태여야 하므로(따라서 인출할 수 없음), GaugeStaker는 가능한 한 가장 긴 기간(현재 4년) 동안 모든 예치금을 잠가 최대 양의 inSPIRIT를 받습니다. 프로토콜 수익 보상은 잠긴(locekd) SPIRIT에서 지속적으로 발생하며 GaugeStaker는 이러한 보상을 자동으로 청구하고 정기적으로 [Nesto neFTM Vault에 반환하여 자동으로 재투자합니다.](https://app.beefy.finance/#/vault/beefy-binspirit)
+사용자가 SPIRIT를 입금하면 GaugeStaker는 자동으로 SpiritSwap으로 SPIRIT을 스테이킹하여 양도할 수 없는 inSPIRIT를 받습니다. 스테이킹된 모든 SPIRIT도 잠금 상태여야 하므로 (따라서 인출할 수 없음), GaugeStaker는 가능한 한 가장 긴 기간(현재 4년) 동안 모든 예치금을 잠가 최대 양의 inSPIRIT를 받습니다. 프로토콜 수익 보상은 잠긴(locekd) SPIRIT에서 지속적으로 발생하며 GaugeStaker는 이러한 보상을 자동으로 청구하고 정기적으로 [Nesto neFTM Vault에 반환하여 자동으로 재투자합니다.](https://app.beefy.finance/#/vault/beefy-binspirit)
 
-inSPIRIT 보유자는 SpiritSwap 거버넌스 및 burst된 농장 보상 분배에 [투표 할 자격이 있으므로 GaugeStaker가 이러한 투표 할당을 관리합니다.](https://docs.beefy.finance/products/beefy-escrowed-tokens/binspirit#can-i-vote-with-binspirit)
+inSPIRIT 보유자는 SpiritSwap 거버넌스 및 burst된 농장 보상 분배에 [투표할 자격이 있으므로 GaugeStaker가 이러한 투표 할당을 관리합니다.](https://docs.beefy.finance/products/beefy-escrowed-tokens/binspirit#can-i-vote-with-binspirit)
 
 마지막으로, inSPIRIT 보유자는 일부 SpiritSwap 농장에서 더 많은 보상을 받았습니다. 모든 burst된 Nesto SpiritSwap Vault는 게이지스테이커를 통해 모든 예금, 인출 및 보상 수확을 전달하여 burst의 혜택을 받도록 구성됩니다. 이것은 GaugeStaker가 Nesto 의 축적된 inSPIRIT의 전체 집중을 유지하기 때문에 각 농장에서 가능한 가장 높은 Burst를 제공합니다.
 
@@ -18,7 +18,7 @@ inSPIRIT 보유자는 SpiritSwap 거버넌스 및 burst된 농장 보상 분배�
 
 GaugeStaker 컨트랙트는 두 가지 역할을 실행하기 위해 다양한 기능과 방법을 통합합니다. 여기에는 다음이 포함됩니다.
 
-민트 ainFTM에 SPIRIT 입금
+민트 neFTM에 SPIRIT 입금
 
 사용자는 SPIRIT( `want`)을 입금할 수 있으며 컨트랙트는 이체 전후 잔액을 확인하여 입금된 금액을 확인합니다. 받은 금액이 0이 아닌 경우 SPIRIT에 대한 기존 잠금이 존재하는지 확인합니다. 잠금이 이전에 시작되지 않았거나 만료되도록 남아 있지 않는 한 그럴 것입니다. 만약 잠금이 존재한다면 현재 잠금 시간이 전체 금액보다 적다면 전체 4년으로 연장되며, 받은 SPIRIT의 잔액은 1:1 금액의 inSPIRIT을 얻기 위해 잠깁니다. 현재 잠금이 존재하지 않는 경우 새 잠금을 생성하고 컨트랙트에서 SPIRIT의 균형을 잠급니다. 마지막으로 사용자로부터 받은 SPIRIT 잔액과 동일한 양의 ainFTM를 발행합니다.
 

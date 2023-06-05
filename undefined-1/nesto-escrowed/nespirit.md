@@ -32,7 +32,7 @@ Nesto는 SPIRITswap의 예치금을 가능한 한 오랫동안 사용하기 위�
 
 neSPIRIT은 SPIRIT에 누적된 모든 보관소(Vault)를 하나의 계약에 보관하며, 해당 계약을 통해 모든 보관소(Vault)를 실행함으로써 각 보관소(Vault)가 최대한 부스트를 받을 수 있도록 보장합니다. 모든 강화된 보상은 개별 Nesto 보관소(Vault)에 의해 유지됩니다.&#x20;
 
-neSPIRIT 계약은 SpiritSwap 거버넌스 제안 및 보관소(Vault) 인센티브 게이지에 대해 Nesto를 대신하여 투표를 제출하며, neSPIRIT 보유자는 게이지에 대해 투표할 수 있습니다. 자세한 내용은 [GaugeStaker 스마트 컨트렉트](../../nesto-1/gaugestaker.md)의 설명을 참조하세요.
+neSPIRIT 계약은 SpiritSwap 거버넌스 제안 및 보관소(Vault) 인센티브 게이지에 대해 Nesto를 대신하여 투표를 제출하며, neSPIRIT 보유자는 게이지에 대해 투표할 수 있습니다. 자세한 내용은 [GaugeStaker 스마트 컨트렉트](../../nesto-1/undefined-1.md)의 설명을 참조하세요.
 
 ## neSPIRIT으로 어떻게 수익을 얻나요?
 

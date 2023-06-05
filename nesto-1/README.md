@@ -10,6 +10,6 @@
 [nesto.md](nesto.md)
 {% endcontent-ref %}
 
-{% content-ref url="gaugestaker.md" %}
-[gaugestaker.md](gaugestaker.md)
+{% content-ref url="undefined-1.md" %}
+[undefined-1.md](undefined-1.md)
 {% endcontent-ref %}
