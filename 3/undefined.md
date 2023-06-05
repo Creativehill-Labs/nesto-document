@@ -1,4 +1,4 @@
-# 레지스트리 컨트렉트 위임
+# 레지스트리 컨트랙트 위임
 
 DelegateRegistry [컨트렉트는](https://github.com/gnosis/delegate-registry/blob/main/contracts/DelegateRegistry.sol) Gnosis에서 개발하고 Snapshot Labs에서 사용하여 Snapshot 기반 거버넌스 공간에서 투표 위임을 용이하게 하는 거버넌스 스마트 컨트렉트입니다. 사용자는 BNB 체인에서 다른 사용자에게 투표 권한을 위임하여 투표권을 사용하여 다른 사용자에게 권한을 부여할 수 있습니다. 사용자는 언제든지 위임을 제거할 수도 있습니다.
 
@@ -85,7 +85,7 @@ function setDelegate(bytes32 id, address delegate) public {
 
 ```
 
-호출이 성공하면 함수는 위임 매핑을 새 위임 주소로 업데이트합니다. 그런 다음 사용자가 이전에 다른 사용자에게 위임했는지 여부를 테스트하고 그렇다면 다음을 내보냅니다.[ClearDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate)이전 대리자가 제거되었음을 나타내는 이벤트입니다. 마지막으로 그것은[SetDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#setdelegate)새 대리자가 추가되었음을 나타내는 이벤트입니다.
+호출이 성공하면 함수는 위임 매핑을 새 위임 주소로 업데이트합니다. 그런 다음 사용자가 이전에 다른 사용자에게 위임했는지 확인하고 위임했다면 다음을 내보냅니다.[ClearDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate) 이전 대리인이 제거되었음을 나타내는 이벤트입니다. 마지막으로 그것은 [SetDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#setdelegate) 새 대리인이 추가되었음을 나타내는 이벤트입니다.
 
 이 기능은 또한 컨트렉트를 사용하도록 요구하지 않습니다.[clearDelegate()](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate-1)기존 대리자를 제거하는 데만 사용되는 함수입니다.
 
