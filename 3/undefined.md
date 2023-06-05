@@ -109,7 +109,7 @@ function clearDelegate(bytes32 id) public {
 }
 ```
 
-호출이 성공하면 함수는 위임 매핑을 null 주소로 업데이트한 다음(즉, 사용자가 투표권을 위임하지 않았음을 나타냄) 다음을 내보냅니다.[ClearDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate)이전 대리자가 제거되었음을 나타내는 이벤트입니다.
+호출이 성공하면 함수는 위임 매핑을 null 주소로 업데이트한 다음(즉, 사용자가 투표권을 위임하지 않았음을 나타냄) 다음을 내보냅니다.[ClearDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate)이전 대리자인이이제거되었음을 나타내는 이벤트입니다.
 
 ## 위임 연습
 
@@ -125,7 +125,7 @@ function clearDelegate(bytes32 id) public {
 
 4.투표권을 위임할 사용자의 주소 또는 ENS 이름을 입력합니다.
 
-5.원하는 경우 "특정 공간으로 위임 제한"을 선택하여 위임을 Nesto Snapshot 공간으로만 제한할 수 있습니다. 그렇게 하려면 다음 공백을 입력하십시오: Nestodao.eth.
+5.원하는 경우 "특정 공간으로 위임 제한"을 선택하여 위임을 Nesto Snapshot 공간으로만 제한할 수 있습니다. 제한하려면면 다음 공백을 입력하십시오: Nestodao.eth.
 
 6.지갑에서 거래를 시작하려면 "확인"을 클릭하십시오. 이것은 쓰기 트랜잭션(예: 블록체인에 저장하기 위한 정보 제출)이므로 트랜잭션을 용이하게 하기 위해 소량의 가스를 지불해야 합니다.
 
@@ -159,7 +159,7 @@ function clearDelegate(bytes32 id) public {
 
 \-----------이미지영역--------------
 
-> 각 블록 탐색기의 기능은[컨트렉트 기능](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#contract-functions)위 섹션.
+> 각 블록 탐색기의 기능은 [컨트렉트 기능](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#contract-functions)위 섹션.
 
 7.거래가 완료되면 NEFI 토큰이 배포된 모든 체인에서 제공한 사용자 주소에 성공적으로 위임됩니다.
 
@@ -172,7 +172,7 @@ DelegateRegistry 컨트렉트 및 Nesto 스냅샷 공간은 다음 주소에 배
 
 ### 추가 정보
 
-Nesto의 거버넌스에서 투표 위임이 작동하는 방식에 대한 자세한 내용은 다음을 참조하십시오.[통치](https://docs.beefy.finance/community-governance/governance)페이지 (구체적으로[내 투표권을 어떻게 위임합니까?](https://docs.beefy.finance/community-governance/governance#how-do-i-delegate-my-vote) 그리고 [대리인이 되려면 어떻게 해야 합니까?](https://docs.beefy.finance/community-governance/governance#how-do-i-become-a-delegate)). [이 Google 시트](https://docs.google.com/spreadsheets/d/1sJH4jg3eEEJDpbws55qUmzPeLDiDuL\_5OAQobSn7m2Y/edit?usp=sharing) 에서 현재 유지 관리되는 투표 대리인 목록을 찾을 수도 있습니다 .
+Nesto의 거버넌스에서 투표 위임이 작동하는 방식에 대한 자세한 내용은 다음을 참조하십시오.[통거버넌스](https://docs.beefy.finance/community-governance/governance)  페이지 (구체적으로[내 투표권을 어떻게 위임합니까?](https://docs.beefy.finance/community-governance/governance#how-do-i-delegate-my-vote) 그리고 [대리인이 되려면 어떻게 해야 합니까?](https://docs.beefy.finance/community-governance/governance#how-do-i-become-a-delegate)). [이 Google 시트](https://docs.google.com/spreadsheets/d/1sJH4jg3eEEJDpbws55qUmzPeLDiDuL\_5OAQobSn7m2Y/edit?usp=sharing) 에서 현재 유지 관리되는 투표 대리인 목록을 찾을 수도 있습니다 .
 
 [Snapshot Labs의 DelegateRegistry 컨트렉트에서 관리하는 모든 위임에 대한 자세한 내용은 여기에서](https://thegraph.com/hosted-service/subgraph/snapshot-labs/snapshot) Snapshot Subgraph를 탐색할 수 있습니다 . 자세한 내용은 Snapshot [문서](https://docs.snapshot.org/guides/delegation) 에서 확인할 수 있습니다 .
 
