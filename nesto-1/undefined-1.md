@@ -42,7 +42,7 @@ function _deposit(address _user, uint256 _amount) internal nonReentrant whenNotP
 }
 ```
 
-### Burst할 게이지 투표
+### 어떤 게이지를 Burst할 지 투표
 
 Nesto Keeper는 GaugeStaker의 inSPIRIT 잔액을 보팅 파워로 사용하여 게이지 인센티브에 투표할 수 있습니다. 주로 Nesto 및 전략적 파트너의 게이지에 대한 투표에 사용되며 Nesto DAO에 의해 관리되어 게이지에 대한 다양한 인센티브에 투표할 수 있습니다. 투표 기능은 투표를 기록하고 게이지 인센티브의 분배를 결정하는 SpiritSwap의 게이지 프록시 컨트랙트에 대한 간단한 호출입니다. Nesto 키퍼는 매개변수 배열을 사용하여 단일 호출에서 여러 게이지 간에 투표권을 분할할 수 있습니다.
 
