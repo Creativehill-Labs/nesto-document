@@ -87,7 +87,7 @@
   * [NESTO 래퍼 계약](nesto-1/nesto.md)
   * [GaugeStaker 컨트랙트](nesto-1/undefined-1.md)
 * [제 3자 계약](3/README.md)
-  * [DelegateRegistry 컨트랙트](3/delegateregistry.md)
+  * [DelegateRegistry 컨트랙트](3/undefined.md)
 * [NESTO API](nesto-api.md)
 
 ## 추가 리소스

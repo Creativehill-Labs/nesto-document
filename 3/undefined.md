@@ -1,10 +1,10 @@
-# 레지스트리 컨트랙트 위임
+# DelegateRegistry 컨트랙트
 
 DelegateRegistry [컨트랙트는](https://github.com/gnosis/delegate-registry/blob/main/contracts/DelegateRegistry.sol) Gnosis에서 개발하고 Snapshot Labs에서 사용하여 Snapshot 기반 거버넌스 공간에서 투표 위임을 용이하게 하는 거버넌스 스마트 컨트랙트입니다. 사용자는 BNB 체인에서 다른 사용자에게 투표 권한을 위임하여 투표권을 사용하여 다른 사용자에게 권한을 부여할 수 있습니다. 사용자는 언제든지 위임을 제거할 수도 있습니다.
 
-이 메커니즘을 통해 커뮤니티의 신뢰할 수 있는 목소리는 지지자의 적은 노력으로 지지를 활용할 수 있습니다. 또한 시간이 부족한 사람들이 발생하는 모든 제안에 참여할 필요 없이 투표권이 거버넌스에 참여하도록 할 수 있습니다.
+이 메커니즘을 통해 커뮤니티의 신뢰할 수 있는 대변인은 지지자의 적은 노력으로 지지를 활용할 수 있습니다. 또한 시간이 부족한 사람들은 발생하는 모든 제안에 참여할 필요 없이 거버넌스에 참여하도록 투표권을 통해 보장받을 수 있습니다.
 
-### 컨트랙트 매핑
+### 컨트랙트 매핑(Contract Mapping)
 
 DelegateRegistry 컨트랙트는 무엇보다도 컨트랙트의 "위임" 매핑에 저장되는 기존 위임에 대한 정보 저장소입니다.
 
@@ -53,7 +53,7 @@ delegate);
 </strong>
 </code></pre>
 
-## 컨트랙트 기능&#x20;
+## 컨트랙트 기능(Contract Functions)
 
 DelegateRegistry 컨트랙트의 기능은 매우 간단하며 대리인을 설정하고 제거하는 두 가지 기능으로 구성됩니다.
 
@@ -111,7 +111,7 @@ function clearDelegate(bytes32 id) public {
 
 호출이 성공하면 함수는 위임 매핑을 null 주소로 업데이트한 다음(즉, 사용자가 투표권을 위임하지 않았음을 나타냄) 다음을 내보냅니다.[ClearDelegate](https://docs.beefy.finance/developer-documentation/third-party-contracts/delegateregistry-contract#cleardelegate)이전 대리인이 제거되었음을 나타내는 이벤트입니다.
 
-## 위임 연습
+## 위임 지시문(Delegation Walkthrough)
 
 사용자가 DelegateRegistry 컨트랙트와 상호 작용하기 위해 채택할 수 있는 두 가지 주요 방법이 있습니다. Snapshot 인터페이스를 통해 상호 작용하거나 컨트랙트와 직접 상호 작용합니다(예: 관련 블록 탐색기를 통해). 다음은 각 방법에 대한 간략한 설명입니다.
 
